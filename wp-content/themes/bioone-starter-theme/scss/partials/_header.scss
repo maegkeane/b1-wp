@@ -3,6 +3,456 @@
 	HEADER (scss/partials/_header.scss)
 ==========================================================================
 */
-header {
+.page-header {
+  height: 100px; 
+  padding: 25px 0 0 15px;
+  margin: 0;
+  position: relative;
+  font: {
+    family: $font-sans;
+    size: 13px; 
+    weight: 600; 
+  }
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 15px solid $color-brand; 
+
+  background-image: url("../../images/headerbg.png");
+
+  @include media-query(max, medium) {
+    font-size: 11px;
+    padding: 25px 0 0 25px; 
+  }
   
+  @include media-query(max, small) {
+    background-image: none; 
+    height: 75px; 
+    border-bottom: $color-brand solid 2px;
+    padding: 25px 75px 0 25px; 
+    font-size: 12px; 
+  }
+
+  img {
+    width: 130px; 
+    float: left; 
+    
+    @include media-query(max, medium) {
+      width: 110px; 
+      padding-top: 2px; 
+    }
+  
+    @include media-query(max, small) {
+      width: 110px; 
+      padding-top: 0;  
+    }
+  }
+}
+
+.page-header-container {
+    margin: 0 auto; 
+    max-width: 1000px;  
+  }
+
+//homepage header
+.page-header_homepage {
+  position: relative;
+  padding: 25px 0 0 15px;
+  margin: 0;
+  height: 400px;
+  font: {
+    family: $font-sans;
+    weight: 600; 
+  }
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  background: {
+    image: url("../../images/headerbg_homepage.jpg");
+    size: cover; 
+    position: center; 
+  }
+  border-bottom: 15px solid $color-brand; 
+
+  @include media-query(max, medium) {
+    font-size: 11px;
+    padding: 25px 0 0 25px; 
+  }
+  
+  @include media-query(max, small) {
+    background-image: none; 
+    height: 75px; 
+    border-bottom: $color-brand solid 2px;
+    padding: 25px 75px 0 25px; 
+    font-size: 12px; 
+  }
+  
+  img {
+    width: 130px; 
+    float: left; 
+    
+    @include media-query(max, medium) {
+      width: 110px; 
+      padding-top: 2px; 
+    }
+  
+    @include media-query(max, small) {
+      width: 110px; 
+      padding-top: 0;  
+    }
+  }
+  
+  .hero-text-container {
+    max-width: 950px; 
+    padding: 115px 20px 0 20px; 
+    margin: 0 auto; 
+
+    @include media-query(max, medium) {
+      padding-top: 100px; 
+    }
+
+    @include media-query(max, small) {
+      display: none; 
+    }
+    .hero-header {
+      font: {
+        family: $font-sans;
+        weight: 400;
+        size: 32px; 
+      } 
+      text-transform: none; 
+      letter-spacing: 0;
+      color: $white; 
+    }
+
+    .hero-subheader {
+      padding-top: 25px; 
+      font: {
+        family: $font-sans;
+        weight: 400;
+        size: 22px; 
+      } 
+      text-transform: none; 
+      letter-spacing: 0;
+      color: $white;
+    }
+  }
+}
+
+// N A V I G A T I O N
+// navigation for mobile state
+nav {
+  z-index: 1;
+  .handle span {
+    display: none;
+  }
+
+  @include media-query(max, small) {
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 100%; 
+    transition: right 200ms ease-in-out;        
+
+    .handle {
+      width: 80px;
+      height: 75px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      border-left: 2px solid $color-brand;
+      border-bottom: 2px solid $color-brand; 
+      background: $white; 
+
+      &:before {
+        content: "";
+        position: absolute; 
+        top: 18px; 
+        right: 0; 
+        height: 3px; 
+        width: 40px; 
+        border-bottom: 3px solid $color-brand;
+        margin-right: 19px;    
+      }
+
+      &:after {
+        content: "";
+        position: absolute; 
+        top: 25px; 
+        right: 0; 
+        height: 3px; 
+        width: 40px; 
+        border-bottom: 3px solid $color-brand;
+        margin-right: 19px;   
+      }
+
+      span {
+        display: inherit;
+        position: inherit; 
+        top: 45px; 
+        right: 0; 
+        margin-right: 17px;    
+        font: {
+          family: $font-sans; 
+          size: 12px; 
+          weight: 800; 
+        }
+        color: $color-brand;
+        text: {
+          transform: uppercase;
+          align: center; 
+        }
+        letter-spacing: 2px; 
+      
+        &:before {
+          content: "";
+          position: absolute; 
+          bottom: 22px; 
+          right: 0; 
+          height: 3px; 
+          width: 40px; 
+          border-bottom: 3px solid $color-brand;
+          margin-right: 2px;   
+        }
+
+      }
+
+    }
+  
+    &.open {
+      .handle {
+        &:before {
+          margin: 0; 
+          top: 30px;
+          right: 24px; 
+          width: 30px; 
+          border-bottom: 4px solid $color-brand;
+          -webkit-transform:rotate(45deg);
+          -moz-transform:rotate(45deg);
+          transform:rotate(45deg);
+        }
+
+        &:after {
+          margin: 0; 
+          top: 30px;
+          right: 25px; 
+          width: 30px; 
+          border-bottom: 4px solid $color-brand;
+          -webkit-transform:rotate(-45deg);
+          -moz-transform:rotate(-45deg);
+          transform:rotate(-45deg);
+        }
+
+        span {
+          display: none;
+        } 
+      }   
+    } 
+
+    > ul {
+      overflow-y: scroll;
+      max-height: 90vh; 
+    }
+
+    &.open ul {
+      right: calc(265px + 80px - 2px);
+    }
+  }
+
+  ul { 
+    position: relative;
+    float: right;
+    margin-right: 25px;
+    margin-top: 12px; 
+
+    @include media-query(max, small) {
+      float: none; 
+      padding-top: 6.5px; 
+      margin: 0; 
+      background: $white;
+      border: {
+        bottom: 2px solid $color-brand;
+        left: 2px solid $color-brand; 
+        right: 2px solid $color-brand; 
+        radius: 3px;
+      }    
+    }
+
+    li {
+      font-size: 13px;
+      display: inline;
+      position: relative;
+      padding-left: 35px;
+
+      &:last-of-type {
+        border-bottom: 0; 
+      }
+      
+      @include media-query(max, medium) { 
+        font-size: 12px; 
+        padding-left: 15px; 
+        padding-right: 0; 
+      } 
+    
+      @include media-query(max, small) { 
+        display: block;
+        padding: 0;
+      } 
+
+      a {
+        color: $white;
+        text-decoration: none;
+        padding: 20px 0; 
+
+        &:hover {
+          color: $white;
+        }
+      
+        @include media-query(max, small) { 
+          display: block; 
+          padding: 10px 20px 10px 15px;
+          border-bottom: 2px solid lighten($color-light, 30%);
+          color: $color-brand; 
+          font-weight: 600;
+
+          &:hover {
+            color: darken($color-brand, 10%);
+          }     
+        }
+      }
+
+      &:hover ul {
+        display: block;
+        top: 25px; 
+
+        @include media-query(max, small) {
+          top: 0; 
+        } 
+      }
+
+      ul {
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 100%;
+        border: {
+          top: 2px solid lighten($color-light, 30%);
+          left: 2px solid lighten($color-light, 30%);
+          right: 2px solid lighten($color-light, 30%);
+          radius: 3px;
+        }
+        background: $white;
+
+        @include media-query(max, small) {
+          position: relative; 
+          border: 0;
+        }   
+      }
+    }
+  }
+}
+
+nav > ul > li:last-of-type li:last-of-type a {
+  border-bottom: 0;
+}
+
+nav .children {
+  display: none; 
+  width: 215px; 
+  padding: 0; 
+  left: 27%;
+  z-index: 2; 
+
+  @include media-query(max, medium) { 
+    left: 16%; 
+    width: 208px;
+  }
+
+  @include media-query(max, small) { 
+    display: block; 
+    left: 0;
+  }
+
+  li {
+    display: inherit; 
+    padding: inherit; 
+
+    a {
+      display: block; 
+      padding: 10px 13px; 
+      color: $color-light;
+      font-size: 12px; 
+      font-weight: 600; 
+      border-bottom: 2px solid lighten($color-light, 30%);  
+
+      &:hover {
+        color: darken($color-light, 30%);
+      }
+
+      @include media-query(max, medium) {
+        padding: 10px 15px; 
+      }
+
+      @include media-query(max, small) {
+        padding-left: 25px; 
+        width: 246px;
+        font-weight: 600;
+        &:last-of-type {
+          border-bottom: 2px solid lighten($color-light, 30%);  
+        }
+      }
+    }
+  }
+}
+  
+//nav-dropdown-arrow
+nav li.has-children {
+  > a:before {
+    content: "\25bc";
+    display: inline; 
+    position: relative; 
+    margin-right: 5px;
+    top: -2px; 
+    font-size: 90%;
+    
+    @include media-query(max, small) {
+      display: none;
+    } 
+  }
+
+  @include media-query(max, small) {
+    > a:after {
+      content: "\25bc";
+      display: inline; 
+      position: relative; 
+      margin-left: 5px;
+      top: -2px; 
+      font-size: 80%;
+    }
+  }
+  
+  @include media-query(max, small) {
+    > a:hover {
+      color: $color-brand;                
+    }    
+  }
+}
+
+//nav-contact-left
+#nav-align-left {
+  left: -40%;
+  width: 160px;
+  border-bottom: 2px solid lighten($color-light, 30%);  
+
+  @include media-query(max, medium) {
+    left: -85%; 
+  }
+
+  @include media-query(max, small) {
+    left: 0; 
+    width: 246px;
+    border-bottom: 0; 
+  }
 }
