@@ -3,3 +3,220 @@
 	CONTENT (scss/partials/_content.scss)
 ==========================================================================
 */
+
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+header {
+  margin-top: 40px; 
+}
+
+article {
+  margin: 0 auto; 
+  max-width: 700px; 
+  font: {
+    family: $font-serif;
+    size: 16px;
+  }
+
+  @include media-query(max, small) {
+    margin: 0 auto;
+    padding: 0 30px;   
+  }
+}
+
+section {
+  margin-bottom: 35px;
+}
+
+aside.left {
+  display: inline; 
+  float: left;
+  width: 180px;
+  font: {
+    family: $font-serif; 
+    size: 18px; 
+    style: italic; 
+  }
+  color: $color-brand; 
+  line-height: 24px; 
+  border-top: 2px solid $color-brand; 
+  margin: 10px 30px 30px -150px; 
+  padding-top: 5px; 
+
+  @include media-query(max, aside) {
+    margin: 10px 30px 60px 0; 
+  }
+  
+  @include media-query(max, small) {
+    width: 280px; 
+    float: none;
+    display: block;
+    margin: 20px 0 20px 0;   
+  } 
+}
+
+aside.right {
+  display: inline; 
+  float: right;
+  width: 170px;
+  font: {
+    family: $font-serif; 
+    size: 18px; 
+    style: italic; 
+  }
+  color: $color-brand; 
+  line-height: 24px; 
+  border-top: 2px solid $color-brand; 
+  margin: 10px -130px 30px 30px; 
+  padding-top: 5px; 
+
+  @include media-query(max, aside) {
+    margin: 10px 0 60px 30px; 
+  }
+  
+  @include media-query(max, small) {
+    float: none;
+    display: block;
+    width: 320px; 
+    margin: 20px 0 20px 0;   
+  } 
+}
+
+.indigo {
+  color: $color-accent;
+  font-weight: 600; 
+}
+
+//buttons 
+.btn-main {
+  display: inline-block; 
+  background: $color-accent; 
+  padding: 13px 26px; 
+  margin: {
+    top: 10px; 
+    right: 10px; 
+    bottom: 25px; 
+  }
+  border-radius: 3px; 
+  font: {
+    family: $font-sans; 
+    size: 12px; 
+    weight: 600; 
+  }
+  text: {
+    transform: uppercase;
+    align: center;
+    decoration: none;  
+  }
+  letter-spacing: 1.5px; 
+  color: $white; 
+  
+  &:hover {
+    background: lighten($color-accent, 5%);
+    color: $white;
+    cursor: pointer;  
+  }
+}
+ 
+.btn-secondary {
+  display: inline-block; 
+  border: 2px solid $color-accent; 
+  padding: 10px 25px; 
+  margin: {
+    right: 10px; 
+    bottom: 25px; 
+  }
+  border-radius: 3px; 
+  font: {
+    family: $font-sans; 
+    size: 12px; 
+    weight: 600; 
+  }
+  text: {
+    transform: uppercase;
+    align: center; 
+    decoration: none; 
+  }
+  letter-spacing: 1.5px; 
+  color: $color-accent; 
+  
+  &:hover {
+    border: 2px solid lighten($color-accent, 20%);
+    color: lighten($color-accent, 20%);
+    cursor: pointer; 
+  }
+}
+
+.btn-secondary-charter {
+  display: inline-block; 
+  border: 2px solid $color-accent; 
+  padding: 10px 25px; 
+  margin: {
+    right: 10px; 
+    bottom: 25px; 
+  }
+  border-radius: 3px; 
+  font: {
+    family: $font-sans; 
+    size: 12px;
+    weight: 600;  
+  }
+  text: {
+    transform: uppercase;
+    align: center; 
+    decoration: none; 
+  }
+  letter-spacing: 1.5px; 
+  color: $color-accent; 
+  
+  &:hover {
+    border: 2px solid lighten($color-accent, 20%);
+    color: lighten($color-accent, 20%);
+    cursor: pointer; 
+  }
+}
+
+#charter-supporters-container {
+  display:none; 
+
+  &.open {
+    display: inline;
+    margin: 0; 
+    padding: 0;
+    font-size: 14px;   
+  
+    ul {
+      margin-top: 0; 
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3; 
+      list-style-type: none;
+
+      @include media-query(max, medium) {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;     
+      }
+
+      @include media-query(max, small) {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;     
+      }  
+
+      .list-item {
+        display: inline-block;
+        width: 100%; 
+      }
+    }
+  }
+  p {
+    font-size: 14px; 
+  }
+}
+
+
+
