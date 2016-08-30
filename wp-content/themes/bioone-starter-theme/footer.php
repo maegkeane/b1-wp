@@ -27,7 +27,7 @@
         </li>
       </ul>
     </section>
-    <section class="footer-copyright">Copyright &copy; 2016<br/>
+    <section class="footer-copyright">Copyright &copy; <?php echo date('Y'); ?><br/>
       <a href="http://www.bioone.org/page/terms_of_use" target="_blank">Terms of Use</a> | <a href="http://www.bioone.org/page/privacy_policy" target="_blank">Privacy Policy
       </a>
     </section>
