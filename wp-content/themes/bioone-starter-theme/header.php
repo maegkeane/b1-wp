@@ -23,17 +23,17 @@
   <header class="page-header">
     <div class="page-header-container">
       <a href="index.html">
-      <picture>
-        <source 
-          media="(min-width: 741px)"
-          srcset="images/whitelogo.png">
-        <source  
-          media="(max-width: 740px)"
-          srcset="images/logo.png">
-        <img 
-          src="images/whitelogo.png" 
-          alt="BioOne Logo">
-      </picture>
+	      <picture>
+	        <source 
+	          media="(min-width: 741px)"
+	          srcset="images/whitelogo.png">
+	        <source  
+	          media="(max-width: 740px)"
+	          srcset="images/logo.png">
+	        <img 
+	          src="images/whitelogo.png" 
+	          alt="BioOne Logo">
+	      </picture>
       </a>
       
       <nav>
