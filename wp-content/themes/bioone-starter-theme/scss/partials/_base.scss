@@ -48,12 +48,12 @@ address {
  * Customize the background color to match your design.
  */
 ::-moz-selection {
-	background: $black;
+	background: $color-main;
 	text-shadow: none;
 	color: $white;
 }
 ::selection {
-	background: $black;
+	background: $color-main;
 	text-shadow: none;
 	color: $white;
 }

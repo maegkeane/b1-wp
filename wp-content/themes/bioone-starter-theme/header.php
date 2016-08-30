@@ -6,14 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><?php wp_title(' | ', true, 'right'); ?></title>
 		
-		<!-- Trade Gothic from Fonts.com -->
-		<script type="text/javascript" src="http://fast.fonts.net/jsapi/5be809dc-7661-4819-a314-d625cf2e4e8e.js"></script>
-
-		<!-- Playfair from Google -->
-		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-
-
+	
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
 		<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -27,20 +20,72 @@
 	body_class($slug);
 	?>>
 		
-		<div id="wrapper" class="hfeed grid-container">
-		
-			<header id="page-header" role="banner">
-		
-				<section id="branding">
-					<div id="site-title">
-						<h1><a class="fill" href="<?php echo esc_url(home_url('/')); ?>" title="<?php esc_attr_e( get_bloginfo('name'), 'blankslate' ); ?>" rel="home"><?php echo esc_html( get_bloginfo('name') ); ?></a></h1>
-					</div>
-					<div id="site-description"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('description'); ?></a></div>
-				</section>
-				
-				<nav id="main-nav" role="navigation">
-					<a class="handle icon"></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-				</nav>
+  <header class="page-header">
+    <div class="page-header-container">
+      <a href="index.html">
+      <picture>
+        <source 
+          media="(min-width: 741px)"
+          srcset="images/whitelogo.png">
+        <source  
+          media="(max-width: 740px)"
+          srcset="images/logo.png">
+        <img 
+          src="images/whitelogo.png" 
+          alt="BioOne Logo">
+      </picture>
+      </a>
+      
+      <nav>
+        <a class="handle">
+          <span>Menu</span>
+        </a>
+        <ul>
+          <li class="has-children">
+            <a href="#">Who We Are</a>
+            <ul class="children" >
+              <li>
+                <a href="team.html">Team</a>
+              </li>
+              <li>
+                <a href="board.html">Board</a>
+              </li>
+              <li>
+                <a href="corporate-docs.html">Corporate Documents</a>
+              </li>
+            </ul> 
+          </li>
+          <li>
+            <a href="story.html">Our Story</a>
+          </li>   
+          <li class="has-children">
+            <a href="#">Our Work</a>
+            <ul class="children">
+              <li>
+                <a href="publications.html">Publications</a>
+              </li>
+              <li>
+                <a href="initiatives.html">Initiatives &amp; Resources</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="news-events.html">News &amp; Events</a>
+          </li>
+          <li class="has-children">
+            <a href="#">Contact</a>
+            <ul class="children" id="nav-align-left">
+              <li>
+                <a href="hello.html">Say Hello</a>
+              </li>
+              <li>
+                <a href="press.html">For The Press</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 		
 			</header> <!-- header#page-header -->
