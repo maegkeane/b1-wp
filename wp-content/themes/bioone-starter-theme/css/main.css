@@ -579,7 +579,7 @@ ol, ul {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-bottom: 15px solid #6E9934;
-  background-image: url("../../images/headerbg.png"); }
+  background-image: url("../img/headerbg.png"); }
   @media only screen and (max-width: 900px) {
     .page-header {
       font-size: 11px;
@@ -616,7 +616,7 @@ ol, ul {
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  background-image: url("../../images/headerbg_homepage.jpg");
+  background-image: url("../../img/headerbg_homepage.jpg");
   background-size: cover;
   background-position: center;
   border-bottom: 15px solid #6E9934; }

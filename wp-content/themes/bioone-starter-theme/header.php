@@ -26,12 +26,12 @@
 	      <picture>
 	        <source 
 	          media="(min-width: 741px)"
-	          srcset="images/whitelogo.png">
+	          srcset="img/whitelogo.png">
 	        <source  
 	          media="(max-width: 740px)"
-	          srcset="images/logo.png">
+	          srcset="img/logo.png">
 	        <img 
-	          src="images/whitelogo.png" 
+	          src="img/whitelogo.png" 
 	          alt="BioOne Logo">
 	      </picture>
       </a>
@@ -51,51 +51,6 @@
           wp_nav_menu ($defaults); 
 
         ?>
-          
-        <!-- this is redundant with the WP menu. need to figure this out <ul>
-          <li class="has-children">
-            <a href="#">Who We Are</a>
-            <ul class="children" >
-              <li>
-                <a href="team.html">Team</a>
-              </li>
-              <li>
-                <a href="board.html">Board</a>
-              </li>
-              <li>
-                <a href="corporate-docs.html">Corporate Documents</a>
-              </li>
-            </ul> 
-          </li>
-          <li>
-            <a href="story.html">Our Story</a>
-          </li>   
-          <li class="has-children">
-            <a href="#">Our Work</a>
-            <ul class="children">
-              <li>
-                <a href="publications.html">Publications</a>
-              </li>
-              <li>
-                <a href="initiatives.html">Initiatives &amp; Resources</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="news-events.html">News &amp; Events</a>
-          </li>
-          <li class="has-children">
-            <a href="#">Contact</a>
-            <ul class="children" id="nav-align-left">
-              <li>
-                <a href="hello.html">Say Hello</a>
-              </li>
-              <li>
-                <a href="press.html">For The Press</a>
-              </li>
-            </ul>
-          </li>
-        </ul>-->
       </nav>
     </div>
   </header>
