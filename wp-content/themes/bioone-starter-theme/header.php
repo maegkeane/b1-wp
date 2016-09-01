@@ -40,7 +40,19 @@
         <a class="handle">
           <span>Menu</span>
         </a>
-        <ul>
+        
+        <?php 
+
+          $defaults = array (
+            'container' => false,
+            'theme_location' => 'main-menu'
+          );
+
+          wp_nav_menu ($defaults); 
+
+        ?>
+          
+        <!-- this is redundant with the WP menu. need to figure this out <ul>
           <li class="has-children">
             <a href="#">Who We Are</a>
             <ul class="children" >
@@ -83,7 +95,7 @@
               </li>
             </ul>
           </li>
-        </ul>
+        </ul>-->
       </nav>
     </div>
   </header>
