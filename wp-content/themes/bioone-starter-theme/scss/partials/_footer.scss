@@ -54,6 +54,10 @@ footer {
 
     li {
       padding-bottom: 5px;
+
+      a.image {
+        text-decoration: none; 
+      }
       
       img {
         width: 25px;
