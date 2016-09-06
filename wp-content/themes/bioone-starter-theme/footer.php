@@ -2,7 +2,7 @@
   <div id="footer-rule"></div>
   <div class="page-footer_content">
     <section class="flex_footer-logo">
-      <img id="footer-logo" src="images/logo.png" alt="logo" />
+      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="logo" />
     </section>  
     <section>
       <h6>Physical</h6> 
@@ -23,7 +23,15 @@
           <a href="mailto:hello@bioone.org">hello@bioone.org</a>
         </li>
         <li>
-          <a href="https://twitter.com/BioOneNews" target="_blank"><img src="images/twitter.png" alt="twitter" /></a><a href="https://www.facebook.com/bioone.org/" target="_blank"><img src="images/fb.png" alt="facebook" /></a><a href="https://www.linkedin.com/company/bioone-" target="_blank"><img src="images/linkedin.png" alt="linkedin" /></a>
+          <a class="image" href="https://twitter.com/BioOneNews" target="_blank">
+            <img src="<?php bloginfo('template_url'); ?>/img/twitter.png" alt="twitter" />
+          </a>
+          <a class="image" href="https://www.facebook.com/bioone.org/" target="_blank">
+              <img src="<?php bloginfo('template_url'); ?>/img/fb.png" alt="facebook" />
+          </a>
+          <a class="class" href="https://www.linkedin.com/company/bioone-" target="_blank">
+            <img src="<?php bloginfo('template_url'); ?>/img/linkedin.png" alt="linkedin" />
+          </a>
         </li>
       </ul>
     </section>
