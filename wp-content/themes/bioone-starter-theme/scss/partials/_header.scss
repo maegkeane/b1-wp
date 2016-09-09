@@ -249,17 +249,18 @@ nav {
       }   
     } 
 
-    > ul {
+    > ul.menu {
       overflow-y: scroll;
       max-height: 90vh; 
     }
 
-    &.open ul {
+    &.open ul.menu {
       right: calc(265px + 80px - 2px);
     }
   }
 
-  ul { 
+  //primary navigation  
+  ul.menu { 
     position: relative;
     float: right;
     margin-right: 25px;
@@ -278,7 +279,7 @@ nav {
       }    
     }
 
-    li {
+    li.menu-item {
       font-size: 13px;
       display: inline;
       position: relative;
@@ -321,7 +322,7 @@ nav {
         }
       }
 
-      &:hover ul {
+      &:hover ul.sub-menu {
         display: block;
         top: 25px; 
 
@@ -330,85 +331,77 @@ nav {
         } 
       }
 
-      ul {
-        margin: 0;
-        padding: 10px;
-        position: absolute;
-        display: none;
+    nav > ul > li:last-of-type li:last-of-type a {
+      border-bottom: 0;
+    }
+  }
+
+    //secondary navigation 
+    ul.sub-menu {
+      margin: 0;
+      padding: 0; 
+      width: 215px; 
+      position: absolute;
+      display: none;
+      left: 27%;
+      top: 100%;
+      z-index: 2; 
+      border: {
+        top: 2px solid lighten($color-light, 30%);
+        left: 2px solid lighten($color-light, 30%);
+        right: 2px solid lighten($color-light, 30%);
+        radius: 3px;
+      }
+      background: $white;
+
+      @include media-query(max, medium) { 
+        left: 16%; 
+        width: 208px;
+      }
+
+      @include media-query(max, small) { 
+        position: relative; 
+        border: 0; 
+        display: block; 
         left: 0;
-        top: 100%;
-        border: {
-          top: 2px solid lighten($color-light, 30%);
-          left: 2px solid lighten($color-light, 30%);
-          right: 2px solid lighten($color-light, 30%);
-          radius: 3px;
-        }
-        background: $white;
-
-        @include media-query(max, small) {
-          position: relative; 
-          border: 0;
-        }   
-      }
-    }
-  }
-}
-
-nav > ul > li:last-of-type li:last-of-type a {
-  border-bottom: 0;
-}
-
-nav .children {
-  display: none; 
-  width: 215px; 
-  padding: 0; 
-  left: 27%;
-  z-index: 2; 
-
-  @include media-query(max, medium) { 
-    left: 16%; 
-    width: 208px;
-  }
-
-  @include media-query(max, small) { 
-    display: block; 
-    left: 0;
-  }
-
-  li {
-    display: inherit; 
-    padding: inherit; 
-
-    a {
-      display: block; 
-      padding: 10px 13px; 
-      color: $color-light;
-      font-size: 12px; 
-      font-weight: 600; 
-      border-bottom: 2px solid lighten($color-light, 30%);  
-
-      &:hover {
-        color: darken($color-light, 30%);
       }
 
-      @include media-query(max, medium) {
-        padding: 10px 15px; 
-      }
+      li {
+        display: inherit; 
+        padding: inherit; 
 
-      @include media-query(max, small) {
-        padding-left: 25px; 
-        width: 246px;
-        font-weight: 600;
-        &:last-of-type {
+        a {
+          display: block; 
+          padding: 10px 13px; 
+          color: $color-light;
+          font-size: 12px; 
+          font-weight: 600; 
           border-bottom: 2px solid lighten($color-light, 30%);  
+
+          &:hover {
+            color: darken($color-light, 30%);
+          }
+
+          @include media-query(max, medium) {
+            padding: 10px 15px; 
+          }
+
+          @include media-query(max, small) {
+            padding-left: 25px; 
+            width: 246px;
+            font-weight: 600;
+            &:last-of-type {
+              border-bottom: 2px solid lighten($color-light, 30%);  
+            }
+          }
         }
       }
     }
   }
 }
-  
+
 //nav-dropdown-arrow
-nav li.has-children {
+nav li.menu-item-has-children {
   > a:before {
     content: "\25bc";
     display: inline; 
