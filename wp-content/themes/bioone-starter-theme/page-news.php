@@ -20,10 +20,10 @@
   <?php endwhile; endif; ?>
  
   <h2><?php the_field('news_title'); ?></h2>
-
-  <div class="card-container">
-
-    <?php if( have_rows( 'news_grid' ) ) : while ( have_rows( 'news_grid' ) ) : the_row(); 
+   <div class="card-container">
+    
+    <?php if (have_rows('news_grid') ) : while (have_rows ('news_grid') ) : the_row(); 
+    
 
       $news_type = get_sub_field('news_type');
       $news_item_name = get_sub_field('news_item_name');
@@ -36,7 +36,7 @@
     
     <a class="card" href="<?php echo $link; ?>" target="_blank">  
       <h3><?php echo $news_type; ?></h3>
-      <h2><?php echo $news_item_name; ?></h2>
+      <h2><?php echo strip_tags($news_item_name); ?></h2>
       <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
       <p class="card_PDF"><?php echo $pdf_note; ?></p>
     </a>
@@ -44,10 +44,15 @@
     <?php endwhile; endif; wp_reset_postdata(); ?>
 
   </div>
-  <hr>
+
+  <a class="btn-main" href="http://www.bioone.org/action/showNews?type=archive" target="_blank">More News</a>
+  
+  <a id="calendar"><hr></a>
 
   <h2><?php the_field('calendar_title'); ?></h2>
+  
   <h3><?php the_field('calendar_subhead'); ?></h3>
+  
   <img id="map" src="<?php echo $map; ?>" alt="<?php echo $map['alt']; ?>">
 
   <div class="card-container">
