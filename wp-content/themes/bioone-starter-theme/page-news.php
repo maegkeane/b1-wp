@@ -37,6 +37,7 @@
     <a class="card" href="<?php echo $link; ?>" target="_blank">  
       <h3><?php echo $news_type; ?></h3>
       <h2><?php echo strip_tags($news_item_name); ?></h2>
+      <!--need "if"/"while" statement--> 
       <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
       <p class="card_PDF"><?php echo $pdf_note; ?></p>
     </a>
@@ -48,12 +49,17 @@
   <a class="btn-main" href="http://www.bioone.org/action/showNews?type=archive" target="_blank">More News</a>
   
   <a id="calendar"><hr></a>
-
   <h2><?php the_field('calendar_title'); ?></h2>
-  
   <h3><?php the_field('calendar_subhead'); ?></h3>
   
-  <img id="map" src="<?php echo $map; ?>" alt="<?php echo $map['alt']; ?>">
+  
+  <?php
+    $map = get_field('map'); 
+    if (!empty($map) ) : 
+  ?> 
+    <img id="map" src="<?php echo $map['url']; ?>" alt="<?php echo $map['alt']; ?>" />
+  <?php endif; ?>
+
 
   <div class="card-container">
 
