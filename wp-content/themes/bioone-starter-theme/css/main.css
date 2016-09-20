@@ -354,92 +354,6 @@ table {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-html,
-button,
-input,
-select,
-textarea {
-  color: #222; }
-
-body {
-  font-size: 16px; }
-  @media only screen and (max-width: 1024px) {
-    body {
-      font-size: 14px; } }
-
-a, a img, input[type=submit] {
-  -webkit-transition: all 250ms ease-in-out;
-  -moz-transition: all 250ms ease-in-out;
-  -ms-transition: all 250ms ease-in-out;
-  -o-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out; }
-
-address {
-  font-style: normal; }
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-::-moz-selection {
-  background: #000000;
-  text-shadow: none;
-  color: #FFFFFF; }
-
-::selection {
-  background: #000000;
-  text-shadow: none;
-  color: #FFFFFF; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; }
-
-audio,
-canvas,
-img,
-video {
-  vertical-align: middle; }
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-
-input[type=text], textarea, select {
-  padding: 10px 10px 9px 10px; }
-  input[type=text]:focus, textarea:focus, select:focus {
-    outline: 0; }
-
-textarea {
-  resize: vertical; }
-
-.fill {
-  width: 100%;
-  height: 100%;
-  display: block; }
-
-.no-margin {
-  margin: 0; }
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.clearfix:after {
-  clear: both; }
-
-.clearfix {
-  *zoom: 1; }
-
 /*
 ==========================================================================
     TYPOGRAPHY (scss/partials/_typography.scss)
@@ -562,6 +476,19 @@ ol, ul {
 
 .long-list li {
   padding-bottom: 12px; }
+
+hr {
+  display: block;
+  margin: 4rem auto;
+  padding: 0;
+  max-width: 25%;
+  height: 1px;
+  border-top: 3px solid #6E9934;
+  border-radius: none; }
+
+.indigo {
+  color: #3B4991;
+  font-weight: 600; }
 
 /*
 ==========================================================================
@@ -1491,6 +1418,9 @@ aside.right {
   position: relative;
   padding: 20px 40px;
   background-color: #dbdef0; }
+  @media only screen and (max-width: 740px) {
+    .light-purple-bg {
+      padding: 20px; } }
   .light-purple-bg #mc_embed_signup input {
     margin-top: 10px;
     padding: 10px 10px;
@@ -1511,6 +1441,9 @@ aside.right {
     align-items: baseline; }
     .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col1 {
       width: 15%; }
+      @media only screen and (max-width: 740px) {
+        .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col1 {
+          width: 20%; } }
     .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col2 {
       width: 40%; }
   .light-purple-bg #mc_embed_signup .btn-main {
@@ -1525,6 +1458,11 @@ aside.right {
     padding-right: 20px;
     padding-bottom: 13px;
     padding-left: 20px; }
+    @media only screen and (max-width: 740px) {
+      .light-purple-bg #mc_embed_signup .btn-main {
+        margin-top: 10px; } }
+  .light-purple-bg #mc_embed_signup_scroll div div ul li label {
+    padding-left: 10px; }
 
 img.pub-logo {
   display: inline;
