@@ -27,7 +27,11 @@
 
       $bio_photo = get_sub_field('bio_photo');
       $name = get_sub_field('name');
+      $degree = get_sub_field('degree');
       $title = get_sub_field('title');
+      $phone_number = get_sub_field('phone_number');
+      $email = get_sub_field('email');
+      $bio = get_sub_field('bio');
 
     ?>
  
@@ -35,10 +39,22 @@
       <a class="bio-list-item_short-bio-container">
         <img class="bio-list-item_image" src="<?php echo $bio_photo['url']; ?>" alt="<?php echo $bio_photo['alt'] ?>" /> 
         <p class="bio-list-item_info">
-            <?php echo $name; ?> <br />
+          <span class="bio-list-item_name">
+            <?php echo $name; ?>
+          </span> 
+          <?php echo $degree; ?>
+          <br />
           <?php echo $title; ?>
         </p>
       </a>
+      <div class="bio-list-item_modal">
+        <span class="close">X</span>
+        <h2><?php echo $name; ?></h2>
+        <h4><?php echo $title; ?><br />
+        <?php echo $phone_number; ?> <br />
+        <?php echo $email; ?></h4>
+        <?php echo $bio; ?>
+      </div>  
     </div>
 
     <?php endwhile; endif; wp_reset_postdata(); ?>
@@ -53,7 +69,11 @@
 
       $bio_photo = get_sub_field('bio_photo');
       $name = get_sub_field('name');
+      $degree = get_sub_field('degree');
       $title = get_sub_field('title');
+      $phone_number = get_sub_field('phone_number');
+      $email = get_sub_field('email');
+      $bio = get_sub_field('bio');
 
     ?>
  
@@ -61,10 +81,24 @@
       <a class="bio-list-item_short-bio-container">
         <img class="bio-list-item_image" src="<?php echo $bio_photo['url']; ?>" alt="<?php echo $bio_photo['alt'] ?>" /> 
         <p class="bio-list-item_info">
-          <?php echo $name; ?> <br />
+          <span class="bio-list-item_name">
+            <?php echo $name; ?>
+          </span> 
+          <br />
           <?php echo $title; ?>
         </p>
       </a>
+      <div class="bio-list-item_modal">
+        <span class="close">X</span>
+        <h2><?php echo $name; ?></h2>
+        <h4><?php echo $title; ?><br />
+        <?php echo $phone_number; ?> <br />
+          <a href="mailto: <?php echo $email; ?>"> 
+            <?php echo $email; ?>
+          </a>
+        </h4>
+        <?php echo $bio; ?>
+      </div>  
     </div>
 
     <?php endwhile; endif; wp_reset_postdata(); ?>
