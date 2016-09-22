@@ -45,7 +45,7 @@
       <div class="bio-list-item_modal">
         <span class="close">X</span>
         <h2><?php echo $name; ?></h2> 
-        <?php echo $bio ?>
+        <?php echo $bio; ?>
       </div>
     </div>
     <?php endwhile; endif; wp_reset_postdata(); ?>
