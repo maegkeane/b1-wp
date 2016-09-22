@@ -114,7 +114,7 @@
           </div>
           <div class="mc-field-group" style="display: inline">
             <label for="mce-EMAIL">and my email address is</label><br />
-            <input type="email" onfocus="if(this.value == 'Enter your email') {this.value=''}" onblur="if(this.value == ''){this.value ='Enter your email'}" name="EMAIL" class="required email" id="mce-EMAIL">
+            <input type="email" value="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
           </div>
 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true">
