@@ -457,18 +457,40 @@ blockquote {
     margin-bottom: -3rem;
     text-align: center;
     font-size: 4em;
-    color: #7cac3a; }
+    color: #6E9934; }
   blockquote:after {
     content: '\201D';
     display: block;
     text-align: center;
     font-size: 4em;
-    color: #89bf41; }
+    color: #6E9934; }
   blockquote .blockquote-source {
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 26px; }
+
+.cycle-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/previous.png") no-repeat;
+  width: 30%;
+  opacity: 0;
+  z-index: 800;
+  height: 100%;
+  cursor: pointer; }
+
+.cycle-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/next.png") no-repeat;
+  width: 30%;
+  opacity: 0;
+  z-index: 800;
+  height: 100%;
+  cursor: pointer; }
 
 ol, ul {
   padding: 0;
@@ -1199,7 +1221,7 @@ aside.right {
     font-weight: 600; }
   .card-container p.card-pdf {
     font-size: 12px; }
-  .card-container a.card {
+  .card-container a.card.press_release {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1213,10 +1235,28 @@ aside.right {
     flex: 0 1 auto;
     text-decoration: none;
     cursor: pointer; }
-    .card-container a.card img {
+    .card-container a.card.press_release:hover {
+      -webkit-box-shadow: inset 0px 0px 0px 4px #6E9934;
+      -moz-box-shadow: inset 0px 0px 0px 4px #6E9934;
+      box-shadow: inset 0px 0px 0px 4px #6E9934; }
+  .card-container a.card.bioone_news {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    min-height: 220px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #6E9934;
+    transition: box-shadow 250ms linear;
+    flex: 0 1 auto;
+    text-decoration: none;
+    cursor: pointer; }
+    .card-container a.card.bioone_news img {
       margin: 5px 0;
       width: 90px; }
-    .card-container a.card:hover {
+    .card-container a.card.bioone_news:hover {
       -webkit-box-shadow: inset 0px 0px 0px 4px #6E9934;
       -moz-box-shadow: inset 0px 0px 0px 4px #6E9934;
       box-shadow: inset 0px 0px 0px 4px #6E9934; }
@@ -1255,7 +1295,7 @@ aside.right {
         font-weight: 400; }
       .card-container .card_calendar .card_calendar_expand.visible {
         display: inline; }
-  .card-container .image-card {
+  .card-container .card.annual_report {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1267,18 +1307,12 @@ aside.right {
     margin-bottom: 10px;
     flex: 0 1 auto;
     text-decoration: none;
-    cursor: pointer; }
-    .card-container .image-card.ar-2015 {
-      background-image: url("../../images/ar-2015.png");
-      background-size: cover;
-      background-position: center; }
-    .card-container .image-card.ar-2014 {
-      background-image: url("../../images/ar-2014.png");
-      background-size: cover;
-      background-position: center; }
-    .card-container .image-card h3 {
+    cursor: pointer;
+    background-size: cover;
+    background-position: center; }
+    .card-container .card.annual_report h3 {
       color: #FFFFFF; }
-      .card-container .image-card h3:after {
+      .card-container .card.annual_report h3:after {
         content: "";
         position: relative;
         display: block;
@@ -1286,7 +1320,7 @@ aside.right {
         padding-top: 7px;
         border-bottom: 2px solid #FFFFFF;
         width: 30px; }
-    .card-container .image-card h2 {
+    .card-container .card.annual_report h2 {
       color: #FFFFFF;
       font-family: "Tisa Pro", Georgia, serif;
       font-size: 20px;
@@ -1294,7 +1328,7 @@ aside.right {
       line-height: 26px;
       padding: 0 10px;
       margin-top: 15px; }
-    .card-container .image-card p {
+    .card-container .card.annual_report p {
       color: #FFFFFF;
       font-size: 14px;
       font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;

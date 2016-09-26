@@ -34,11 +34,21 @@
 
     ?>
     
-    <a class="card" href="<?php echo $link; ?>" target="_blank">  
+    <a class="card <?php echo $news_type; ?>" 
+      <?php   
+        if (get_sub_field('report_bg') && $news_type === 'annual_report') {
+        ?> 
+        style="background-image: url(<?php echo $report_bg['url']; ?>);"
+      <?php  
+        }       
+      ?>
+      href="<?php echo $link; ?>" target="_blank">  
       <h3><?php echo $news_type; ?></h3>
       <h2><?php echo strip_tags($news_item_name); ?></h2>
-      <!--need "if"/"while" statement--> 
+
+      <?php if (get_sub_field('issue_icon')) : ?>
       <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
+      <?php endif; ?> 
       <p class="card_PDF"><?php echo $pdf_note; ?></p>
     </a>
 
@@ -52,14 +62,12 @@
   <h2><?php the_field('calendar_title'); ?></h2>
   <h3><?php the_field('calendar_subhead'); ?></h3>
   
-
   <?php
     $map = get_field('map'); 
     if (!empty($map) ) : 
   ?> 
     <img id="map" src="<?php echo $map['url']; ?>" alt="<?php echo $map['alt']; ?>" />
   <?php endif; ?>
-
 
   <div class="card-container">
 
@@ -74,13 +82,14 @@
 
     ?>
     
-    <a class="card_calendar" href="<?php echo $link; ?>" target="_blank">  
+    <a class="card_calendar">  
       <h3><?php echo $date; ?></h3>
       <h2><?php echo $event_name; ?></h2>
       <p><?php echo $location; ?></p>
       <div class="card_calendar_expand">
-        <p><?php echo $booth; ?> </p>
-        <p><?php echo $attendees; ?> </p>
+        <p>Who you'll see there: </br>
+        <?php echo $attendees; ?></p>
+        <p><?php echo $booth; ?></br>
       </div>
     </a>
 

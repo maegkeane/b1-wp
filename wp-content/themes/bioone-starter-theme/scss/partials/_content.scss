@@ -505,7 +505,30 @@ aside.right {
     font-size: 12px;
   }
 
-  a.card {
+  a.card.press_release {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    min-height: 220px;  
+    padding: 10px; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid $color-brand;
+    transition: box-shadow 250ms linear;   
+
+    flex: 0 1 auto;
+    text-decoration: none; 
+    cursor: pointer;
+
+    &:hover {
+      -webkit-box-shadow:inset 0px 0px 0px 4px $color-brand;
+      -moz-box-shadow:inset 0px 0px 0px 4px $color-brand;
+      box-shadow:inset 0px 0px 0px 4px $color-brand;
+    }
+  }
+
+  a.card.bioone_news {
     display: flex; 
     align-items: center;
     flex-direction: column;
@@ -585,7 +608,7 @@ aside.right {
     }
   }
 
-  .image-card { 
+  .card.annual_report { 
     display: flex; 
     align-items: center; 
     flex-direction: column;
@@ -599,22 +622,11 @@ aside.right {
     flex: 0 1 auto;
     text-decoration: none; 
     cursor: pointer; 
-
-    &.ar-2015 {
-      background: { 
-        image: url("../../images/ar-2015.png"); 
+    
+    background: { 
         size: cover; 
         position: center;
       }
-    }
-
-    &.ar-2014 {
-      background: { 
-        image: url("../../images/ar-2014.png"); 
-        size: cover; 
-        position: center;
-      }  
-    } 
 
     h3 {
       color: $white; 
@@ -628,7 +640,7 @@ aside.right {
         border-bottom: 2px solid $white; 
         width: 30px; 
       } 
-  }
+    }
 
     h2 {
       color: $white; 
@@ -665,8 +677,9 @@ aside.right {
       -moz-box-shadow:inset 0px 0px 0px 3px $white;
       box-shadow:inset 0px 0px 0px 3px $white; 
     }  
-  }   
-}
+  }
+}   
+
 
 #map {
   max-width: 100%;
