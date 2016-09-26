@@ -165,10 +165,31 @@ blockquote {
   }
 }
 
-.blockquote-next-previous {
-  text-align: center;
-  color: $color-brand;
+.cycle-prev {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  background: url("../img/previous.png") no-repeat; 
+  width: 30%; 
+  opacity: 0; 
+  z-index: 800; 
+  height: 100%; 
+  cursor: pointer; 
 }
+
+.cycle-next {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  background: url("../img/next.png") no-repeat; 
+  width: 30%; 
+  opacity: 0; 
+  z-index: 800; 
+  height: 100%; 
+  cursor: pointer; 
+
+}
+
 
 ol, ul {
   padding: 0;
