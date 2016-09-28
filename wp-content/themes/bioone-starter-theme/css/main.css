@@ -1333,17 +1333,17 @@ aside.right {
       font-size: 14px;
       font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 600; }
-  .card-container .outline {
-    margin-top: 2px;
-    border: 2px solid #FFFFFF;
-    width: 200px;
-    min-height: 200px;
-    transition: box-shadow 250ms linear;
-    flex: 1 1 auto; }
-    .card-container .outline:hover {
-      -webkit-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
-      -moz-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
-      box-shadow: inset 0px 0px 0px 3px #FFFFFF; }
+    .card-container .card.annual_report .outline {
+      margin-top: 2px;
+      border: 2px solid #FFFFFF;
+      width: 200px;
+      min-height: 200px;
+      transition: box-shadow 250ms linear;
+      flex: 1 1 auto; }
+      .card-container .card.annual_report .outline:hover {
+        -webkit-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
+        -moz-box-shadow: inset 0px 0px 0px 3px #FFFFFF;
+        box-shadow: inset 0px 0px 0px 3px #FFFFFF; }
 
 #map {
   max-width: 100%; }

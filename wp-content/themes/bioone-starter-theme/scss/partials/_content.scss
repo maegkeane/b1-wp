@@ -457,6 +457,7 @@ aside.right {
 }
 
 //news & events
+//news & events
 .card-container {
   display: flex;
   text-align: center;
@@ -662,24 +663,24 @@ aside.right {
         weight: 600; 
       }
     }
-  }
 
-  .outline {
-    margin-top: 2px; 
-    border: 2px solid $white; 
-    width: 200px;
-    min-height: 200px;  
-    transition: box-shadow 250ms linear;
-    flex: 1 1 auto;
+    .outline {
+      margin-top: 2px; 
+      border: 2px solid $white; 
+      width: 200px;
+      min-height: 200px;  
+      transition: box-shadow 250ms linear;
+      flex: 1 1 auto;
 
-    &:hover {
-      -webkit-box-shadow:inset 0px 0px 0px 3px $white;
-      -moz-box-shadow:inset 0px 0px 0px 3px $white;
-      box-shadow:inset 0px 0px 0px 3px $white; 
-    }  
+      &:hover {
+        -webkit-box-shadow:inset 0px 0px 0px 3px $white;
+        -moz-box-shadow:inset 0px 0px 0px 3px $white;
+        box-shadow:inset 0px 0px 0px 3px $white; 
+      }  
+    }
   }
 }   
-
+   
 
 #map {
   max-width: 100%;
