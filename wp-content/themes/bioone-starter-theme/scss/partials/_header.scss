@@ -63,7 +63,7 @@
     family: $font-sans;
     weight: 600; 
   }
-  letter-spacing: 1.5px;
+  letter-spacing: 0px;
   text-transform: uppercase;
 
   background: {
@@ -264,7 +264,7 @@ nav {
     position: relative;
     float: right;
     margin-right: 25px;
-    margin-top: 12px; 
+    margin-top: 12px;
 
     @include media-query(max, small) {
       width: 265px; 
@@ -281,7 +281,7 @@ nav {
     }
 
     li.menu-item {
-      font-size: 13px;
+      font-size: 13px; 
       display: inline;
       position: relative;
       padding-left: 35px;
