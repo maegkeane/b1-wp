@@ -38,7 +38,7 @@
   <div class="timeline-flex">
     <div class="timeline-rule"></div>
     <div class="timeline-item-container">
-    
+
     <?php if( have_rows( 'timeline' ) ) : while ( have_rows( 'timeline' ) ) : the_row(); 
 
       $year = get_sub_field('year');
@@ -47,8 +47,8 @@
 
     ?>
       <div class="timeline-item">
-        <h3><p><?php $year; ?></p> </h3>
-        <h2><p><?php $event_name; ?></p> </h2>
+        <h3><?php $year; ?></h3>
+        <h2><?php $event_name; ?></h2>
         <p><?php $event_description; ?></p>
       </div>
 
