@@ -18,6 +18,8 @@
 
   <?php endwhile; endif; ?>
 
+</article>
+
 <!--this is the static code for reference
 
   <h2><?php ?></h2>
@@ -31,9 +33,9 @@
   <h2><?php ?></h2>
   <p><?php ?></p> 
   <hr>
-</article> 
+</article>--> 
 
-<article>-->
+<article>
   <h1>Timeline</h1>
   <div class="timeline-flex">
     <div class="timeline-rule"></div>
@@ -47,9 +49,9 @@
 
     ?>
       <div class="timeline-item">
-        <h3><?php $year; ?></h3>
-        <h2><?php $event_name; ?></h2>
-        <p><?php $event_description; ?></p>
+        <h3><?php echo $year; ?></h3>
+        <h2><?php echo $event_name; ?></h2>
+        <?php echo $event_description; ?>
       </div>
 
     <?php endwhile; endif; wp_reset_postdata(); ?>
