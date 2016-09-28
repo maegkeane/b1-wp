@@ -26,6 +26,7 @@
     
 
       $news_type = get_sub_field('news_type');
+      $news_type_code = strtolower(str_replace(' ', '_', $news_type)); 
       $news_item_name = get_sub_field('news_item_name');
       $link = get_sub_field('link');
       $report_bg = get_sub_field('report_bg');
@@ -34,15 +35,18 @@
 
     ?>
     
-    <a class="card <?php echo $news_type; ?>" 
+    <a class="card <?php echo $news_type_code; ?>"
       <?php   
-        if (get_sub_field('report_bg') && $news_type === 'annual_report') {
+        if (get_sub_field('report_bg') && $news_type_code === 'annual_report') {
         ?> 
         style="background-image: url(<?php echo $report_bg['url']; ?>);"
       <?php  
         }       
       ?>
       href="<?php echo $link; ?>" target="_blank">  
+      <?php if ($news_type_code === 'annual_report') { ?>
+        <div class="outline">
+      <?php } ?>
       <h3><?php echo $news_type; ?></h3>
       <h2><?php echo strip_tags($news_item_name); ?></h2>
 
@@ -50,6 +54,9 @@
       <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
       <?php endif; ?> 
       <p class="card_PDF"><?php echo $pdf_note; ?></p>
+      <?php if ($news_type_code === 'annual_report') { ?>
+        </div>
+      <?php } ?>
     </a>
 
     <?php endwhile; endif; wp_reset_postdata(); ?>
