@@ -7,20 +7,20 @@
 $font-serif: "Tisa Pro", Georgia, serif;
 $font-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-ol,
-ul, 
-aside, 
-{
-  margin: 1rem 0px;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// blockquote,
+// ol,
+// ul, 
+// aside, 
+// {
+//   margin: 1rem 0px;
+// }
 
 p {
   font: {
@@ -51,6 +51,7 @@ h1 {
     weight: 400;
   }
   color: $color-brand;
+  margin-top: 20px; 
 }
 
 h2 { 
