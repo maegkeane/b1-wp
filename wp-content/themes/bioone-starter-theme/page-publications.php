@@ -26,16 +26,16 @@
     $button = get_sub_field('button');
 
   ?>
-    <a href="<?php $link; ?>">
+    <a href="<?php echo $link; ?>">
       <img class="pub-logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"/>
     </a>
 
   <section>
-    <p><?php $description; ?></p>
+    <p><?php echo $description; ?></p>
   </section>
  
   <section>  
-    <a class="btn-main" href="<?php $link; ?>"><?php echo $button; ?></a>
+    <a class="btn-main" href="<?php echo $link; ?>"><?php echo $button; ?></a>
   </section>
 
   <?php endwhile; endif; wp_reset_postdata(); ?>
