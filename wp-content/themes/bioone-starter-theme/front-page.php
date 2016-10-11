@@ -9,7 +9,7 @@
     
     <?php endwhile; endif; ?>  
     
-    <a class="btn-main" href="publications.html">More About Publications</a>
+    <a class="btn-main" href="publications.html">More About Our Products</a>
   </section>
   <hr>
   <section>

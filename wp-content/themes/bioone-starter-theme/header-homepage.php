@@ -56,7 +56,7 @@
     <div class="hero-text-container">
       <div class="hero-header">BioOne is a nonprofit publisher committed to making scientific research more accessible
       </div>
-      <div class="hero-subheader">We curate and support quality research while exploring new models in scholarly publishing 
+      <div class="hero-subheader">We curate research content and support discourse while exploring new models in scientific publishing 
       </div>
     </div>
   </header>
