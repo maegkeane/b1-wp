@@ -31,6 +31,7 @@
       $title = get_sub_field('title');
       $phone_number = get_sub_field('phone_number');
       $email = get_sub_field('email');
+      $linkedin = get_sub_field('linkedin');
       $bio = get_sub_field('bio');
 
     ?>
@@ -47,12 +48,19 @@
           <?php echo $title; ?>
         </p>
       </a>
+      
       <div class="bio-list-item_modal">
         <span class="close">X</span>
         <h2><?php echo $name; ?></h2>
-        <h4><?php echo $title; ?><br />
-        <?php echo $phone_number; ?> <br />
-        <?php echo $email; ?></h4>
+        <h4 class="not-bold">
+          <?php echo $title; ?> <br />
+          <?php echo $phone_number; ?> <br />
+          <a href="<?php echo $email ;?>"><?php echo $email; ?></a> <br />          
+          <a href="<?php echo $linkedin;?>" target="_blank">
+            <img class="bio-icon" src="<?php bloginfo('template_url'); ?>/img/linkedin.png" alt="linkedin" />
+          </a>
+        
+        </h4>
         <?php echo $bio; ?>
       </div>  
     </div>

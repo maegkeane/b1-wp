@@ -364,10 +364,11 @@ p {
   font-size: 16px;
   line-height: 24px;
   margin-top: 0;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 a {
-  color: #3B4991; }
+  color: #3B4991;
+  text-decoration: none; }
   a:hover {
     color: #5c6cbd; }
   a a#calendar {
@@ -1151,6 +1152,12 @@ aside.right {
         .flex-grid .bio-list-item .bio-list-item_modal.visible h4 {
           margin-top: 0;
           margin-bottom: 20px; }
+        .flex-grid .bio-list-item .bio-list-item_modal.visible h4.not-bold {
+          weight: 400; }
+          .flex-grid .bio-list-item .bio-list-item_modal.visible h4.not-bold a {
+            text-decoration: none; }
+          .flex-grid .bio-list-item .bio-list-item_modal.visible h4.not-bold img.bio-icon {
+            width: 25px; }
       .flex-grid .bio-list-item .bio-list-item_modal .close {
         display: block;
         width: 20px;

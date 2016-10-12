@@ -420,6 +420,18 @@ aside.right {
           margin-top: 0;
           margin-bottom: 20px;
         }
+
+        h4.not-bold {
+          weight: 400; 
+        
+          a {
+            text-decoration: none; 
+          }
+          
+          img.bio-icon {
+            width: 25px;
+          }
+        }
       }
 
       .close {
@@ -456,7 +468,7 @@ aside.right {
   overflow: hidden; 
 }
 
-//news & events
+
 //news & events
 .card-container {
   display: flex;
