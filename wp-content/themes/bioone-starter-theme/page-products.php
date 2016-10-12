@@ -1,6 +1,6 @@
 <?php 
 /*
-  Template Name: Publications Page 
+  Template Name: Our Products Page 
 */
 ?> 
 
