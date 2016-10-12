@@ -29,7 +29,7 @@
           <a class="image" href="https://www.facebook.com/bioone.org/" target="_blank">
               <img src="<?php bloginfo('template_url'); ?>/img/fb.png" alt="facebook" />
           </a>
-          <a class="class" href="https://www.linkedin.com/company/bioone-" target="_blank">
+          <a class="image" href="https://www.linkedin.com/company/bioone-" target="_blank">
             <img src="<?php bloginfo('template_url'); ?>/img/linkedin.png" alt="linkedin" />
           </a>
         </li>
