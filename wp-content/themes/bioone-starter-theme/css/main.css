@@ -517,7 +517,7 @@ hr {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-bottom: 15px solid #6E9934;
-  background-image: url("../img/headerbg.png"); }
+  background-image: url("../img/headerbg_test.jpg"); }
   @media only screen and (max-width: 900px) {
     .page-header {
       font-size: 11px;
@@ -554,7 +554,7 @@ hr {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background-image: url("../img/headerbg_homepage.jpg");
+  background-image: url("../img/headerbg-homepage_smaller.jpg");
   background-size: cover;
   background-position: center;
   border-bottom: 15px solid #6E9934; }
@@ -661,7 +661,7 @@ nav {
           nav .handle span:before {
             content: "";
             position: absolute;
-            bottom: 22px;
+            bottom: 25px;
             right: 0;
             height: 3px;
             width: 40px;
@@ -691,7 +691,7 @@ nav {
         overflow-y: scroll;
         max-height: 90vh; }
       nav.open ul.menu {
-        right: calc(265px + 80px - 2px); } }
+        right: calc(240px + 80px - 2px); } }
   nav ul.menu {
     position: relative;
     float: right;
@@ -699,7 +699,7 @@ nav {
     margin-top: 12px; }
     @media only screen and (max-width: 740px) {
       nav ul.menu {
-        width: 265px;
+        width: 240px;
         float: none;
         padding-top: 6.5px;
         margin: 0;

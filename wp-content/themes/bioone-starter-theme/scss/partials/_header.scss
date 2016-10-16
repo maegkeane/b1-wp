@@ -17,7 +17,7 @@
   text-transform: uppercase;
   border-bottom: 15px solid $color-brand; 
 
-  background-image: url("../img/headerbg.png");
+  background-image: url("../img/headerbg_test.jpg");
 
   @include media-query(max, medium) {
     font-size: 11px;
@@ -67,7 +67,7 @@
   text-transform: uppercase;
 
   background: {
-    image: url("../img/headerbg_homepage.jpg");
+    image: url("../img/headerbg-homepage_smaller.jpg");
     size: cover; 
     position: center; 
   }
@@ -207,7 +207,7 @@ nav {
         &:before {
           content: "";
           position: absolute; 
-          bottom: 22px; 
+          bottom: 25px; 
           right: 0; 
           height: 3px; 
           width: 40px; 
@@ -255,7 +255,7 @@ nav {
     }
 
     &.open ul.menu {
-      right: calc(265px + 80px - 2px);
+      right: calc(240px + 80px - 2px);
     }
   }
 
@@ -267,7 +267,7 @@ nav {
     margin-top: 12px;
 
     @include media-query(max, small) {
-      width: 265px; 
+      width: 240px; 
       float: none; 
       padding-top: 6.5px; 
       margin: 0; 
