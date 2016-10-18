@@ -434,52 +434,47 @@ address {
   small {
     font-size: 14px; } }
 
-blockquote {
-  padding: 0;
-  color: #64717D;
-  font-style: italic;
-  font-size: 24px;
-  text-align: center; }
-  blockquote:before {
-    content: '\201C';
-    display: block;
-    margin-bottom: -3rem;
+.cycle-slideshow {
+  height: 450px; }
+  .cycle-slideshow .cycle-pager {
     text-align: center;
-    font-size: 4em;
-    color: #6E9934; }
-  blockquote:after {
-    content: '\201D';
-    display: block;
-    text-align: center;
-    font-size: 4em;
-    color: #6E9934; }
-  blockquote .blockquote-source {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: 26px; }
-
-.cycle-prev {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/previous.png") no-repeat;
-  width: 30%;
-  opacity: 0;
-  z-index: 800;
-  height: 100%;
-  cursor: pointer; }
-
-.cycle-next {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: url("../img/next.png") no-repeat;
-  width: 30%;
-  opacity: 0;
-  z-index: 800;
-  height: 100%;
-  cursor: pointer; }
+    top: -20px;
+    font-size: 2.5em;
+    cursor: pointer; }
+    .cycle-slideshow .cycle-pager .cycle-pager-active {
+      color: #6E9934;
+      width: 100px; }
+    .cycle-slideshow .cycle-pager span {
+      color: #64717D; }
+      .cycle-slideshow .cycle-pager span:hover {
+        color: #6E9934; }
+  .cycle-slideshow blockquote {
+    padding: 0;
+    color: #64717D;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center; }
+    @media only screen and (max-width: 740px) {
+      .cycle-slideshow blockquote {
+        font-size: 18px; } }
+    .cycle-slideshow blockquote:before {
+      content: '\201C';
+      display: block;
+      margin-bottom: -3rem;
+      text-align: center;
+      font-size: 4em;
+      color: #6E9934; }
+    .cycle-slideshow blockquote:after {
+      content: '\201D';
+      display: block;
+      text-align: center;
+      font-size: 4em;
+      color: #6E9934; }
+    .cycle-slideshow blockquote .blockquote-source {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 26px; }
 
 ol, ul {
   padding: 0;

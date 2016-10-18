@@ -153,9 +153,8 @@
     data-cycle-slides="> blockquote"
     > 
     
-    <div class="cycle-prev"></div>
-    <div class="cycle-next"></div>
-    
+    <div class="cycle-pager"></div>
+
     <?php if( have_rows( 'testimonials' ) ) : while ( have_rows( 'testimonials' ) ) : the_row(); 
     
       $blockquote = get_sub_field('blockquote');
@@ -171,7 +170,7 @@
       </blockquote>
     
     <?php endwhile; endif; wp_reset_postdata(); ?>
-    
+
     </div>
   </section>
 </article>
