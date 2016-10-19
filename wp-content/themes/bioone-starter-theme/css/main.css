@@ -435,24 +435,30 @@ address {
     font-size: 14px; } }
 
 .cycle-slideshow {
-  height: 450px; }
+  height: 500px; }
+  @media only screen and (max-width: 740px) {
+    .cycle-slideshow {
+      height: 1000px; } }
   .cycle-slideshow .cycle-pager {
     text-align: center;
-    top: -20px;
     font-size: 2.5em;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 900; }
     .cycle-slideshow .cycle-pager .cycle-pager-active {
       color: #6E9934;
       width: 100px; }
     .cycle-slideshow .cycle-pager span {
-      color: #64717D; }
+      color: #64717D;
+      padding: 5px 10px; }
       .cycle-slideshow .cycle-pager span:hover {
         color: #6E9934; }
   .cycle-slideshow blockquote {
+    display: table-cell;
+    vertical-align: middle;
     padding: 0;
     color: #64717D;
     font-style: italic;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center; }
     @media only screen and (max-width: 740px) {
       .cycle-slideshow blockquote {
@@ -463,13 +469,15 @@ address {
       margin-bottom: -3rem;
       text-align: center;
       font-size: 4em;
-      color: #6E9934; }
+      color: #6E9934;
+      z-index: 500; }
     .cycle-slideshow blockquote:after {
       content: '\201D';
       display: block;
       text-align: center;
       font-size: 4em;
-      color: #6E9934; }
+      color: #6E9934;
+      z-index: 500; }
     .cycle-slideshow blockquote .blockquote-source {
       margin-top: 10px;
       margin-bottom: 0;

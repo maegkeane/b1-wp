@@ -136,33 +136,39 @@ small {
 //testimonials
 
 .cycle-slideshow {
-  height: 450px; 
+  height: 500px; 
 
-  .cycle-pager {
-    text-align: center; 
-    top: -20px; 
-    font-size: 2.5em;
-    cursor: pointer;  
-
-    .cycle-pager-active {
-      color: $color-brand;
-      width: 100px; 
-    }
-
-    span {
-      color: $color-light;
-      &:hover {
-        color: $color-brand; 
-      }  
-    } 
+  @include media-query(max, small) {
+    height: 1000px; 
   }
   
+  .cycle-pager {
+    text-align: center; 
+    font-size: 2.5em;
+    cursor: pointer; 
+    z-index: 900; 
+
+  .cycle-pager-active {
+    color: $color-brand;
+    width: 100px; 
+  }
+  span {
+    color: $color-light;
+    &:hover {
+      color: $color-brand; 
+    }
+    padding: 5px 10px;   
+  }
+}
+  
   blockquote {
+    display: table-cell; 
+    vertical-align: middle; 
     padding: 0; 
     color: $color-light; 
     font: { 
       style: italic; 
-      size: 20px; 
+      size: 24px; 
     }
     text-align: center; 
 
@@ -177,6 +183,7 @@ small {
       text-align: center; 
       font-size: 4em;
       color: $color-brand;
+      z-index: 500; 
     }
 
     &:after {
@@ -185,6 +192,7 @@ small {
       text-align: center; 
       font-size: 4em;
       color: $color-brand;
+      z-index: 500; 
     }
 
     .blockquote-source {

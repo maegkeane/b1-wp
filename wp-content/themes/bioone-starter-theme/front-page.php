@@ -145,16 +145,13 @@
   </section>
   <section> 
     <h1>From the Community</h1>
-    
+
     <div class="cycle-slideshow" 
     data-cycle-fx=scrollHorz
     data-cycle-timeout=0
-    data-cycle-pause-on-hover="true"
     data-cycle-slides="> blockquote"
     > 
-    
     <div class="cycle-pager"></div>
-
     <?php if( have_rows( 'testimonials' ) ) : while ( have_rows( 'testimonials' ) ) : the_row(); 
     
       $blockquote = get_sub_field('blockquote');
