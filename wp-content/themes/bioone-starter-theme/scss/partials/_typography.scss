@@ -136,11 +136,7 @@ small {
 //testimonials
 
 .cycle-slideshow {
-  height: 500px; 
-
-  @include media-query(max, small) {
-    height: 1000px; 
-  }
+  height: 600px; 
   
   .cycle-pager {
     text-align: center; 
