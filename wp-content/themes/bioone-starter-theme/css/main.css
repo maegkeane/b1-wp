@@ -715,6 +715,9 @@ nav {
       padding-left: 35px; }
       nav ul.menu li.menu-item:last-of-type {
         border-bottom: 0; }
+      nav ul.menu li.menu-item:last-of-type ul {
+        left: -40px;
+        width: 160px; }
       @media only screen and (max-width: 900px) {
         nav ul.menu li.menu-item {
           font-size: 12px;
@@ -761,9 +764,6 @@ nav {
       border-right: 2px solid #b6bdc4;
       border-radius: 3px;
       background: #FFFFFF; }
-      nav ul.menu ul.sub-menu:last-of-type {
-        left: -40px;
-        width: 160px; }
       @media only screen and (max-width: 900px) {
         nav ul.menu ul.sub-menu {
           left: 16%;

@@ -290,6 +290,11 @@ nav {
         border-bottom: 0; 
       }
       
+      &:last-of-type ul {
+        left: -40px; 
+        width: 160px; 
+      }
+      
       @include media-query(max, medium) { 
         font-size: 12px; 
         padding-left: 15px; 
@@ -355,11 +360,6 @@ nav {
       }
       background: $white;
 
-      &:last-of-type {
-        left: -40px; 
-        width: 160px; 
-      }
-      
       @include media-query(max, medium) { 
         left: 16%; 
         width: 208px;
