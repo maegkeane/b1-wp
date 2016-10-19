@@ -130,7 +130,7 @@
             </div>
             <div class="mc-field-group" style="display: inline">
               <label for="mce-EMAIL">and my email address is</label><br />
-              <input type="email" value="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
+              <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -147,26 +147,27 @@
     <h1>From the Community</h1>
 
     <div class="cycle-slideshow" 
-    data-cycle-fx=scrollHorz
-    data-cycle-timeout=0
-    data-cycle-slides="> blockquote"
-    > 
-    <div class="cycle-pager"></div>
-    <?php if( have_rows( 'testimonials' ) ) : while ( have_rows( 'testimonials' ) ) : the_row(); 
-    
-      $blockquote = get_sub_field('blockquote');
-      $name = get_sub_field('name');
-      $title = get_sub_field('title');
-      $institution = get_sub_field('institution');
-    
-    ?>
-    
-      <blockquote>       
-        <?php echo strip_tags($blockquote); ?>
-        <p class="blockquote-source">– <?php echo $name; ?> <br /><?php echo $title; ?>, <?php echo $institution; ?></p>
-      </blockquote>
-    
-    <?php endwhile; endif; wp_reset_postdata(); ?>
+      data-cycle-fx=scrollHorz
+      data-cycle-timeout=0
+      data-cycle-slides="> blockquote"
+      > 
+      <div class="cycle-pager"></div>
+      
+      <?php if( have_rows( 'testimonials' ) ) : while ( have_rows( 'testimonials' ) ) : the_row(); 
+      
+        $blockquote = get_sub_field('blockquote');
+        $name = get_sub_field('name');
+        $title = get_sub_field('title');
+        $institution = get_sub_field('institution');
+      
+      ?>
+      
+        <blockquote>       
+          <?php echo strip_tags($blockquote); ?>
+          <p class="blockquote-source">– <?php echo $name; ?> <br /><?php echo $title; ?>, <?php echo $institution; ?></p>
+        </blockquote>
+      
+      <?php endwhile; endif; wp_reset_postdata(); ?>
 
     </div>
   </section>
