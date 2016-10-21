@@ -20,7 +20,7 @@
   <?php endwhile; endif; ?>
  
   <section>
-    <h3>Annual Report</h3><br />
+    <h3>Annual Reports</h3><br />
     <div class="card-container">
       
       <?php if (have_rows('annual_reports_grid') ) : while (have_rows ('annual_reports_grid') ) : the_row(); 
