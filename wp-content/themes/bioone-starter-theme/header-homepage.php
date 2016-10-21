@@ -22,7 +22,7 @@
 		
   <header class="page-header_homepage">
     <div class="page-header-container">
-      <a href="index.html">
+      <a href="<?php bloginfo('url'); ?>">
 	      <picture>
 	        <source 
 	          media="(min-width: 741px)"
