@@ -352,7 +352,8 @@ table {
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  line-height: 1.5; }
 
 /*
 ==========================================================================

@@ -9,4 +9,5 @@
 *, *:after, *:before { // Global box sizing & font smoothing
 	@include border-box;
 	@include font-smoothing;
+  line-height: 1.5; 
 }
