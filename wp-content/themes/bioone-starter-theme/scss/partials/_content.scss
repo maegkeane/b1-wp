@@ -608,11 +608,17 @@ aside.right {
       width: 30px; 
     } 
 
-    .card_calendar_expand {
-       
+    .card_calendar_expand { 
       display: none;
-      p {
-        font-weight: 600;
+      
+      p.who {
+        font-style: italic; 
+        font-weight: 400; 
+      }
+
+      p.where {
+        font-style: none; 
+        font-weight: 400; 
       }
       
       &.visible {
