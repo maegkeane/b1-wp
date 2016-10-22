@@ -4,7 +4,6 @@
 */
 ?> 
 
-
 <?php get_header(); ?>
 
 <article>
@@ -18,22 +17,17 @@
 
   <?php endwhile; endif; ?>
 
-</article>
-
-<!--this is the static code for reference
-
-  <h2><?php ?></h2>
-  <p><?php ?></p>
-  <aside class="left"><?php ?>
+  <p><?php the_field('paragraphs');?></p>
+  <aside class="left">
+    <?php the_field('first_aside');?>
   </aside>
-  <p><?php ?></p>
-  <h2><?php ?></h2>
-  <p><?php ?></p> 
-  <aside class="right"><?php ?>
-  <h2><?php ?></h2>
-  <p><?php ?></p> 
+  <p><?php the_field('more_paragraphs');?></p>
+  <aside class="right">
+    <?php the_field('second_aside');?>
+  </aside>
+  <p><?php the_field('last_paragraphs');?></p> 
   <hr>
-</article>--> 
+</article> 
 
 <article>
   <h1>Timeline</h1>
