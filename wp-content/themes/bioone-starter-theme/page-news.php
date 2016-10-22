@@ -88,15 +88,17 @@
       $attendees = get_sub_field('attendees')
 
     ?>
-    
+
     <a class="card_calendar">  
       <h3><?php echo $date; ?></h3>
       <h2><?php echo $event_name; ?></h2>
       <p><?php echo $location; ?></p>
       <div class="card_calendar_expand">
-        <p>Who you'll see there: </br>
+        <p class="who">Who you'll see there: </br>
         <?php echo $attendees; ?></p>
-        <p><?php echo $booth; ?></br>
+        <?php if (get_sub_field('booth')) : ?>  
+          <p class="where"><?php echo $booth; ?></br>
+        <?php endif; ?>
       </div>
     </a>
 
