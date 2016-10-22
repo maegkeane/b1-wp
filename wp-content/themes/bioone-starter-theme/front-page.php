@@ -86,14 +86,24 @@
 
     ?>
     
+    <?php if (get_sub_field('issue_icon')) : ?>
+      <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
+      <?php endif; ?> 
+      <p class="card_PDF"><?php echo $pdf_note; ?></p>
+      <?php if ($news_type_code === 'annual_report') { ?>
+        </div>
+      <?php } ?>
+
     <a class="card_calendar">  
       <h3><?php echo $date; ?></h3>
       <h2><?php echo $event_name; ?></h2>
       <p><?php echo $location; ?></p>
       <div class="card_calendar_expand">
-        <p>Who you'll see there: </br>
+        <p class="who">Who you'll see there: </br>
         <?php echo $attendees; ?></p>
-        <p><?php echo $booth; ?></br>
+        <?php if (get_sub_field('booth')) : ?>  
+          <p class="where"><?php echo $booth; ?></br>
+        <?php endif; ?>
       </div>
     </a>
 
