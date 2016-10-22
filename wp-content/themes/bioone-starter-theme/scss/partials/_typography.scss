@@ -137,7 +137,8 @@ small {
 
 .cycle-slideshow {
   height: 600px; 
-  
+  position: relative; 
+
   .cycle-pager {
     text-align: center; 
     font-size: 2.5em;
@@ -158,9 +159,12 @@ small {
 }
   
   blockquote {
+    z-index: 500; 
     display: table-cell; 
-    vertical-align: middle; 
     padding: 0; 
+    max-width: 100%; 
+    vertical-align: middle; 
+    pointer-events: none; 
     color: $color-light; 
     font: { 
       style: italic; 
@@ -179,7 +183,6 @@ small {
       text-align: center; 
       font-size: 4em;
       color: $color-brand;
-      z-index: 500; 
     }
 
     &:after {
@@ -188,7 +191,6 @@ small {
       text-align: center; 
       font-size: 4em;
       color: $color-brand;
-      z-index: 500; 
     }
 
     .blockquote-source {

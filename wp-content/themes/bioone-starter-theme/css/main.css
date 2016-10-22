@@ -449,7 +449,8 @@ address {
     font-size: 14px; } }
 
 .cycle-slideshow {
-  height: 600px; }
+  height: 600px;
+  position: relative; }
   .cycle-slideshow .cycle-pager {
     text-align: center;
     font-size: 2.5em;
@@ -464,9 +465,12 @@ address {
       .cycle-slideshow .cycle-pager span:hover {
         color: #6E9934; }
   .cycle-slideshow blockquote {
+    z-index: 500;
     display: table-cell;
-    vertical-align: middle;
     padding: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    pointer-events: none;
     color: #64717D;
     font-style: italic;
     font-size: 24px;
@@ -480,15 +484,13 @@ address {
       margin-bottom: -3rem;
       text-align: center;
       font-size: 4em;
-      color: #6E9934;
-      z-index: 500; }
+      color: #6E9934; }
     .cycle-slideshow blockquote:after {
       content: '\201D';
       display: block;
       text-align: center;
       font-size: 4em;
-      color: #6E9934;
-      z-index: 500; }
+      color: #6E9934; }
     .cycle-slideshow blockquote .blockquote-source {
       margin-top: 10px;
       margin-bottom: 0;
