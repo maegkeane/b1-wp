@@ -391,7 +391,7 @@ a {
 h1 {
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 100;
   color: #6E9934;
   margin-top: 20px; }
 
@@ -1428,11 +1428,11 @@ aside.right {
       padding: 20px; } }
   .light-purple-bg #mc_embed_signup input {
     margin-top: 10px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border: 1px solid #3B4991;
     color: #64717D;
     font-family: "ff-tisa-web-pro", Georgia, serif;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 3px; }
     .light-purple-bg #mc_embed_signup input:focus {
       outline: 0;
@@ -1459,9 +1459,9 @@ aside.right {
     font-weight: 600;
     margin-top: 0;
     margin-right: 0;
-    padding-top: 14px;
+    padding-top: 13px;
     padding-right: 20px;
-    padding-bottom: 13px;
+    padding-bottom: 10px;
     padding-left: 20px; }
     @media only screen and (max-width: 740px) {
       .light-purple-bg #mc_embed_signup .btn-main {
