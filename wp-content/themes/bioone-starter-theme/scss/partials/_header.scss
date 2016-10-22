@@ -8,19 +8,17 @@
   padding: 25px 0 0 15px;
   margin: 0;
   position: relative;
+  background-image: url("../img/headerbg_test.jpg");
+  border-bottom: 15px solid $color-brand; 
   font: {
     family: $font-sans;
-    size: 14px; 
-    weight: 600; 
+    size: 14px;
+    weight: 600;
   }
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-bottom: 15px solid $color-brand; 
-
-  background-image: url("../img/headerbg_test.jpg");
+  letter-spacing: 1.5px;
+  text-transform: uppercase; 
 
   @include media-query(max, medium) {
-    font-size: 11px;
     padding: 25px 0 0 25px; 
   }
   
@@ -29,7 +27,6 @@
     height: 72px; 
     border-bottom: $color-brand solid 2px;
     padding: 25px 75px 0 25px; 
-    font-size: 12px; 
   }
 
   img {
@@ -49,9 +46,9 @@
 }
 
 .page-header-container {
-    margin: 0 auto; 
-    max-width: 1000px;  
-  }
+  margin: 0 auto; 
+  max-width: 1000px;  
+}
 
 //homepage header
 .page-header_homepage {
@@ -59,22 +56,21 @@
   padding: 25px 0 0 15px;
   margin: 0 0 40px 0;
   height: 400px;
-  font: {
-    family: $font-sans;
-    weight: 600; 
-  }
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
   background: {
     image: url("../img/headerbg-homepage_smaller.jpg");
     size: cover; 
     position: center; 
   }
   border-bottom: 15px solid $color-brand; 
+  font: {
+    family: $font-sans;
+    size: 14px;
+    weight: 600;
+  }
+  letter-spacing: 1.5px;
+  text-transform: uppercase; 
 
   @include media-query(max, medium) {
-    font-size: 11px;
     padding: 25px 0 0 25px; 
   }
   
@@ -83,7 +79,6 @@
     height: 72px; 
     border-bottom: $color-brand solid 2px;
     padding: 25px 75px 0 25px; 
-    font-size: 12px; 
   }
   
   img {
@@ -116,8 +111,9 @@
     .hero-header {
       font: {
         family: $font-sans;
-        weight: 400;
+        weight: 600;
         size: 32px; 
+        style: italic;
       } 
       text-transform: none; 
       letter-spacing: 0;
@@ -195,7 +191,7 @@ nav {
         font: {
           family: $font-sans; 
           size: 12px; 
-          weight: 800; 
+          weight: 600; 
         }
         color: $color-brand;
         text: {
@@ -281,7 +277,7 @@ nav {
     }
 
     li.menu-item {
-      font-size: 13px; 
+      font-size: 14px;
       display: inline;
       position: relative;
       padding-left: 35px;
@@ -294,19 +290,19 @@ nav {
         left: -40px; 
         width: 160px; 
         
-          @include media-query(max, small) { 
-            left: 0; 
-            width: 240px;
-      } 
+        @include media-query(max, small) { 
+          left: 0; 
+          width: 240px;
+        } 
       }
       
-      @include media-query(max, medium) { 
-        font-size: 12px; 
+      @include media-query(max, medium) {  
         padding-left: 15px; 
         padding-right: 0; 
       } 
     
       @include media-query(max, small) { 
+        font-size: 12px;
         display: block;
         padding: 0;
       } 
@@ -314,10 +310,10 @@ nav {
       a {
         color: $white;
         text-decoration: none;
-        padding: 20px 0; 
 
         &:hover {
           color: $white;
+          border-bottom: 2px white solid;
         }
       
         @include media-query(max, small) { 
@@ -329,6 +325,7 @@ nav {
 
           &:hover {
             color: darken($color-brand, 10%);
+            border-bottom: none;
           }     
         }
       }

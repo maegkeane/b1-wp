@@ -525,24 +525,22 @@ hr {
   padding: 25px 0 0 15px;
   margin: 0;
   position: relative;
+  background-image: url("../img/headerbg_test.jpg");
+  border-bottom: 15px solid #6E9934;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-bottom: 15px solid #6E9934;
-  background-image: url("../img/headerbg_test.jpg"); }
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
   @media only screen and (max-width: 900px) {
     .page-header {
-      font-size: 11px;
       padding: 25px 0 0 25px; } }
   @media only screen and (max-width: 740px) {
     .page-header {
       background-image: none;
       height: 72px;
       border-bottom: #6E9934 solid 2px;
-      padding: 25px 75px 0 25px;
-      font-size: 12px; } }
+      padding: 25px 75px 0 25px; } }
   .page-header img {
     width: 130px;
     float: left; }
@@ -564,25 +562,24 @@ hr {
   padding: 25px 0 0 15px;
   margin: 0 0 40px 0;
   height: 400px;
-  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   background-image: url("../img/headerbg-homepage_smaller.jpg");
   background-size: cover;
   background-position: center;
-  border-bottom: 15px solid #6E9934; }
+  border-bottom: 15px solid #6E9934;
+  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
   @media only screen and (max-width: 900px) {
     .page-header_homepage {
-      font-size: 11px;
       padding: 25px 0 0 25px; } }
   @media only screen and (max-width: 740px) {
     .page-header_homepage {
       background-image: none;
       height: 72px;
       border-bottom: #6E9934 solid 2px;
-      padding: 25px 75px 0 25px;
-      font-size: 12px; } }
+      padding: 25px 75px 0 25px; } }
   .page-header_homepage img {
     width: 130px;
     float: left; }
@@ -606,8 +603,9 @@ hr {
         display: none; } }
     .page-header_homepage .hero-text-container .hero-header {
       font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 32px;
+      font-style: italic;
       text-transform: none;
       letter-spacing: 0;
       color: #FFFFFF; }
@@ -667,7 +665,7 @@ nav {
           margin-right: 17px;
           font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 12px;
-          font-weight: 800;
+          font-weight: 600;
           color: #6E9934;
           text-transform: uppercase;
           text-align: center;
@@ -723,7 +721,7 @@ nav {
         border-right: 2px solid #6E9934;
         border-radius: 3px; } }
     nav ul.menu li.menu-item {
-      font-size: 13px;
+      font-size: 14px;
       display: inline;
       position: relative;
       padding-left: 35px; }
@@ -738,19 +736,19 @@ nav {
             width: 240px; } }
       @media only screen and (max-width: 900px) {
         nav ul.menu li.menu-item {
-          font-size: 12px;
           padding-left: 15px;
           padding-right: 0; } }
       @media only screen and (max-width: 740px) {
         nav ul.menu li.menu-item {
+          font-size: 12px;
           display: block;
           padding: 0; } }
       nav ul.menu li.menu-item a {
         color: #FFFFFF;
-        text-decoration: none;
-        padding: 20px 0; }
+        text-decoration: none; }
         nav ul.menu li.menu-item a:hover {
-          color: #FFFFFF; }
+          color: #FFFFFF;
+          border-bottom: 2px white solid; }
         @media only screen and (max-width: 740px) {
           nav ul.menu li.menu-item a {
             display: block;
@@ -759,7 +757,8 @@ nav {
             color: #6E9934;
             font-weight: 600; }
             nav ul.menu li.menu-item a:hover {
-              color: #537327; } }
+              color: #537327;
+              border-bottom: none; } }
       nav ul.menu li.menu-item:hover ul.sub-menu {
         display: block;
         top: 25px; }
