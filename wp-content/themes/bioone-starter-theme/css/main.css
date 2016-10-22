@@ -416,7 +416,7 @@ h4 {
   margin: 0;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 100;
   line-height: 24px;
   color: #000000; }
 
@@ -511,7 +511,7 @@ hr {
   max-width: 25%;
   height: 1px;
   border-top: 3px solid #6E9934;
-  border-radius: none; }
+  border-radius: 0; }
 
 .indigo {
   color: #3B4991;
@@ -830,13 +830,13 @@ aside.left {
   display: inline;
   float: left;
   width: 180px;
-  font-family: "ff-tisa-web-pro", Georgia, serif;
+  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: italic;
   color: #6E9934;
   line-height: 24px;
   border-top: 2px solid #6E9934;
-  margin: 10px 30px 30px -150px;
+  margin: 10px 30px 0 -150px;
   padding-top: 5px; }
   @media only screen and (max-width: 1020px) {
     aside.left {
@@ -852,7 +852,7 @@ aside.right {
   display: inline;
   float: right;
   width: 170px;
-  font-family: "ff-tisa-web-pro", Georgia, serif;
+  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: italic;
   color: #6E9934;
@@ -1091,10 +1091,15 @@ aside.right {
     .flex-grid .bio-list-item p.bio-list-item_info {
       width: 170px;
       margin-top: 10px;
-      font-size: 14px;
-      line-height: 20px; }
+      font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px; }
       .flex-grid .bio-list-item p.bio-list-item_info span.bio-list-item_name {
+        font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
         font-weight: 600; }
+      .flex-grid .bio-list-item p.bio-list-item_info a {
+        font-family: "ff-tisa-web-pro", Georgia, serif;
+        weight: 100; }
     .flex-grid .bio-list-item .bio-list-item_modal {
       display: none;
       padding: 40px;
@@ -1380,7 +1385,7 @@ aside.right {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 2600px;
+  height: 2800px;
   justify-content: center;
   margin-bottom: 100px; }
   @media only screen and (max-width: 740px) {
