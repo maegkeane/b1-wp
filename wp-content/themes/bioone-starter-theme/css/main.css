@@ -611,6 +611,7 @@ hr {
       color: #FFFFFF; }
     .page-header_homepage .hero-text-container .hero-subheader {
       padding-top: 25px;
+      max-width: 800px;
       font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 400;
       font-size: 22px;
@@ -757,23 +758,25 @@ nav {
             color: #6E9934;
             font-weight: 600; }
             nav ul.menu li.menu-item a:hover {
-              color: #537327;
-              border-bottom: none; } }
-      nav ul.menu li.menu-item:hover ul.sub-menu {
-        display: block;
-        top: 25px; }
-        @media only screen and (max-width: 740px) {
-          nav ul.menu li.menu-item:hover ul.sub-menu {
-            top: 0; } }
-      nav ul.menu li.menu-item nav > ul > li:last-of-type li:last-of-type a {
-        border-bottom: 0; }
-    nav ul.menu ul.sub-menu {
+              color: #537327; }
+            nav ul.menu li.menu-item a a:last-of-type {
+              border-bottom: 0px; } }
+        nav ul.menu li.menu-item a:hover ul.sub-menu {
+          display: block;
+          top: 25px; }
+          @media only screen and (max-width: 740px) {
+            nav ul.menu li.menu-item a:hover ul.sub-menu {
+              top: 0; } }
+    nav ul.menu nav > ul > li:last-of-type li:last-of-type a {
+      border-bottom: 0; }
+  @media only screen and (max-width: 740px) {
+    nav ul.sub-menu {
       margin: 0;
-      padding: 0;
-      width: 215px;
-      position: absolute;
-      display: none;
-      left: 27%;
+      padding: 0 0 0 25px;
+      width: 246px;
+      position: relative;
+      display: block;
+      left: 0;
       top: 100%;
       z-index: 2;
       border-top: 2px solid #b6bdc4;
@@ -781,38 +784,20 @@ nav {
       border-right: 2px solid #b6bdc4;
       border-radius: 3px;
       background: #FFFFFF; }
-      @media only screen and (max-width: 900px) {
-        nav ul.menu ul.sub-menu {
-          left: 16%;
-          width: 208px; } }
-      @media only screen and (max-width: 740px) {
-        nav ul.menu ul.sub-menu {
-          position: relative;
-          border: 0;
-          display: block;
-          left: 0; } }
-      nav ul.menu ul.sub-menu li {
+      nav ul.sub-menu li {
         display: inherit;
         padding: inherit; }
-        nav ul.menu ul.sub-menu li a {
+        nav ul.sub-menu li a {
           display: block;
           padding: 10px 13px;
           color: #64717D;
           font-size: 12px;
           font-weight: 600;
           border-bottom: 2px solid #b6bdc4; }
-          nav ul.menu ul.sub-menu li a:hover {
+          nav ul.sub-menu li a:hover {
             color: #202428; }
-          @media only screen and (max-width: 900px) {
-            nav ul.menu ul.sub-menu li a {
-              padding: 10px 15px; } }
-          @media only screen and (max-width: 740px) {
-            nav ul.menu ul.sub-menu li a {
-              padding-left: 25px;
-              width: 246px;
-              font-weight: 600; }
-              nav ul.menu ul.sub-menu li a:last-of-type {
-                border-bottom: 2px solid #b6bdc4; } }
+          nav ul.sub-menu li a:last-of-type {
+            border-bottom: 2px solid #b6bdc4; } }
 
 /*
 ==========================================================================
