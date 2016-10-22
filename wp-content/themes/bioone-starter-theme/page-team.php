@@ -42,10 +42,11 @@
         <p class="bio-list-item_info">
           <span class="bio-list-item_name">
             <?php echo $name; ?>
-          </span> 
-          <?php echo $degree; ?>
+          </span>
           <br />
           <?php echo $title; ?>
+          <br />
+          <a class="bio-list-item_email" href="mailto:<?php echo $email ;?>"><?php echo $email; ?></a>          
         </p>
       </a>
       
@@ -75,7 +76,6 @@
     
     <?php if( have_rows( 'bio_grid_sales' ) ) : while ( have_rows( 'bio_grid_sales' ) ) : the_row(); 
 
-      $bio_photo = get_sub_field('bio_photo');
       $name = get_sub_field('name');
       $degree = get_sub_field('degree');
       $title = get_sub_field('title');
@@ -87,7 +87,6 @@
  
     <div class="bio-list-item">
       <a class="bio-list-item_short-bio-container">
-        <img class="bio-list-item_image" src="<?php echo $bio_photo['url']; ?>" alt="<?php echo $bio_photo['alt'] ?>" /> 
         <p class="bio-list-item_info">
           <span class="bio-list-item_name">
             <?php echo $name; ?>
@@ -101,7 +100,7 @@
         <h2><?php echo $name; ?></h2>
         <h4><?php echo $title; ?><br />
         <?php echo $phone_number; ?> <br />
-          <a href="mailto: <?php echo $email; ?>"> 
+          <a href="mailto:<?php echo $email; ?>"> 
             <?php echo $email; ?>
           </a>
         </h4>
