@@ -87,7 +87,7 @@ h4 {
   font: {
     family: $font-sans; 
     size: 16px;
-    weight: 600; 
+    weight: 100; 
   }
   line-height: 24px; 
   color: $color-main; 
@@ -219,8 +219,10 @@ hr {
   padding: 0; 
   max-width: 25%; 
   height: 1px; 
-  border-top: 3px solid $color-brand;
-  border-radius: none;  
+  border: {
+    top: 3px solid $color-brand;
+    radius: 0;  
+  } 
 }
 
 .indigo {
