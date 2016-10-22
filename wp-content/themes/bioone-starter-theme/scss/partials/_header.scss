@@ -26,7 +26,7 @@
   
   @include media-query(max, small) {
     background-image: none; 
-    height: 75px; 
+    height: 72px; 
     border-bottom: $color-brand solid 2px;
     padding: 25px 75px 0 25px; 
     font-size: 12px; 
@@ -80,7 +80,7 @@
   
   @include media-query(max, small) {
     background-image: none; 
-    height: 75px; 
+    height: 72px; 
     border-bottom: $color-brand solid 2px;
     padding: 25px 75px 0 25px; 
     font-size: 12px; 
@@ -155,7 +155,7 @@ nav {
 
     .handle {
       width: 80px;
-      height: 75px;
+      height: 72px;
       position: fixed;
       top: 0;
       right: 0;
@@ -189,7 +189,7 @@ nav {
       span {
         display: inherit;
         position: inherit; 
-        top: 45px; 
+        top: 40px; 
         right: 0; 
         margin-right: 17px;    
         font: {
@@ -202,12 +202,12 @@ nav {
           transform: uppercase;
           align: center; 
         }
-        letter-spacing: 2px; 
+        letter-spacing: 1.5px; 
       
         &:before {
           content: "";
           position: absolute; 
-          bottom: 25px; 
+          bottom: 23px; 
           right: 0; 
           height: 3px; 
           width: 40px; 
@@ -293,6 +293,11 @@ nav {
       &:last-of-type ul {
         left: -40px; 
         width: 160px; 
+        
+          @include media-query(max, small) { 
+            left: 0; 
+            width: 240px;
+      } 
       }
       
       @include media-query(max, medium) { 
