@@ -360,6 +360,19 @@ table {
     TYPOGRAPHY (scss/partials/_typography.scss)
 ==========================================================================
 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+aside {
+  margin: 1rem 0px; }
+
 p {
   font-family: "ff-tisa-web-pro", Georgia, serif;
   font-size: 16px;
@@ -526,7 +539,7 @@ hr {
   @media only screen and (max-width: 740px) {
     .page-header {
       background-image: none;
-      height: 75px;
+      height: 72px;
       border-bottom: #6E9934 solid 2px;
       padding: 25px 75px 0 25px;
       font-size: 12px; } }
@@ -566,7 +579,7 @@ hr {
   @media only screen and (max-width: 740px) {
     .page-header_homepage {
       background-image: none;
-      height: 75px;
+      height: 72px;
       border-bottom: #6E9934 solid 2px;
       padding: 25px 75px 0 25px;
       font-size: 12px; } }
@@ -620,7 +633,7 @@ nav {
       transition: right 200ms ease-in-out; }
       nav .handle {
         width: 80px;
-        height: 75px;
+        height: 72px;
         position: fixed;
         top: 0;
         right: 0;
@@ -649,7 +662,7 @@ nav {
         nav .handle span {
           display: inherit;
           position: inherit;
-          top: 45px;
+          top: 40px;
           right: 0;
           margin-right: 17px;
           font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -658,11 +671,11 @@ nav {
           color: #6E9934;
           text-transform: uppercase;
           text-align: center;
-          letter-spacing: 2px; }
+          letter-spacing: 1.5px; }
           nav .handle span:before {
             content: "";
             position: absolute;
-            bottom: 25px;
+            bottom: 23px;
             right: 0;
             height: 3px;
             width: 40px;
@@ -719,6 +732,10 @@ nav {
       nav ul.menu li.menu-item:last-of-type ul {
         left: -40px;
         width: 160px; }
+        @media only screen and (max-width: 740px) {
+          nav ul.menu li.menu-item:last-of-type ul {
+            left: 0;
+            width: 240px; } }
       @media only screen and (max-width: 900px) {
         nav ul.menu li.menu-item {
           font-size: 12px;
@@ -1290,8 +1307,12 @@ aside.right {
       width: 30px; }
     .card-container .card_calendar .card_calendar_expand {
       display: none; }
-      .card-container .card_calendar .card_calendar_expand p {
-        font-weight: 600; }
+      .card-container .card_calendar .card_calendar_expand p.who {
+        font-style: italic;
+        font-weight: 400; }
+      .card-container .card_calendar .card_calendar_expand p.where {
+        font-style: none;
+        font-weight: 400; }
       .card-container .card_calendar .card_calendar_expand.visible {
         display: inline; }
   .card-container .card.annual_report {
