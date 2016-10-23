@@ -489,8 +489,11 @@ aside.right {
   h3 {
     position: relative; 
     text-transform: uppercase;
-    font-family: $font-sans;
-    font-size: 13px;  
+    font: {
+      family: $font-sans;
+      size: 13px; 
+      weight: 600;
+    } 
     letter-spacing: 1px; 
 
     &:after {
@@ -521,7 +524,7 @@ aside.right {
     font: {
       size: 14px; 
       family: $font-sans;
-      weight: 600;
+      weight: 100;
     }  
   }
 
