@@ -448,55 +448,6 @@ address {
   small {
     font-size: 14px; } }
 
-.cycle-slideshow {
-  height: 600px;
-  position: relative; }
-  .cycle-slideshow .cycle-pager {
-    text-align: center;
-    font-size: 2.5em;
-    cursor: pointer;
-    z-index: 900; }
-    .cycle-slideshow .cycle-pager .cycle-pager-active {
-      color: #6E9934;
-      width: 100px; }
-    .cycle-slideshow .cycle-pager span {
-      color: #64717D;
-      padding: 5px 10px; }
-      .cycle-slideshow .cycle-pager span:hover {
-        color: #6E9934; }
-  .cycle-slideshow blockquote {
-    z-index: 500;
-    display: table-cell;
-    padding: 0;
-    max-width: 100%;
-    vertical-align: middle;
-    pointer-events: none;
-    color: #64717D;
-    font-style: italic;
-    font-size: 24px;
-    text-align: center; }
-    @media only screen and (max-width: 740px) {
-      .cycle-slideshow blockquote {
-        font-size: 18px; } }
-    .cycle-slideshow blockquote:before {
-      content: '\201C';
-      display: block;
-      margin-bottom: -3rem;
-      text-align: center;
-      font-size: 4em;
-      color: #6E9934; }
-    .cycle-slideshow blockquote:after {
-      content: '\201D';
-      display: block;
-      text-align: center;
-      font-size: 4em;
-      color: #6E9934; }
-    .cycle-slideshow blockquote .blockquote-source {
-      margin-top: 10px;
-      margin-bottom: 0;
-      font-size: 16px;
-      line-height: 26px; }
-
 ol, ul {
   padding: 0;
   list-style-type: none; }
@@ -582,15 +533,15 @@ hr {
       height: 72px;
       border-bottom: #6E9934 solid 2px;
       padding: 25px 75px 0 25px; } }
-  .page-header_homepage img {
+  .page-header_homepage .header-logo {
     width: 130px;
     float: left; }
     @media only screen and (max-width: 900px) {
-      .page-header_homepage img {
+      .page-header_homepage .header-logo {
         width: 110px;
         padding-top: 2px; } }
     @media only screen and (max-width: 740px) {
-      .page-header_homepage img {
+      .page-header_homepage .header-logo {
         width: 110px;
         padding-top: 0; } }
   .page-header_homepage .hero-text-container {
@@ -1489,6 +1440,55 @@ img.pub-logo {
   display: block;
   margin: 0 auto;
   max-width: 500px; }
+
+.cycle-slideshow {
+  height: 600px;
+  position: relative; }
+  .cycle-slideshow .cycle-pager {
+    text-align: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    z-index: 900; }
+    .cycle-slideshow .cycle-pager .cycle-pager-active {
+      color: #6E9934;
+      width: 100px; }
+    .cycle-slideshow .cycle-pager span {
+      color: #64717D;
+      padding: 5px 10px; }
+      .cycle-slideshow .cycle-pager span:hover {
+        color: #6E9934; }
+  .cycle-slideshow blockquote {
+    z-index: 500;
+    display: table-cell;
+    padding: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    pointer-events: none;
+    color: #64717D;
+    font-style: italic;
+    font-size: 24px;
+    text-align: center; }
+    @media only screen and (max-width: 740px) {
+      .cycle-slideshow blockquote {
+        font-size: 18px; } }
+    .cycle-slideshow blockquote:before {
+      content: '\201C';
+      display: block;
+      margin-bottom: -3rem;
+      text-align: center;
+      font-size: 4em;
+      color: #6E9934; }
+    .cycle-slideshow blockquote:after {
+      content: '\201D';
+      display: block;
+      text-align: center;
+      font-size: 4em;
+      color: #6E9934; }
+    .cycle-slideshow blockquote .blockquote-source {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 26px; }
 
 /*
 ==========================================================================

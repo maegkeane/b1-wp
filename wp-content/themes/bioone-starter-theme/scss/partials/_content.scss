@@ -936,5 +936,72 @@ img.pub-logo {
   max-width: 500px; 
 }
 
+//testimonials
 
+.cycle-slideshow {
+  height: 600px; 
+  position: relative; 
+
+  .cycle-pager {
+    text-align: center; 
+    font-size: 2.5em;
+    cursor: pointer; 
+    z-index: 900; 
+
+  .cycle-pager-active {
+    color: $color-brand;
+    width: 100px; 
+  }
+  span {
+    color: $color-light;
+    &:hover {
+      color: $color-brand; 
+    }
+    padding: 5px 10px;   
+  }
+}
+  
+  blockquote {
+    z-index: 500; 
+    display: table-cell; 
+    padding: 0; 
+    max-width: 100%; 
+    vertical-align: middle; 
+    pointer-events: none; 
+    color: $color-light; 
+    font: { 
+      style: italic; 
+      size: 24px; 
+    }
+    text-align: center; 
+
+    @include media-query(max, small) {
+      font-size: 18px;
+    }
+    
+    &:before {
+      content: '\201C'; // "
+      display: block; 
+      margin-bottom: -3rem; 
+      text-align: center; 
+      font-size: 4em;
+      color: $color-brand;
+    }
+
+    &:after {
+      content: '\201D'; // "
+      display: block; 
+      text-align: center; 
+      font-size: 4em;
+      color: $color-brand;
+    }
+
+    .blockquote-source {
+      margin-top: 10px;
+      margin-bottom: 0;  
+      font-size: 16px; 
+      line-height: 26px; 
+    }
+  }
+}
 
