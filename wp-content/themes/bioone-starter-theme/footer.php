@@ -24,13 +24,13 @@
         </li>
         <li>
           <a class="image" href="https://twitter.com/BioOneNews" target="_blank">
-            <img src="<?php bloginfo('template_url'); ?>/img/twitter.png" alt="twitter" />
+            <img src="<?php bloginfo('template_url'); ?>/img/social/twitter.png" alt="twitter" />
           </a>
           <a class="image" href="https://www.facebook.com/bioone.org/" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/img/fb.png" alt="facebook" />
+              <img src="<?php bloginfo('template_url'); ?>/img/social/fb.png" alt="facebook" />
           </a>
           <a class="image" href="https://www.linkedin.com/company/bioone-" target="_blank">
-            <img src="<?php bloginfo('template_url'); ?>/img/linkedin.png" alt="linkedin" />
+            <img src="<?php bloginfo('template_url'); ?>/img/social/linkedin.png" alt="linkedin" />
           </a>
         </li>
       </ul>

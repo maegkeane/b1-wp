@@ -527,7 +527,7 @@ hr {
   padding: 25px 0 0 15px;
   margin: 0;
   position: relative;
-  background-image: url("../img/headerbg_test.jpg");
+  background-image: url("../img/headerbg.jpg");
   border-bottom: 15px solid #6E9934;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -564,7 +564,7 @@ hr {
   padding: 25px 0 0 15px;
   margin: 0 0 40px 0;
   height: 400px;
-  background-image: url("../img/headerbg-homepage_smaller.jpg");
+  background-image: url("../img/bgs/headerbg-homepage.jpg");
   background-size: cover;
   background-position: center;
   border-bottom: 15px solid #6E9934;
@@ -1169,6 +1169,7 @@ aside.right {
     text-transform: uppercase;
     font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
+    font-weight: 600;
     letter-spacing: 1px; }
     .card-container h3:after {
       content: "";
@@ -1190,7 +1191,7 @@ aside.right {
     color: #6E9934;
     font-size: 14px;
     font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600; }
+    font-weight: 100; }
   .card-container p.card-pdf {
     font-size: 12px; }
   .card-container a.card.press_release {
