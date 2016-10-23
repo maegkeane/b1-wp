@@ -21,11 +21,11 @@
 	$slug = get_post( $post )->post_name;
 	body_class($slug);
 	?>>
-		
+      
   <header class="page-header_homepage">
     <div class="page-header-container">
       <a href="<?php bloginfo('url'); ?>">
-	      <picture>
+	      <picture class="header-logo">
 	        <source 
 	          media="(min-width: 741px)"
 	          srcset="<?php bloginfo('template_url'); ?>/img/logos/whitelogo.png">
@@ -33,6 +33,7 @@
 	          media="(max-width: 740px)"
 	          srcset="<?php bloginfo('template_url'); ?>/img/logos/logo.png">
 	        <img 
+            class="header-logo"
 	          src="<?php bloginfo('template_url'); ?>/img/logos/whitelogo.png"
 	          alt="BioOne Logo">
 	      </picture>
