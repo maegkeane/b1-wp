@@ -1,6 +1,6 @@
 <?php 
 /*
-  Template Name: Team Page 
+  Template Name: Who We Are Page 
 */
 ?> 
 
@@ -18,7 +18,11 @@
     <?php the_content(); ?>
 
   <?php endwhile; endif; ?>
- 
+  
+  <hr>
+  
+  <h2><?php the_field('team_header'); ?></h2>
+  <p><?php the_field('team_description'); ?></p>
   <h3><?php the_field('hq_staff_header'); ?></h3>
 
   <div class="flex-grid">
@@ -56,9 +60,9 @@
         <h4 class="not-bold">
           <?php echo $title; ?> <br />
           <?php echo $phone_number; ?> <br />
-          <a href="<?php echo $email ;?>"><?php echo $email; ?></a> <br />          
-          <a href="<?php echo $linkedin;?>" target="_blank">
-            <img class="bio-icon" src="<?php bloginfo('template_url'); ?>/img/linkedin.png" alt="linkedin" />
+          <a href="<?php echo $email; ?>"><?php echo $email; ?></a> <br />          
+          <a href="<?php echo $linkedin; ?>" target="_blank">
+            <img class="bio-icon" src="<?php bloginfo('template_url'); ?>/img/social/linkedin.png" alt="linkedin" />
           </a>
         
         </h4>
