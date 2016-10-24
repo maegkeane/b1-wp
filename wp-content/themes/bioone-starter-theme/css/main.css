@@ -788,24 +788,26 @@ section {
 aside.left {
   display: inline;
   float: left;
-  width: 180px;
+  width: 190px;
+  text-align: right;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: italic;
   color: #6E9934;
   line-height: 24px;
   border-top: 2px solid #6E9934;
-  margin: 10px 30px 0 -150px;
+  margin: 10px 30px 9px -90px;
   padding-top: 5px; }
-  @media only screen and (max-width: 1020px) {
+  @media only screen and (max-width: 900px) {
     aside.left {
       margin: 10px 30px 60px 0; } }
   @media only screen and (max-width: 740px) {
     aside.left {
-      width: 280px;
+      width: 180px;
       float: none;
       display: block;
-      margin: 20px 0 20px 0; } }
+      margin: 20px 0 20px 0;
+      text-align: left; } }
 
 aside.right {
   display: inline;
@@ -819,14 +821,14 @@ aside.right {
   border-top: 2px solid #6E9934;
   margin: 10px -130px 30px 30px;
   padding-top: 5px; }
-  @media only screen and (max-width: 1020px) {
+  @media only screen and (max-width: 900px) {
     aside.right {
       margin: 10px 0 60px 30px; } }
   @media only screen and (max-width: 740px) {
     aside.right {
       float: none;
       display: block;
-      width: 320px;
+      width: 230px;
       margin: 20px 0 20px 0; } }
 
 .indigo {
