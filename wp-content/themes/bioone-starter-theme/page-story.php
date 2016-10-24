@@ -56,9 +56,9 @@
 
 <article>
   <hr>
-  <h1><?php ?></h1>
-  <h2><?php ?></h2>
-  <p><?php ?></p> 
+  <h1><?php the_field('partners_header'); ?></h1>
+  <h2><?php the_field('partners_subheader'); ?></h2>
+  <p><?php the_field('partners_description'); ?></p> 
   <h2>BioOne Founders</h2>
   <div id="story-founder-logos">
 
