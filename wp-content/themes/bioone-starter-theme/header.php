@@ -28,12 +28,12 @@
 	      <picture>
 	        <source 
 	          media="(min-width: 741px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/whitelogo.png">
+	          srcset="<?php bloginfo('template_url'); ?>/img/logos/logo.png">
 	        <source  
 	          media="(max-width: 740px)"
 	          srcset="<?php bloginfo('template_url'); ?>/img/logos/logo.png">
 	        <img 
-	          src="<?php bloginfo('template_url'); ?>/img/logos/whitelogo.png"
+	          src="<?php bloginfo('template_url'); ?>/img/logos/logo.png"
 	          alt="BioOne Logo">
 	      </picture>
       </a>

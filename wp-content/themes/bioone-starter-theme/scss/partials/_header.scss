@@ -4,12 +4,13 @@
 ==========================================================================
 */
 .page-header {
-  height: 100px; 
-  padding: 25px 0 0 15px;
+  height: 80px; 
+  padding: 15px 0 0 15px;
   margin: 0;
   position: relative;
-  background-image: url("../img/headerbg.jpg");
-  border-bottom: 15px solid $color-brand; 
+  background-color: $white;
+  border-bottom: 2px solid $color-brand; 
+  color: $color-brand; 
   font: {
     family: $font-sans;
     size: 14px;
@@ -32,7 +33,8 @@
   img {
     width: 130px; 
     float: left; 
-    
+    margin-top: 5px; 
+
     @include media-query(max, medium) {
       width: 110px; 
       padding-top: 2px; 
@@ -48,92 +50,6 @@
 .page-header-container {
   margin: 0 auto; 
   max-width: 1000px; 
-}
-
-//homepage header
-.page-header_homepage {
-  position: relative;
-  padding: 25px 0 0 15px;
-  margin: 0 0 40px 0;
-  height: 400px;
-  background: {
-    image: url("../img/bgs/headerbg-homepage.jpg");
-    size: cover; 
-    position: center; 
-  }
-  border-bottom: 15px solid $color-brand; 
-  font: {
-    family: $font-sans;
-    size: 14px;
-    weight: 600;
-  }
-  letter-spacing: 1.5px;
-  text-transform: uppercase; 
-
-  @include media-query(max, medium) {
-    padding: 25px 0 0 25px; 
-  }
-  
-  @include media-query(max, small) {
-    background-image: none; 
-    height: 72px; 
-    border-bottom: $color-brand solid 2px;
-    padding: 25px 75px 0 25px; 
-  }
-  
-  .header-logo {
-    width: 130px; 
-    float: left; 
-    
-    @include media-query(max, medium) {
-      width: 110px; 
-      padding-top: 2px; 
-    }
-  
-    @include media-query(max, small) {
-      width: 110px; 
-      padding-top: 0;  
-    }
-  }
-  
-  .hero-text-container {
-    max-width: 950px; 
-    padding: 115px 20px 0 20px; 
-    margin: 0 auto; 
-
-    @include media-query(max, medium) {
-      padding-top: 100px; 
-    }
-
-    @include media-query(max, small) {
-      display: none; 
-    }
-    .hero-header {
-      font: {
-        family: $font-sans;
-        weight: 600;
-        size: 32px; 
-        style: italic;
-      } 
-      text-transform: none; 
-      letter-spacing: 0;
-      color: $white; 
-    }
-
-    .hero-subheader {
-      padding-top: 25px; 
-      max-width: 800px;
-
-      font: {
-        family: $font-sans;
-        weight: 400;
-        size: 22px; 
-      } 
-      text-transform: none; 
-      letter-spacing: 0;
-      color: $white;
-    }
-  }
 }
 
 // NAVIGATION
@@ -299,23 +215,24 @@ nav {
       }
       
       @include media-query(max, medium) {  
+        font-size: 13px;
         padding-left: 15px; 
         padding-right: 0; 
       } 
     
       @include media-query(max, small) { 
-        font-size: 12px;
+        font-size: 14px;
         display: block;
         padding: 0;
       } 
 
       a {
-        color: $white;
+        color: $color-brand;
         text-decoration: none;
 
         &:hover {
-          color: $white;
-          border-bottom: 2px white solid;
+          color: $color-brand;
+          border-bottom: 2px $color-brand solid;
         }
       
         @include media-query(max, small) { 
@@ -393,3 +310,97 @@ nav {
     }
   }
 } 
+
+//homepage header
+.page-header_homepage {
+  position: relative;
+  padding: 25px 0 0 15px;
+  margin: 0 0 40px 0;
+  height: 400px;
+  background: {
+    image: url("../img/bgs/headerbg-homepage_hawk.jpg");
+    size: cover; 
+    position: center; 
+  }
+  border-bottom: 10px solid $color-brand; 
+  font: {
+    family: $font-sans;
+    size: 14px;
+    weight: 600;
+  }
+  letter-spacing: 1.5px;
+  text-transform: uppercase; 
+
+  @include media-query(max, medium) {
+    padding: 25px 0 0 25px; 
+  }
+  
+  @include media-query(max, small) {
+    background-image: none; 
+    height: 72px; 
+    border-bottom: $color-brand solid 2px;
+    padding: 25px 75px 0 25px; 
+  }
+
+  nav ul.menu li a {
+      color: $white;
+    &:hover {
+      color: $white; 
+      border-bottom: $white 2px solid; 
+    } 
+  }
+  
+  .header-logo {
+    width: 130px; 
+    float: left; 
+    
+    @include media-query(max, medium) {
+      width: 110px; 
+      padding-top: 2px; 
+    }
+  
+    @include media-query(max, small) {
+      width: 110px; 
+      padding-top: 0;  
+    }
+  }
+  
+  .hero-text-container {
+    max-width: 950px; 
+    padding: 115px 20px 0 20px; 
+    margin: 0 auto; 
+
+    @include media-query(max, medium) {
+      padding-top: 100px; 
+    }
+
+    @include media-query(max, small) {
+      display: none; 
+    }
+    .hero-header {
+      font: {
+        family: $font-sans;
+        weight: 600;
+        size: 32px; 
+        style: italic;
+      } 
+      text-transform: none; 
+      letter-spacing: 0;
+      color: $white; 
+    }
+
+    .hero-subheader {
+      padding-top: 25px; 
+      max-width: 800px;
+
+      font: {
+        family: $font-sans;
+        weight: 400;
+        size: 22px; 
+      } 
+      text-transform: none; 
+      letter-spacing: 0;
+      color: $white;
+    }
+  }
+}
