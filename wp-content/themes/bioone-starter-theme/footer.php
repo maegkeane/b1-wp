@@ -2,7 +2,7 @@
   <div id="footer-rule"></div>
   <div class="page-footer_content">
     <section class="flex_footer-logo">
-      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="logo" />
+      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logos/logo.png" alt="logo" />
     </section>  
     <section>
       <h6>Physical</h6> 
@@ -17,7 +17,7 @@
       <h6>Digital</h6>
       <ul>
         <li>
-          <a href="#">about.bioone.org</a>
+          <a href="<?php bloginfo('url'); ?>">about.bioone.org</a>
         </li>
         <li>
           <a href="mailto:hello@bioone.org">hello@bioone.org</a>
