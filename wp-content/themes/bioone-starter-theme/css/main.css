@@ -381,8 +381,7 @@ p {
   margin-bottom: 20px; }
 
 a {
-  color: #3B4991;
-  text-decoration: none; }
+  color: #3B4991; }
   a:hover {
     color: #5c6cbd; }
   a a#calendar {
@@ -398,7 +397,7 @@ h1 {
 h2 {
   margin-bottom: 5px;
   font-family: "ff-tisa-web-pro", Georgia, serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100; }
 
 h3 {
@@ -461,6 +460,7 @@ hr {
   padding: 0;
   max-width: 25%;
   height: 1px;
+  border: 0;
   border-top: 3px solid #6E9934;
   border-radius: 0; }
 
@@ -474,12 +474,13 @@ hr {
 ==========================================================================
 */
 .page-header {
-  height: 100px;
-  padding: 25px 0 0 15px;
+  height: 80px;
+  padding: 15px 0 0 15px;
   margin: 0;
   position: relative;
-  background-image: url("../img/headerbg.jpg");
-  border-bottom: 15px solid #6E9934;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #6E9934;
+  color: #6E9934;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -496,7 +497,8 @@ hr {
       padding: 25px 75px 0 25px; } }
   .page-header img {
     width: 130px;
-    float: left; }
+    float: left;
+    margin-top: 5px; }
     @media only screen and (max-width: 900px) {
       .page-header img {
         width: 110px;
@@ -509,68 +511,6 @@ hr {
 .page-header-container {
   margin: 0 auto;
   max-width: 1000px; }
-
-.page-header_homepage {
-  position: relative;
-  padding: 25px 0 0 15px;
-  margin: 0 0 40px 0;
-  height: 400px;
-  background-image: url("../img/bgs/headerbg-homepage.jpg");
-  background-size: cover;
-  background-position: center;
-  border-bottom: 15px solid #6E9934;
-  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase; }
-  @media only screen and (max-width: 900px) {
-    .page-header_homepage {
-      padding: 25px 0 0 25px; } }
-  @media only screen and (max-width: 740px) {
-    .page-header_homepage {
-      background-image: none;
-      height: 72px;
-      border-bottom: #6E9934 solid 2px;
-      padding: 25px 75px 0 25px; } }
-  .page-header_homepage .header-logo {
-    width: 130px;
-    float: left; }
-    @media only screen and (max-width: 900px) {
-      .page-header_homepage .header-logo {
-        width: 110px;
-        padding-top: 2px; } }
-    @media only screen and (max-width: 740px) {
-      .page-header_homepage .header-logo {
-        width: 110px;
-        padding-top: 0; } }
-  .page-header_homepage .hero-text-container {
-    max-width: 950px;
-    padding: 115px 20px 0 20px;
-    margin: 0 auto; }
-    @media only screen and (max-width: 900px) {
-      .page-header_homepage .hero-text-container {
-        padding-top: 100px; } }
-    @media only screen and (max-width: 740px) {
-      .page-header_homepage .hero-text-container {
-        display: none; } }
-    .page-header_homepage .hero-text-container .hero-header {
-      font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 600;
-      font-size: 32px;
-      font-style: italic;
-      text-transform: none;
-      letter-spacing: 0;
-      color: #FFFFFF; }
-    .page-header_homepage .hero-text-container .hero-subheader {
-      padding-top: 25px;
-      max-width: 800px;
-      font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 400;
-      font-size: 22px;
-      text-transform: none;
-      letter-spacing: 0;
-      color: #FFFFFF; }
 
 nav {
   z-index: 1; }
@@ -690,19 +630,20 @@ nav {
             width: 240px; } }
       @media only screen and (max-width: 900px) {
         nav ul.menu li.menu-item {
+          font-size: 13px;
           padding-left: 15px;
           padding-right: 0; } }
       @media only screen and (max-width: 740px) {
         nav ul.menu li.menu-item {
-          font-size: 12px;
+          font-size: 14px;
           display: block;
           padding: 0; } }
       nav ul.menu li.menu-item a {
-        color: #FFFFFF;
+        color: #6E9934;
         text-decoration: none; }
         nav ul.menu li.menu-item a:hover {
-          color: #FFFFFF;
-          border-bottom: 2px white solid; }
+          color: #6E9934;
+          border-bottom: 2px #6E9934 solid; }
         @media only screen and (max-width: 740px) {
           nav ul.menu li.menu-item a {
             display: block;
@@ -751,6 +692,73 @@ nav {
             color: #202428; }
           nav ul.sub-menu li a:last-of-type {
             border-bottom: 2px solid #b6bdc4; } }
+
+.page-header_homepage {
+  position: relative;
+  padding: 25px 0 0 15px;
+  margin: 0 0 40px 0;
+  height: 400px;
+  background-image: url("../img/bgs/headerbg-homepage_hawk.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 10px solid #6E9934;
+  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 900px) {
+    .page-header_homepage {
+      padding: 25px 0 0 25px; } }
+  @media only screen and (max-width: 740px) {
+    .page-header_homepage {
+      background-image: none;
+      height: 72px;
+      border-bottom: #6E9934 solid 2px;
+      padding: 25px 75px 0 25px; } }
+  .page-header_homepage nav ul.menu li a {
+    color: #FFFFFF; }
+    .page-header_homepage nav ul.menu li a:hover {
+      color: #FFFFFF;
+      border-bottom: #FFFFFF 2px solid; }
+  .page-header_homepage .header-logo {
+    width: 130px;
+    float: left; }
+    @media only screen and (max-width: 900px) {
+      .page-header_homepage .header-logo {
+        width: 110px;
+        padding-top: 2px; } }
+    @media only screen and (max-width: 740px) {
+      .page-header_homepage .header-logo {
+        width: 110px;
+        padding-top: 0; } }
+  .page-header_homepage .hero-text-container {
+    max-width: 950px;
+    padding: 115px 20px 0 20px;
+    margin: 0 auto; }
+    @media only screen and (max-width: 900px) {
+      .page-header_homepage .hero-text-container {
+        padding-top: 100px; } }
+    @media only screen and (max-width: 740px) {
+      .page-header_homepage .hero-text-container {
+        display: none; } }
+    .page-header_homepage .hero-text-container .hero-header {
+      font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #FFFFFF; }
+    .page-header_homepage .hero-text-container .hero-subheader {
+      padding-top: 25px;
+      max-width: 800px;
+      font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #FFFFFF; }
 
 /*
 ==========================================================================
