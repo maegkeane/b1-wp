@@ -34,7 +34,6 @@ p {
 
 a {
   color: $color-accent;
-  text-decoration: none; 
 
   &:hover {
     color: lighten($color-accent, 15%);
@@ -59,7 +58,7 @@ h2 {
   margin-bottom: 5px; 
   font: {
     family: $font-serif; 
-    size: 20px;
+    size: 22px;
     weight: 100;
   }
 }
@@ -150,6 +149,7 @@ hr {
   padding: 0; 
   max-width: 25%; 
   height: 1px; 
+  border: 0; 
   border: {
     top: 3px solid $color-brand;
     radius: 0;  
