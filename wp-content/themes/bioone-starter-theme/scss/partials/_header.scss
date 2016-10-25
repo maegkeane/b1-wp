@@ -209,6 +209,7 @@ nav {
         width: 160px; 
         
         @include media-query(max, small) { 
+          color: $color-brand; 
           left: 0; 
           width: 240px;
         } 
@@ -244,10 +245,14 @@ nav {
 
           &:hover {
             color: darken($color-brand, 10%);
+            border-bottom: 2px solid lighten($color-light, 30%);
           }
 
           a:last-of-type {
-            border-bottom: 0px;      
+            border-bottom: 0;
+            &:hover {
+              border-bottom: 0; 
+            }      
           }
         }
 
@@ -311,6 +316,11 @@ nav {
   }
 } 
 
+.page-header-container {
+  margin: 0 auto; 
+  max-width: 1000px; 
+}
+
 //homepage header
 .page-header_homepage {
   position: relative;
@@ -318,7 +328,7 @@ nav {
   margin: 0 0 40px 0;
   height: 400px;
   background: {
-    image: url("../img/bgs/headerbg-homepage_hawk.jpg");
+    image: url("../img/bgs/headerbg-homepage_hummingbird.jpg");
     size: cover; 
     position: center; 
   }
@@ -343,11 +353,31 @@ nav {
   }
 
   nav ul.menu li a {
-      color: $white;
+    color: $white;
     &:hover {
       color: $white; 
       border-bottom: $white 2px solid; 
-    } 
+    }
+
+    @include media-query(max, small) { 
+      display: block; 
+      padding: 10px 20px 10px 15px;
+      border-bottom: 2px solid lighten($color-light, 30%);
+      color: $color-brand; 
+      font-weight: 600;
+
+      &:hover {
+        color: darken($color-brand, 10%);
+        border-bottom: 2px solid lighten($color-light, 30%);
+      }
+      
+      a:last-of-type {
+        border-bottom: 0;
+        &:hover {
+          border-bottom: 0; 
+        }      
+      }
+    }
   }
   
   .header-logo {
