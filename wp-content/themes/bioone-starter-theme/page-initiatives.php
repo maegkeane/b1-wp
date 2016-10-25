@@ -29,7 +29,7 @@
           $logo = get_sub_field('logo');
         ?> 
           <a href="<?php echo $link; ?>">
-            <img class="notb1-logo" src="<?php echo $logo ;?>" alt="<?php echo $logo['alt'] ?>">
+            <img class="notb1-logo" src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt'] ?>">
           </a>
 
         <?php endwhile; endif; wp_reset_postdata(); ?> 
