@@ -522,6 +522,7 @@ nav {
     display: none; }
   @media only screen and (max-width: 740px) {
     nav {
+      z-index: 9999;
       position: fixed;
       top: 0;
       bottom: 0;
@@ -1018,7 +1019,7 @@ aside.right {
       margin: 0;
       padding: 0; } }
   .flex-container .flex-2ndcol_leftborder {
-    border-left: 2px solid #6E9934;
+    border-left: 1px dotted #6E9934;
     padding-left: 30px;
     max-width: 100%; }
     .flex-container .flex-2ndcol_leftborder li {
@@ -1058,8 +1059,7 @@ aside.right {
   flex-wrap: wrap;
   margin-bottom: 20px; }
   .flex-grid a {
-    cursor: pointer;
-    padding-right: 20px; }
+    cursor: pointer; }
   .flex-grid .bio-list-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1070,6 +1070,7 @@ aside.right {
     margin-right: 40px;
     margin-bottom: 20px; }
     .flex-grid .bio-list-item._short-bio-container {
+      display: block;
       padding-right: 20px; }
     .flex-grid .bio-list-item .bio-list-item_image {
       width: 150px;
