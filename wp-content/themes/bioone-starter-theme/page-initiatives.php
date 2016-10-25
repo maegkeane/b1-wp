@@ -16,7 +16,7 @@
     <?php the_content(); ?>
 
   <?php endwhile; endif; ?>
-
+  <hr>
   <section>
     <h2><?php echo get_field('dev_world_title');?></h2>
     <div class="flex-container">
@@ -28,7 +28,9 @@
           $link = get_sub_field('link');
           $logo = get_sub_field('logo');
         ?> 
-          <a href="<?php echo $link; ?>"><img class="notb1-logo" src="<?php echo $logo ;?>" alt="<?php echo $logo['alt'] ?>"></a>
+          <a href="<?php echo $link; ?>">
+            <img class="notb1-logo" src="<?php echo $logo ;?>" alt="<?php echo $logo['alt'] ?>">
+          </a>
 
         <?php endwhile; endif; wp_reset_postdata(); ?> 
         
@@ -39,11 +41,13 @@
         <small><?php echo get_field('dev_world_info'); ?></small>
       </section>  
     </div>
-  </section>  
+  </section>
+  <hr>  
   <section>
     <h2><?php echo get_field('ppm_header'); ?></h2>
     <p><?php echo get_field('ppm_description'); ?></p>
   </section>
+  <hr>
   <section>
     <h2><?php echo get_field('presentations_header'); ?></h2>
     <h3><?php echo get_field('secondary_header'); ?></h3>
