@@ -21,8 +21,26 @@
 	$slug = get_post( $post )->post_name;
 	body_class($slug);
 	?>>
-      
-  <header class="page-header_homepage">
+
+  <?php
+
+    if( have_rows( 'homepage_random' ) ) : while ( have_rows( 'homepage_random' ) ) : the_row(); 
+
+    $imgArray = [];
+
+    while () {
+      array_push($imgArray, get_sub_field($homepage_bg['url']));
+    };
+
+    $randomNumber = rand(0,$homepage_bg.count()-1);
+
+  ?>
+    
+  <header class="page-header_homepage" 
+    style="background-image: url('<?php echo $homepage_bg($randomNumber);?>'); size: cover; position: center;" />
+
+  <?php endwhile; endif; wp_reset_postdata(); ?>  
+  
     <div class="page-header-container">
       <a href="<?php bloginfo('url'); ?>">
 	      <picture class="header-logo">
