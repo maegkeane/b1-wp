@@ -61,7 +61,7 @@ nav {
   }
 
   @include media-query(max, small) {
-    z-index: 9999; 
+    z-index: 999; 
     position: fixed; 
     top: 0;
     bottom: 0;
@@ -275,6 +275,12 @@ nav {
 
     //secondary navigation 
   ul.sub-menu {
+    display: none; 
+
+    li.current_page_item {
+      display: inline; 
+    }
+
     @include media-query(max, small) {
       margin: 0;
       padding: 0 0 0 25px; 
@@ -328,11 +334,6 @@ nav {
   padding: 25px 0 0 15px;
   margin: 0 0 40px 0;
   height: 400px;
-  background: {
-    image: url("../img/bgs/headerbg-homepage_hummingbird.jpg");
-    size: cover; 
-    position: center; 
-  }
   border-bottom: 10px solid $color-brand; 
   font: {
     family: $font-sans;

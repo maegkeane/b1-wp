@@ -360,13 +360,17 @@ aside.right {
   .bio-list-item {
     @include flexbox(); 
     flex-direction: column; 
-
+    position: relative; 
     margin-right: 40px;
     margin-bottom: 20px;  
 
     &._short-bio-container {
-      display: block; 
-      padding-right: 20px; 
+      position: absolute; 
+      top: 0; 
+      bottom: 0; 
+      right: 0; 
+      left: 0; 
+      z-index: 1000; 
     }
 
     .bio-list-item_image {
@@ -399,6 +403,7 @@ aside.right {
     }
 
     .bio-list-item_modal {
+      z-index: 9999;
       display: none; 
       padding: 40px; 
       position: fixed;
@@ -406,7 +411,6 @@ aside.right {
       right: 25%; 
       left: 25%; 
       bottom: 40px; 
-      z-index: 1000;
       background: white; 
       border: 2px solid $color-brand;
       overflow-y: scroll; 
