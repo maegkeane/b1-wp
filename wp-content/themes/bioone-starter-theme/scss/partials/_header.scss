@@ -86,22 +86,22 @@ ul.menu {
   }
 
   li.menu-item {
-    font-size: 14px;
     display: inline;
     position: relative;
     padding-left: 35px;
+    font-size: 14px;
     
     @include media-query(max, medium) {  
-      font-size: 13px;
       padding-left: 15px; 
       padding-right: 0; 
+      font-size: 13px;
     } 
   
     @include media-query(max, small) { 
-      font-size: 14px;
       display: block;
       padding: 0;
       border-bottom: 2px solid lighten($color-light, 30%);
+      font-size: 14px;
 
       &:last-of-type {
         border-bottom: 0; 
@@ -295,13 +295,17 @@ nav {
 
     @include media-query(max, small) { 
       display: block; 
-      padding: 10px 20px 10px 15px;
+      padding: 0;
       border-bottom: 2px solid lighten($color-light, 30%);
+
+      &:last-of-type {
+        border-bottom: 0; 
+      }
     }
 
     a {
       color: $white;
-    
+
       &:hover {
         color: $white; 
         border-bottom: $white 2px solid; 
@@ -309,18 +313,13 @@ nav {
 
       @include media-query(max, small) { 
         color: $color-brand; 
-        
+        padding: 10px 20px 10px 15px; 
+
         &:hover {
           color: darken($color-brand, 10%);
           border-bottom: 0;
         }
       }
-    }
-  }
-
-  nav ul.menu li:last-of-type {
-    @include media-query(max, small) { 
-      border-bottom: 0; 
     }
   }
 

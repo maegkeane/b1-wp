@@ -542,21 +542,21 @@ ul.menu {
       border-right: 2px solid #6E9934;
       border-radius: 3px; } }
   ul.menu li.menu-item {
-    font-size: 14px;
     display: inline;
     position: relative;
-    padding-left: 35px; }
+    padding-left: 35px;
+    font-size: 14px; }
     @media only screen and (max-width: 900px) {
       ul.menu li.menu-item {
-        font-size: 13px;
         padding-left: 15px;
-        padding-right: 0; } }
+        padding-right: 0;
+        font-size: 13px; } }
     @media only screen and (max-width: 740px) {
       ul.menu li.menu-item {
-        font-size: 14px;
         display: block;
         padding: 0;
-        border-bottom: 2px solid #b6bdc4; }
+        border-bottom: 2px solid #b6bdc4;
+        font-size: 14px; }
         ul.menu li.menu-item:last-of-type {
           border-bottom: 0; } }
     ul.menu li.menu-item a {
@@ -706,8 +706,10 @@ nav {
   @media only screen and (max-width: 740px) {
     .page-header_homepage nav ul.menu li {
       display: block;
-      padding: 10px 20px 10px 15px;
-      border-bottom: 2px solid #b6bdc4; } }
+      padding: 0;
+      border-bottom: 2px solid #b6bdc4; }
+      .page-header_homepage nav ul.menu li:last-of-type {
+        border-bottom: 0; } }
   .page-header_homepage nav ul.menu li a {
     color: #FFFFFF; }
     .page-header_homepage nav ul.menu li a:hover {
@@ -715,13 +717,11 @@ nav {
       border-bottom: #FFFFFF 2px solid; }
     @media only screen and (max-width: 740px) {
       .page-header_homepage nav ul.menu li a {
-        color: #6E9934; }
+        color: #6E9934;
+        padding: 10px 20px 10px 15px; }
         .page-header_homepage nav ul.menu li a:hover {
           color: #537327;
           border-bottom: 0; } }
-  @media only screen and (max-width: 740px) {
-    .page-header_homepage nav ul.menu li:last-of-type {
-      border-bottom: 0; } }
   .page-header_homepage .header-logo {
     width: 130px;
     float: left; }
