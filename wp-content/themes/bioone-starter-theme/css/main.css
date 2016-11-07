@@ -375,10 +375,10 @@ aside {
 
 p {
   font-family: "ff-tisa-web-pro", Georgia, serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1em;
+  line-height: 1.5em;
   margin-top: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 1.1em; }
 
 a {
   color: #3B4991; }
@@ -389,21 +389,21 @@ a {
 
 h1 {
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 34px;
+  font-size: 2em;
   font-weight: 100;
   color: #6E9934;
-  margin-top: 20px; }
+  margin-top: 1.1em; }
 
 h2 {
   margin-bottom: 5px;
   font-family: "ff-tisa-web-pro", Georgia, serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 100; }
 
 h3 {
   margin-bottom: 0;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
+  font-size: 1.2em;
   font-weight: 400;
   color: #6E9934; }
   h3 a {
@@ -414,9 +414,9 @@ h3 {
 h4 {
   margin: 0;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.2em;
   font-weight: 100;
-  line-height: 24px;
+  line-height: 1.5em;
   color: #000000; }
 
 h4.bold {
@@ -425,7 +425,7 @@ h4.bold {
 
 h5 {
   margin: 0;
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 600;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6E9934;
@@ -437,7 +437,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 2px;
   font-family: "ff-tisa-web-pro", Georgia, serif;
-  font-size: 12px;
+  font-size: 0.8em;
   font-style: italic;
   font-weight: 100;
   letter-spacing: 1px;
@@ -449,14 +449,14 @@ address {
 
 @media only screen and (max-width: 740px) {
   small {
-    font-size: 14px; } }
+    font-size: 0.8em; } }
 
 ol, ul {
   padding: 0;
   list-style-type: none; }
 
 .long-list li {
-  padding-bottom: 12px; }
+  padding-bottom: 0.7em; }
 
 hr {
   display: block;
@@ -1566,6 +1566,7 @@ footer {
     margin-bottom: 20px;
     background: #dbdef0; }
   footer .page-footer_content {
+    margin: 0 auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;

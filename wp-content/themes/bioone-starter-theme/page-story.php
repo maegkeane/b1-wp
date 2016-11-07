@@ -59,6 +59,7 @@
   <h1><?php the_field('partners_header'); ?></h1>
   <h2><?php the_field('partners_subheader'); ?></h2>
   <p><?php the_field('partners_description'); ?></p> 
+  
   <h2>BioOne Founders</h2>
   <div id="story-founder-logos">
 
@@ -76,8 +77,7 @@
     <?php endwhile; endif; wp_reset_postdata(); ?>
   
   </div>
-  
-  <h2>Charter Supporters</h2>
+  <h2>BioOne Charter Supporters</h2>
   <a class="btn-secondary-charter">Show list</a>
   <div id="charter-supporters-container">
     <ul>
@@ -211,6 +211,10 @@
     </ul>
     <p><span class="indigo">*</span>Sponsors pledged $5,000+ in addition to charter support</p>
   </div>
+
+  <h2><em>Elementa</em> Partners</h2>
+  <?php the_field('elementa_founders');?>
+
 </article>
 
 <?php get_footer(); ?>
