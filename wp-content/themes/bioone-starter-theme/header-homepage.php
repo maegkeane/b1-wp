@@ -28,13 +28,13 @@
 	      <picture class="header-logo">
 	        <source 
 	          media="(min-width: 741px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/whitelogo.png">
+	          srcset="<?php bloginfo('template_url'); ?>/img/logos/b1-logo_white.svg">
 	        <source  
 	          media="(max-width: 740px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/logo.png">
+	          srcset="<?php bloginfo('template_url'); ?>/img/logos/b1-logo.svg">
 	        <img 
             class="header-logo"
-	          src="<?php bloginfo('template_url'); ?>/img/logos/whitelogo.png"
+	          src="<?php bloginfo('template_url'); ?>/img/logos/b1-logo_white.svg"
 	          alt="BioOne Logo">
 	      </picture>
       </a>

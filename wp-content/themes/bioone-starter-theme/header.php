@@ -25,17 +25,7 @@
   <header class="page-header">
     <div class="page-header-container">
       <a href="<?php bloginfo('url'); ?>">
-	      <picture>
-	        <source 
-	          media="(min-width: 741px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/logo.png">
-	        <source  
-	          media="(max-width: 740px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/logo.png">
-	        <img 
-	          src="<?php bloginfo('template_url'); ?>/img/logos/logo.png"
-	          alt="BioOne Logo">
-	      </picture>
+      	<img src="<?php bloginfo('template_url'); ?>/img/logos/b1-logo.svg" alt="BioOne Logo" />
       </a>
       
       <nav>

@@ -2,7 +2,7 @@
   <div id="footer-rule"></div>
   <div class="page-footer_content">
     <section class="flex_footer-logo">
-      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logos/logo.png" alt="logo" />
+      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logos/b1-logo.svg" alt="logo" />
     </section>  
     <section>
       <h6>Physical</h6> 
@@ -37,7 +37,8 @@
     </section>
     <section class="footer-copyright">Copyright &copy; <?php echo date('Y'); ?><br/>
       <a href="http://www.bioone.org/page/terms_of_use" target="_blank">Terms of Use</a> | <a href="http://www.bioone.org/page/privacy_policy" target="_blank">Privacy Policy
-      </a>
+      </a><br />
+      <a href="http://devmaeg.com/bioone-wp/corporate-documents" target="_blank">Corporate Documents</a>
     </section>
   </div>
 </footer>
