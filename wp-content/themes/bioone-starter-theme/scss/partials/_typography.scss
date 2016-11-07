@@ -25,11 +25,11 @@ aside,
 p {
   font: {
     family: $font-serif; 
-    size: 16px;
+    size: 1em;
   }
-  line-height: 24px;
+  line-height: 1.5em;
   margin-top: 0; 
-  margin-bottom: 20px; 
+  margin-bottom: 1.1em; 
 }
 
 a {
@@ -47,18 +47,18 @@ a {
 h1 {
   font: {
     family: $font-sans;
-    size: 34px;
+    size: 2em;
     weight: 100;
   }
   color: $color-brand;
-  margin-top: 20px; 
+  margin-top: 1.1em; 
 }
 
 h2 { 
   margin-bottom: 5px; 
   font: {
     family: $font-serif; 
-    size: 24px;
+    size: 1.5em;
     weight: 100;
   }
 }
@@ -67,7 +67,7 @@ h3 {
   margin-bottom: 0; 
   font: {
     family: $font-sans;
-    size: 22px;
+    size: 1.2em;
     weight: 400; 
   }
   color: $color-brand;
@@ -85,10 +85,10 @@ h4 {
   margin: 0; 
   font: {
     family: $font-sans; 
-    size: 16px;
+    size: 1.2em;
     weight: 100; 
   }
-  line-height: 24px; 
+  line-height: 1.5em; 
   color: $color-main; 
 }
 
@@ -100,7 +100,7 @@ h4.bold {
 h5 {
   margin: 0; 
   font: {
-    size: 14px; 
+    size: 0.8em; 
     weight: 600; 
     family: $font-sans; 
   }
@@ -118,7 +118,7 @@ h6 {
   } 
   font: {
     family: $font-serif; 
-    size: 12px; 
+    size: 0.8em; 
     style: italic;
     weight: 100; 
   }
@@ -133,7 +133,7 @@ address {
 
 small {
   @include media-query(max, small) {
-    font-size: 14px; 
+    font-size: 0.8em; 
   } 
 }
 
@@ -144,7 +144,7 @@ ol, ul {
 
 .long-list {
   li {
-    padding-bottom: 12px; 
+    padding-bottom: 0.7em; 
   }
 }
 
