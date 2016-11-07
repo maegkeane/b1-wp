@@ -495,7 +495,6 @@ hr {
       padding: 25px 0 0 25px; } }
   @media only screen and (max-width: 740px) {
     .page-header {
-      background-image: none;
       height: 72px;
       border-bottom: #6E9934 solid 2px;
       padding: 25px 75px 0 25px; } }
@@ -515,6 +514,81 @@ hr {
 .page-header-container {
   margin: 0 auto;
   max-width: 1000px; }
+
+/*
+====================
+  Navigation 
+====================
+*/
+ul.menu {
+  position: relative;
+  float: right;
+  margin-right: 25px;
+  margin-top: 12px; }
+  @media only screen and (max-width: 740px) {
+    ul.menu {
+      width: 240px;
+      float: none;
+      padding-top: 6.5px;
+      margin: 0;
+      background: #FFFFFF;
+      border-bottom: 2px solid #6E9934;
+      border-left: 2px solid #6E9934;
+      border-right: 2px solid #6E9934;
+      border-radius: 3px; } }
+  ul.menu li.menu-item {
+    font-size: 14px;
+    display: inline;
+    position: relative;
+    padding-left: 35px; }
+    ul.menu li.menu-item:last-of-type {
+      border-bottom: 0; }
+    ul.menu li.menu-item:last-of-type ul {
+      left: -40px;
+      width: 160px; }
+      @media only screen and (max-width: 740px) {
+        ul.menu li.menu-item:last-of-type ul {
+          color: #6E9934;
+          left: 0;
+          width: 240px; } }
+    @media only screen and (max-width: 900px) {
+      ul.menu li.menu-item {
+        font-size: 13px;
+        padding-left: 15px;
+        padding-right: 0; } }
+    @media only screen and (max-width: 740px) {
+      ul.menu li.menu-item {
+        font-size: 14px;
+        display: block;
+        padding: 0; } }
+    ul.menu li.menu-item a {
+      color: #6E9934;
+      text-decoration: none; }
+      ul.menu li.menu-item a:hover {
+        color: #6E9934;
+        border-bottom: 2px #6E9934 solid; }
+      @media only screen and (max-width: 740px) {
+        ul.menu li.menu-item a {
+          display: block;
+          padding: 10px 20px 10px 15px;
+          border-bottom: 2px solid #b6bdc4;
+          color: #6E9934;
+          font-weight: 600; }
+          ul.menu li.menu-item a:hover {
+            color: #537327;
+            border-bottom: 2px solid #b6bdc4; }
+          ul.menu li.menu-item a a:last-of-type {
+            border-bottom: 0; }
+            ul.menu li.menu-item a a:last-of-type:hover {
+              border-bottom: 0; } }
+      ul.menu li.menu-item a:hover ul.sub-menu {
+        display: block;
+        top: 25px; }
+        @media only screen and (max-width: 740px) {
+          ul.menu li.menu-item a:hover ul.sub-menu {
+            top: 0; } }
+  ul.menu nav > ul > li:last-of-type li:last-of-type a {
+    border-bottom: 0; }
 
 nav {
   z-index: 1; }
@@ -603,113 +677,12 @@ nav {
         max-height: 90vh; }
       nav.open ul.menu {
         right: calc(240px + 80px - 2px); } }
-  nav ul.menu {
-    position: relative;
-    float: right;
-    margin-right: 25px;
-    margin-top: 12px; }
-    @media only screen and (max-width: 740px) {
-      nav ul.menu {
-        width: 240px;
-        float: none;
-        padding-top: 6.5px;
-        margin: 0;
-        background: #FFFFFF;
-        border-bottom: 2px solid #6E9934;
-        border-left: 2px solid #6E9934;
-        border-right: 2px solid #6E9934;
-        border-radius: 3px; } }
-    nav ul.menu li.menu-item {
-      font-size: 14px;
-      display: inline;
-      position: relative;
-      padding-left: 35px; }
-      nav ul.menu li.menu-item:last-of-type {
-        border-bottom: 0; }
-      nav ul.menu li.menu-item:last-of-type ul {
-        left: -40px;
-        width: 160px; }
-        @media only screen and (max-width: 740px) {
-          nav ul.menu li.menu-item:last-of-type ul {
-            color: #6E9934;
-            left: 0;
-            width: 240px; } }
-      @media only screen and (max-width: 900px) {
-        nav ul.menu li.menu-item {
-          font-size: 13px;
-          padding-left: 15px;
-          padding-right: 0; } }
-      @media only screen and (max-width: 740px) {
-        nav ul.menu li.menu-item {
-          font-size: 14px;
-          display: block;
-          padding: 0; } }
-      nav ul.menu li.menu-item a {
-        color: #6E9934;
-        text-decoration: none; }
-        nav ul.menu li.menu-item a:hover {
-          color: #6E9934;
-          border-bottom: 2px #6E9934 solid; }
-        @media only screen and (max-width: 740px) {
-          nav ul.menu li.menu-item a {
-            display: block;
-            padding: 10px 20px 10px 15px;
-            border-bottom: 2px solid #b6bdc4;
-            color: #6E9934;
-            font-weight: 600; }
-            nav ul.menu li.menu-item a:hover {
-              color: #537327;
-              border-bottom: 2px solid #b6bdc4; }
-            nav ul.menu li.menu-item a a:last-of-type {
-              border-bottom: 0; }
-              nav ul.menu li.menu-item a a:last-of-type:hover {
-                border-bottom: 0; } }
-        nav ul.menu li.menu-item a:hover ul.sub-menu {
-          display: block;
-          top: 25px; }
-          @media only screen and (max-width: 740px) {
-            nav ul.menu li.menu-item a:hover ul.sub-menu {
-              top: 0; } }
-    nav ul.menu nav > ul > li:last-of-type li:last-of-type a {
-      border-bottom: 0; }
-  nav ul.sub-menu {
-    display: none; }
-    nav ul.sub-menu li.current_page_item {
-      display: inline; }
-    @media only screen and (max-width: 740px) {
-      nav ul.sub-menu {
-        margin: 0;
-        padding: 0 0 0 25px;
-        width: 246px;
-        position: relative;
-        display: block;
-        left: 0;
-        top: 100%;
-        z-index: 2;
-        border-top: 2px solid #b6bdc4;
-        border-left: 2px solid #b6bdc4;
-        border-right: 2px solid #b6bdc4;
-        border-radius: 3px;
-        background: #FFFFFF; }
-        nav ul.sub-menu li {
-          display: inherit;
-          padding: inherit; }
-          nav ul.sub-menu li a {
-            display: block;
-            padding: 10px 13px;
-            color: #64717D;
-            font-size: 12px;
-            font-weight: 600;
-            border-bottom: 2px solid #b6bdc4; }
-            nav ul.sub-menu li a:hover {
-              color: #202428; }
-            nav ul.sub-menu li a:last-of-type {
-              border-bottom: 2px solid #b6bdc4; } }
 
-.page-header-container {
-  margin: 0 auto;
-  max-width: 1000px; }
-
+/*
+==========================
+  HOMEPAGE HEADER
+==========================
+*/
 .page-header_homepage {
   position: relative;
   padding: 25px 0 0 15px;
@@ -720,7 +693,22 @@ nav {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  /*
+=========================
+  Homepage Navigation
+=========================
+*/
+  /*
+=================
+  Homepage Logo
+=================
+*/
+  /*
+==============
+  Hero
+==============
+*/ }
   @media only screen and (max-width: 900px) {
     .page-header_homepage {
       padding: 25px 0 0 25px; } }
@@ -744,11 +732,9 @@ nav {
         font-weight: 600; }
         .page-header_homepage nav ul.menu li a:hover {
           color: #537327;
-          border-bottom: 2px solid #b6bdc4; }
-        .page-header_homepage nav ul.menu li a a:last-of-type {
           border-bottom: 0; }
-          .page-header_homepage nav ul.menu li a a:last-of-type:hover {
-            border-bottom: 0; } }
+        .page-header_homepage nav ul.menu li a:last-of-type {
+          border-bottom: 0; } }
   .page-header_homepage .header-logo {
     width: 130px;
     float: left; }
@@ -1632,41 +1618,32 @@ footer {
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
-   * Don't show links for images, or javascript/internal links
-   */
+		 * Don't show links for images, or javascript/internal links
+		 */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   @page {
     margin: 0.5cm; }
   p,
@@ -1674,7 +1651,6 @@ footer {
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
