@@ -36,7 +36,7 @@
   </section>
   <section>
     <a href="<?php echo get_field('elementa_link'); ?>">
-      <img class="pub-logo" src="<?php echo get_field('elementa_logo')['url']; ?>" alt="<?php echo get_field('elementa_logo')['alt']; ?>"/>
+      <img class="elementa-logo" src="<?php echo get_field('elementa_logo')['url']; ?>" alt="<?php echo get_field('elementa_logo')['alt']; ?>"/>
     </a>
     <p><?php echo get_field('elementa_description'); ?></p>   
     <a class="btn-main" href="<?php echo get_field('elementa_link'); ?>"><?php echo get_field('elementa_button'); ?></a>
@@ -45,6 +45,7 @@
     <h1>Initiatives &amp; Resources</h1>
     <h2>Community Tools</h2>
     <?php echo get_field('community_tools_description'); ?>
+    <br />
     <h2><?php echo get_field('dev_world_title');?></h2>
     <div class="flex-container">
       <section class="flex-1stcol">
