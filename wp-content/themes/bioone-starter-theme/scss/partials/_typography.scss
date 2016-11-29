@@ -25,11 +25,11 @@ aside,
 p {
   font: {
     family: $font-serif; 
-    size: 1em;
+    size: 1rem;
   }
-  line-height: 1.5em;
+  line-height: 1.5rem;
   margin-top: 0; 
-  margin-bottom: 1.1em; 
+  margin-bottom: 1.1rem; 
 }
 
 a {
@@ -47,18 +47,18 @@ a {
 h1 {
   font: {
     family: $font-sans;
-    size: 2em;
+    size: 2rem;
     weight: 100;
   }
   color: $color-brand;
-  margin-top: 1.1em; 
+  margin-top: 1.1rem; 
 }
 
 h2 { 
   margin-bottom: 5px; 
   font: {
     family: $font-serif; 
-    size: 1.5em;
+    size: 1.5rem;
     weight: 100;
   }
 }
@@ -67,7 +67,7 @@ h3 {
   margin-bottom: 0; 
   font: {
     family: $font-sans;
-    size: 1.2em;
+    size: 1.3rem;
     weight: 400; 
   }
   color: $color-brand;
@@ -85,10 +85,10 @@ h4 {
   margin: 0; 
   font: {
     family: $font-sans; 
-    size: 1.2em;
+    size: 1rem;
     weight: 100; 
   }
-  line-height: 1.5em; 
+  line-height: 1.5rem; 
   color: $color-main; 
 }
 
@@ -100,7 +100,7 @@ h4.bold {
 h5 {
   margin: 0; 
   font: {
-    size: 0.8em; 
+    size: 0.8rem; 
     weight: 600; 
     family: $font-sans; 
   }
@@ -118,7 +118,7 @@ h6 {
   } 
   font: {
     family: $font-serif; 
-    size: 0.8em; 
+    size: 0.8rem; 
     style: italic;
     weight: 100; 
   }
@@ -133,7 +133,7 @@ address {
 
 small {
   @include media-query(max, small) {
-    font-size: 0.8em; 
+    font-size: 0.8rem; 
   } 
 }
 
@@ -144,13 +144,13 @@ ol, ul {
 
 .long-list {
   li {
-    padding-bottom: 0.7em; 
+    padding-bottom: 0.7rem; 
   }
 }
 
 hr {
   display: block; 
-  margin: 4rem auto; 
+  margin: 3em auto; 
   padding: 0; 
   max-width: 25%; 
   height: 1px; 
@@ -160,6 +160,19 @@ hr {
     radius: 0;  
   } 
 }
+
+hr.secondary {
+  display: block; 
+  margin: 0.2em 0 1em; 
+  padding: 0; 
+  max-width: 60%; 
+  height: 1px; 
+  border: 0; 
+  border: {
+    top: 2px solid $color-light;
+    radius: 0;  
+  } 
+} 
 
 .indigo {
   color: $color-accent;
