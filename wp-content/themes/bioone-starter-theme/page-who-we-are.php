@@ -80,7 +80,6 @@
     <div class="flex-grid">
       <?php if (have_rows('bio_grid_board') ) : while (have_rows ('bio_grid_board') ) : the_row(); 
     
-        $bio_photo = get_sub_field('bio_photo');
         $name = get_sub_field('name');
         $position = get_sub_field('position');
         $affiliation = get_sub_field('affiliation');
@@ -91,7 +90,6 @@
 
       <div class="bio-list-item">
         <a class="bio-list-item_short-bio-container">
-          <img class="bio-list-item_image" src="<?php echo $bio_photo['url']; ?>" alt="<?php echo $bio_photo['alt'] ?>" /> 
           <p class="bio-list-item_info">
             <span class="bio-list-item_name">
               <?php echo $name; ?>
@@ -112,7 +110,13 @@
   <section>
     <!--SALES TEAM-->
     <h3><?php the_field('sales_staff_header'); ?></h3>
-      
+    <p><?php the_field('sales_staff_description'); ?></p>
+    <h4 class="bold"><?php the_field('global_director_name'); ?></h4>
+    <h4><?php the_field('global_director_position'); ?></h4>
+    <?php the_field('global_director_address'); ?>
+    <br />
+    <h4 class="bold">Account Managers by Region</h4>
+    <hr class="secondary">
     <?php if( have_rows( 'bio_grid_sales' ) ) : while ( have_rows( 'bio_grid_sales' ) ) : the_row(); 
 
       $name = get_sub_field('name');
@@ -126,7 +130,7 @@
 
     ?>
 
-    <h4><?php echo $area; ?></h4>
+    <h5><?php echo $area; ?></h5>
     <p><?php echo $name; ?><br />
     <?php echo $title; ?><br />
     <a href="mailto:<?php echo $email;?>"><?php echo $email; ?></a><br />
