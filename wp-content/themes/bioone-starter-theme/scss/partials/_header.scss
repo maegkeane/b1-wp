@@ -265,6 +265,11 @@ nav {
   padding: 25px 0 0 15px;
   margin: 0 0 40px 0;
   height: 400px;
+  background: {
+    image: url("../img/bgs/headerbg-homepage_hummingbird.jpg");
+    size: cover; 
+    position: center;
+  }
   border-bottom: 10px solid $color-brand; 
   font: {
     family: $font-sans;
