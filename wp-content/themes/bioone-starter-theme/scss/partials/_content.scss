@@ -374,13 +374,13 @@ aside.right {
     }
 
     .bio-list-item_image {
-      width: 150px; 
-      height: 150px; 
+      width: 175px; 
+      height: 175px; 
       margin-top: 20px;
     }
 
     p.bio-list-item_info {
-      width: 170px;  
+      width: 190px;  
       margin-top: 10px;
       font: {
         family: $font-sans; 
@@ -1029,5 +1029,9 @@ img.pub-logo {
       line-height: 26px; 
     }
   }
+}
+
+.elementa-logo {
+  max-width: 50%; 
 }
 
