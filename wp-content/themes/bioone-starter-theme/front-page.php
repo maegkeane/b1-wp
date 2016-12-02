@@ -114,9 +114,9 @@
         while ( $the_query->have_posts() ) {
           $the_query->the_post();
 
-      // For this example we have a lot of information we want to group together
-      // for each post, so into the array we pass another array.
-      // So each value in the array is another array with more values.
+          // For this example we have a lot of information we want to group together
+          // for each post, so into the array we pass another array.
+          // So each value in the array is another array with more values.
           $conferenceArray = array(       
             'conference_name' => get_the_title(),
             'display_date' => get_sub_field('display_date'),
@@ -126,42 +126,41 @@
             'order_date' => get_sub_field('order_date'),
           );
       // array_push adds an item to the end of an existing array
-          array_push($conferenceCalendarArray, $conferenceArray);
+            array_push($conferenceCalendarArray, $conferenceArray);
           }
-    
-          function date_compare($a, $b)
-          {
-            $t1 = strtotime($a['order_date']);
-            $t2 = strtotime($b['order_date']);
-            return $t1 - $t2;
-          }    
-
-          usort($conferenceCalendarArray, 'date_compare');
-        
-          echo '<div class="card_container">';
-          //this is where we are actually putting things on the page, do $i<count(2); so only three appear
-          for ($i=0; $i<3; $i++) { // Do another loop to get stuff out of the array
-            echo 
-              '<a class="card_calendar">' .
-                $conferenceCalendarArray[$i]['conference_name'] .
-                '<h3>' $date; '</h3>' .
-                '<h2>' $event_name; '</h2>' .
-                '<p>'  $location; '</p>' .
-                '<div class="card_calendar_expand">' . 
-                  '<p class="who">Who youll see there: </br>' .
-                   $attendees; '</p>' .
-                  if (get_sub_field('booth')) :   
-                  '<p class="where">' $booth; '</br>' .
-                '</div>' .
-              '</a>';
-            }
-          echo '</div>';
-          
           wp_reset_postdata(); // Restore original post data to prevent unintended functionality
-
         } else {
           // no posts found
       }
+
+      function date_compare($a, $b)
+      {
+        $t1 = strtotime($a['order_date']);
+        $t2 = strtotime($b['order_date']);
+        return $t1 - $t2;
+      }    
+
+      usort($conferenceCalendarArray, 'date_compare');
+    
+      echo '<div class="card_container">';
+      //this is where we are actually putting things on the page, do $i<count(2); so only three appear
+      for ($i=0; $i<3; $i++) { // Do another loop to get stuff out of the array
+        echo 
+          '<a class="card_calendar">' .
+            $conferenceCalendarArray[$i]['conference_name'] .
+            '<h3>' $date; '</h3>' .
+            '<h2>' $event_name; '</h2>' .
+            '<p>'  $location; '</p>' .
+            '<div class="card_calendar_expand">' . 
+              '<p class="who">Who youll see there: </br>' .
+               $attendees; '</p>' .
+              if (get_sub_field('booth')) :   
+              '<p class="where">' $booth; '</br>' .
+            '</div>' .
+          '</a>';
+        }
+      echo '</div>';
+    ?>
 
     <!--THIS IS THE OLD CODE FOR THE CONFERENCES  
     <?php if( have_rows( 'calendar_grid' ) ) : while ( have_rows( 'calendar_grid' ) ) : the_row(); 
