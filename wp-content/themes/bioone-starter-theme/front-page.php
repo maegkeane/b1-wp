@@ -11,10 +11,39 @@
   <section>
     <h1>Stay Current</h1>
     <h2>Top Stories</h2>
-    <h2><?php the_field('news_title'); ?></h2>
-    <div class="card-container">
+    <!--<h2><?php the_field('news_title'); ?></h2>-->
+    <!--<div class="card-container">-->
+
+    <?php 
+      $the_query = new WP_Query(array(
+        'post_type' => 'news',
+        'posts_per_page' => 3,
+      ));
+
+    if ($the_query->have_posts() ) {
+      echo '<div class="card-container">';
     
-    <?php if (have_rows('news_grid') ) : while (have_rows ('news_grid') ) : the_row(); 
+    while ( $the_query->have_posts() ) {
+      $the_query->the_post();
+      echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
+    }
+      
+      echo '</div>';
+    
+      wp_reset_postdata(); // Restore original post data to prevent unintended functionality
+    
+    } else {
+    // no posts found
+      }
+  //
+  //  END WP QUERY
+  //
+  ?>
+
+
+
+    <!--THIS IS THE OLD CODE FOR THE NEWS-->
+    <!--<?php if (have_rows('news_grid') ) : while (have_rows ('news_grid') ) : the_row(); 
     
       $news_type = get_sub_field('news_type');
       $news_type_code = strtolower(str_replace(' ', '_', $news_type)); 
@@ -66,11 +95,75 @@
     <?php endwhile; endif; wp_reset_postdata(); ?>
     
     </div>
+  -->
+
   </section>
   <section>
     <h2>Upcoming Conferences</h2>
-     <div class="card-container">
 
+    <?php 
+      $the_query = new WP_Query(array( // Define query
+        'post_type' => 'conferences',
+        'posts_per_page' => 200, // for conferences, you don't want them to only get 3, you are looking at all of them (say, 200)
+        'orderby' => 'date'
+      ));
+      
+      $conferenceCalendarArray = array(); //overall grid of conferences
+
+      if ( $the_query->have_posts() ) {
+        while ( $the_query->have_posts() ) {
+          $the_query->the_post();
+
+      // For this example we have a lot of information we want to group together
+      // for each post, so into the array we pass another array.
+      // So each value in the array is another array with more values.
+          $conferenceArray = array(       
+            'conference_name' => get_the_title(),
+            'display_date' => get_sub_field('display_date'),
+            'location' => get_sub_field('location'),
+            'attendees' => get_sub_field('attendees'),
+            'booth' => get_sub_field('booth'),
+            'order_date' => get_sub_field('order_date'),
+          );
+      // array_push adds an item to the end of an existing array
+          array_push($conferenceCalendarArray, $conferenceArray);
+          }
+    
+          function date_compare($a, $b)
+          {
+            $t1 = strtotime($a['order_date']);
+            $t2 = strtotime($b['order_date']);
+            return $t1 - $t2;
+          }    
+
+          usort($conferenceCalendarArray, 'date_compare');
+        
+          echo '<div class="card_container">';
+          //this is where we are actually putting things on the page, do $i<count(2); so only three appear
+          for ($i=0; $i<3; $i++) { // Do another loop to get stuff out of the array
+            echo 
+              '<a class="card_calendar">' .
+                $conferenceCalendarArray[$i]['conference_name'] .
+                '<h3>' $date; '</h3>' .
+                '<h2>' $event_name; '</h2>' .
+                '<p>'  $location; '</p>' .
+                '<div class="card_calendar_expand">' . 
+                  '<p class="who">Who youll see there: </br>' .
+                   $attendees; '</p>' .
+                  if (get_sub_field('booth')) :   
+                  '<p class="where">' $booth; '</br>' .
+                '</div>' .
+              '</a>';
+            }
+          echo '</div>';
+          
+          wp_reset_postdata(); // Restore original post data to prevent unintended functionality
+
+        } else {
+          // no posts found
+      }
+
+    <!--THIS IS THE OLD CODE FOR THE CONFERENCES  
     <?php if( have_rows( 'calendar_grid' ) ) : while ( have_rows( 'calendar_grid' ) ) : the_row(); 
 
       $date= get_sub_field('date');
@@ -81,14 +174,6 @@
       $attendees = get_sub_field('attendees')
 
     ?>
-    
-    <?php if (get_sub_field('issue_icon')) : ?>
-      <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
-      <?php endif; ?> 
-      <p class="card_PDF"><?php echo $pdf_note; ?></p>
-      <?php if ($news_type_code === 'annual_report') { ?>
-        </div>
-      <?php } ?>
 
     <a class="card_calendar">  
       <h3><?php echo $date; ?></h3>
@@ -103,7 +188,7 @@
       </div>
     </a>
 
-    <?php endwhile; endif; wp_reset_postdata(); ?>
+    <?php endwhile; endif; wp_reset_postdata(); ?>-->
 
     </div>
     <a class="btn-main" href="news-events.html#calendar">Full Calendar</a>  
