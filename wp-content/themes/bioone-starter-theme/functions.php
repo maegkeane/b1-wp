@@ -57,3 +57,101 @@ function blankslate_comments_number($count) {
 	return $count;
 }
 }
+
+//
+//  CUSTOM POST TYPE DECLARATION
+//    This goes in functions.php
+//
+add_action('init', 'create_conferences_post_type'); // Add our HTML5 Blank Custom Post Type
+function create_conferences_post_type()
+{
+  register_taxonomy_for_object_type('category', 'conferences'); // Register Taxonomies for Category
+  register_taxonomy_for_object_type('post_tag', 'conferences');
+  register_post_type('conferences', // Register Custom Post Type
+    array(
+    'labels' => array(
+      'name' => __('Conference Post', 'conferences_section'), // Rename these to suit
+      'singular_name' => __('Conference Post Section', 'conferences_section'),
+      'add_new' => __('Add New Conference Post', 'conferences_section'),
+      'add_new_item' => __('Add New Conference Post', 'conferences_section'),
+      'edit' => __('Edit', 'conferences_section'),
+      'edit_item' => __('Edit Conference Post', 'conferences_section'),
+      'new_item' => __('New Conference Post', 'conferences_section'),
+      'view' => __('View Conference Post', 'conferences_section'),
+      'view_item' => __('View Conference Post', 'conferences_section'),
+      'search_items' => __('Search Conference Posts', 'conferences_section'),
+      'not_found' => __('No conference posts found', 'conferences_section'),
+      'not_found_in_trash' => __('No conference posts found in Trash', 'conferences_section')
+    ),
+    'public' => true,
+    'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+    'has_archive' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      'excerpt',
+      'thumbnail',
+      'excerpt',
+      'revisions',
+      'comments',
+    ),
+    'can_export' => true, // Allows export in Tools > Export
+    'taxonomies' => array(
+      'post_tag',
+      'category'
+    ) // Add Category and Post Tags support
+  ));
+  // flush_rewrite_rules();
+}
+//
+//  END CUSTOM POST TYPE DECLARATION
+//
+
+//
+//  CUSTOM POST TYPE DECLARATION
+//    This goes in functions.php
+//
+add_action('init', 'create_news_post_type'); // Add our HTML5 Blank Custom Post Type
+function create_news_post_type()
+{
+  register_taxonomy_for_object_type('category', 'news'); // Register Taxonomies for Category
+  register_taxonomy_for_object_type('post_tag', 'news');
+  register_post_type('news', // Register Custom Post Type
+    array(
+    'labels' => array(
+      'name' => __('News Post', 'news_section'), // Rename these to suit
+      'singular_name' => __('News Post Section', 'news_section'),
+      'add_new' => __('Add New', 'news_section'),
+      'add_new_item' => __('Add New Post', 'news_section'),
+      'edit' => __('Edit', 'news_section'),
+      'edit_item' => __('Edit Post', 'news_section'),
+      'new_item' => __('New News Post', 'news_section'),
+      'view' => __('View News Post', 'news_section'),
+      'view_item' => __('View News Post', 'news_section'),
+      'search_items' => __('Search News Posts', 'news_section'),
+      'not_found' => __('No news posts found', 'news_section'),
+      'not_found_in_trash' => __('No news posts found in Trash', 'news_section')
+    ),
+    'public' => true,
+    'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+    'has_archive' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      'excerpt',
+      'thumbnail',
+      'excerpt',
+      'revisions',
+      'comments',
+    ),
+    'can_export' => true, // Allows export in Tools > Export
+    'taxonomies' => array(
+      'post_tag',
+      'category'
+    ) // Add Category and Post Tags support
+  ));
+  // flush_rewrite_rules();
+}
+//
+//  END CUSTOM POST TYPE DECLARATION
+//
