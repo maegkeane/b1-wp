@@ -63,6 +63,18 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/archive-conferences.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive-conferences.php",
+		"oF": 0
+		},
+	"\/archive-news.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive-news.php",
+		"oF": 0
+		},
 	"\/archive.php": {
 		"ft": 8192,
 		"oA": 0,
