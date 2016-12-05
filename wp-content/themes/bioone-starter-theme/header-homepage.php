@@ -22,7 +22,19 @@
 	body_class($slug);
 	?>>
 
-  <header class="page-header_homepage">
+  <?php 
+    
+    $homepage_bgArray = array(
+      'homepage_random' => get_field('homepage_random'),
+      'homepage_bg' => get_sub_field('homepage_bg')
+    );
+
+    shuffle($homepage_bgArray);
+
+  ?>
+
+    <div class="page_header_homepage" style="background-image: url('<?php echo $homepage_bgArray[0]['homepage_bg'];?>');"></div>
+
     <div class="page-header-container">
       <a href="<?php bloginfo('url'); ?>">
 	      <picture class="header-logo">
