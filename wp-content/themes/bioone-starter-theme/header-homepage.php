@@ -23,14 +23,20 @@
 	?>>
 
   <?php 
-    
-    $homepage_bgArray = array(
-      'homepage_random' => get_field('homepage_random'),
-      'homepage_bg' => get_sub_field('homepage_bg')
-    );
+      
+    // You didn't need to put this in an array because get_field('homepage_random')
+    // already returns an array. So you were created a multi-mulit-dimensional array. :)
+    $homepage_bgArray = get_field('homepage_random');
 
     shuffle($homepage_bgArray);
 
+    // I left this here so you can see what the array outputs.
+    // Ultimately all you need to do is grab the code below on
+    // line 36 and replace it in your background-image statement.
+    echo $homepage_bgArray[0]['homepage_bg']['url'];
+    echo '<pre>';
+    print_r($homepage_bgArray);
+    echo '</pre>';
   ?>
 
     <div class="page_header_homepage" style="background-image: url('<?php echo $homepage_bgArray[0]['homepage_bg'];?>');"></div>
