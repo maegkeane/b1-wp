@@ -904,6 +904,12 @@
 		"oAP": "\/page-corporate.php",
 		"oF": 0
 		},
+	"\/page-elementa.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-elementa.php",
+		"oF": 0
+		},
 	"\/page-news.php": {
 		"ft": 8192,
 		"oA": 0,

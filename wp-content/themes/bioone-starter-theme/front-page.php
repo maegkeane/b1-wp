@@ -234,45 +234,4 @@
   </section>
 </article>
 
-<?php get_footer(); ?>ot remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_c96bf0ec63cc75c323952cced_13cf7c0c45" tabindex="-1" value="">
-              </div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-main">
-              </div>
-          </form>
-        </div>
-  <!--End mc_embed_signup-->
-    </div>  
-  </section>
-  <section> 
-    <h1>From the Community</h1>
-
-    <div class="cycle-slideshow" 
-      data-cycle-fx=scrollHorz
-      data-cycle-timeout=0
-      data-cycle-slides="> blockquote"
-      > 
-      <div class="cycle-pager"></div>
-      
-      <?php if( have_rows( 'testimonials' ) ) : while ( have_rows( 'testimonials' ) ) : the_row(); 
-      
-        $blockquote = get_sub_field('blockquote');
-        $name = get_sub_field('name');
-        $title = get_sub_field('title');
-        $institution = get_sub_field('institution');
-      
-      ?>
-      
-        <blockquote>       
-          <?php echo strip_tags($blockquote); ?>
-          <p class="blockquote-source">– <?php echo $name; ?> <br /><?php echo $title; ?>, <?php echo $institution; ?></p>
-        </blockquote>
-      
-      <?php endwhile; endif; wp_reset_postdata(); ?>
-
-    </div>
-  </section>
-</article>
-
 <?php get_footer(); ?>
