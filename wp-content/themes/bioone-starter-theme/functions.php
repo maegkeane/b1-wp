@@ -121,8 +121,8 @@ function create_news_post_type()
     'labels' => array(
       'name' => __('News Post', 'news_section'), // Rename these to suit
       'singular_name' => __('News Post Section', 'news_section'),
-      'add_new' => __('Add New', 'news_section'),
-      'add_new_item' => __('Add New Post', 'news_section'),
+      'add_new' => __('Add News Post', 'news_section'),
+      'add_new_item' => __('Add News Post', 'news_section'),
       'edit' => __('Edit', 'news_section'),
       'edit_item' => __('Edit Post', 'news_section'),
       'new_item' => __('New News Post', 'news_section'),
