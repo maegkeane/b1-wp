@@ -11,36 +11,34 @@
   <section>
     <h1>Stay Current</h1>
     <h2>Top Stories</h2>
-    <!--<h2><?php the_field('news_title'); ?></h2>-->
-    <!--<div class="card-container">-->
-
-    <?php 
-      $the_query = new WP_Query(array(
-        'post_type' => 'news',
-        'posts_per_page' => 3,
-      ));
-
-    if ($the_query->have_posts() ) {
+    <?php   
+    $the_query = new WP_Query(array( // Define query
+      'post_type' => 'news',
+      'posts_per_page' => 3,
+      'orderby' => 'date'
+    ));
+    
+    if ( $the_query->have_posts() ) {
       echo '<div class="card-container">';
-    
-    while ( $the_query->have_posts() ) {
-      $the_query->the_post();
-      echo '<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>';
-    }
-      
+        while ( $the_query->have_posts() ) {
+          $the_query->the_post();
+          echo 
+            '<a class="card bioone_news" href="' . get_the_permalink() . 'target="_blank">
+              <div class="outline">
+                <h3>' . get_field('bioone_news') . '</h3>
+                <h2>' . get_the_title() . '</h2>
+                <img src"' . get_field('issue_icon')['url'] . '" alt="' . get_field('issue_icon')['alt'] . '"/>
+                <p>' . get_field('pdf_note') . '</p>
+              </div>
+            </a>';
+        }
       echo '</div>';
-    
+
       wp_reset_postdata(); // Restore original post data to prevent unintended functionality
-    
     } else {
-    // no posts found
-      }
-  //
-  //  END WP QUERY
-  //
+      // no posts found
+    }
   ?>
-
-
 
     <!--THIS IS THE OLD CODE FOR THE NEWS-->
     <!--<?php if (have_rows('news_grid') ) : while (have_rows ('news_grid') ) : the_row(); 
@@ -163,35 +161,6 @@
       }
       echo '</div>';
     ?>
-
-    <!--THIS IS THE OLD CODE FOR THE CONFERENCES  
-    <?php if( have_rows( 'calendar_grid' ) ) : while ( have_rows( 'calendar_grid' ) ) : the_row(); 
-
-      $date= get_sub_field('date');
-      $event_name = get_sub_field('event_name');
-      $location = get_sub_field('location');
-      $link = get_sub_field('link');
-      $booth = get_sub_field('booth');
-      $attendees = get_sub_field('attendees')
-
-    ?>
-
-    <a class="card_calendar">  
-      <h3><?php echo $date; ?></h3>
-      <h2><?php echo $event_name; ?></h2>
-      <p><?php echo $location; ?></p>
-      <div class="card_calendar_expand">
-        <p class="who">Who you'll see there: </br>
-        <?php echo $attendees; ?></p>
-        <?php if (get_sub_field('booth')) : ?>  
-          <p class="where"><?php echo $booth; ?></br>
-        <?php endif; ?>
-      </div>
-    </a>
-
-    <?php endwhile; endif; wp_reset_postdata(); ?>-->
-
-    </div>
     <a class="btn-main" href="news-events.html#calendar">Full Calendar</a>  
   </section>
   <section>
