@@ -21,26 +21,15 @@
 	$slug = get_post( $post )->post_name;
 	body_class($slug);
 	?>>
-
+  
   <?php 
-      
-    // You didn't need to put this in an array because get_field('homepage_random')
-    // already returns an array. So you were created a multi-mulit-dimensional array. :)
+  
     $homepage_bgArray = get_field('homepage_random');
 
     shuffle($homepage_bgArray);
-
-    // I left this here so you can see what the array outputs.
-    // Ultimately all you need to do is grab the code below on
-    // line 36 and replace it in your background-image statement.
-    echo $homepage_bgArray[0]['homepage_bg']['url'];
-    echo '<pre>';
-    print_r($homepage_bgArray);
-    echo '</pre>';
   ?>
 
-    <div class="page_header_homepage" style="background-image: url('<?php echo $homepage_bgArray[0]['homepage_bg'];?>');"></div>
-
+  <header class="page-header_homepage" style="background-image: url('<?php echo $homepage_bgArray[0]['homepage_bg']['url']; ?>');"></div>
     <div class="page-header-container">
       <a href="<?php bloginfo('url'); ?>">
 	      <picture class="header-logo">
@@ -80,6 +69,5 @@
       <div class="hero-subheader">We curate research content and support discourse while exploring new models in scientific publishing 
       </div>
     </div>
-  </header>
 		
-			</header> <!-- header#page-header -->
+	</header> <!-- header#page-header -->
