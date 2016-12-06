@@ -23,13 +23,12 @@
         while ( $the_query->have_posts() ) {
           $the_query->the_post();
           echo 
-            '<a class="card bioone_news" href="' . get_the_permalink() . 'target="_blank">
+            '<a class="card ' . wp_get_post_categories() . ' " ' . if (wp_get_post_categories() == ['annual_report']) { . 'style="background-image: url(' . get_field('annual_report_bg_image')['url'] . ' )"; ' . } . ' href=" ' . get_the_permalink() . ' " target="_blank">             
               <div class="outline">
                 <h3>' . get_field('bioone_news') . '</h3>
-                <h2>' . get_the_title() . '</h2>
-                <img src"' . get_field('issue_icon')['url'] . '" alt="' . get_field('issue_icon')['alt'] . '"/>
+                <h2>' . get_the_title() . '</h2>' . if (wp_get_post_categories() == ['bioone_news']) { . '<img src="' . get_field('issue_icon')['url'] . '" alt="' . get_field('issue_icon')['alt'] . ' "/> ' . }) . '
                 <p>' . get_field('pdf_note') . '</p>
-              </div>
+             </div>
             </a>';
         }
       echo '</div>';
