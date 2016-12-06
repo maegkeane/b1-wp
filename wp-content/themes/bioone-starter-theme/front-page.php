@@ -22,14 +22,60 @@
       echo '<div class="card-container">';
         while ( $the_query->have_posts() ) {
           $the_query->the_post();
-          echo 
-            '<a class="card ' . wp_get_post_categories() . ' " ' . if (wp_get_post_categories() == ['annual_report']) { . 'style="background-image: url(' . get_field('annual_report_bg_image')['url'] . ' )"; ' . } . ' href=" ' . get_the_permalink() . ' " target="_blank">             
-              <div class="outline">
-                <h3>' . get_field('bioone_news') . '</h3>
-                <h2>' . get_the_title() . '</h2>' . if (wp_get_post_categories() == ['bioone_news']) { . '<img src="' . get_field('issue_icon')['url'] . '" alt="' . get_field('issue_icon')['alt'] . ' "/> ' . }) . '
-                <p>' . get_field('pdf_note') . '</p>
-             </div>
-            </a>';
+
+          // IAN'S NOTE:
+          //    Here's how my thought process works. "Okay, I know I can get a post's
+          //    categories using wp_get_post_categories. But what's inside that array?
+          //    Let me print_r() it onto the page so I can see."
+          // Uncomment the three lines below to see what wp_get_post_categories returns
+          // echo '<pre>';
+          // print_r(wp_get_post_categories($post->ID));
+          // echo '</pre>';
+
+          // IAN'S NOTE:
+          //    "Oh, It contains an array with a single item in it that's a number. That's
+          //    probably the post category's ID. Let's use get_category() to see what information
+          //    I can get about the category – maybe I can retrieve the name and a code-friendly
+          //    string to use as a CSS class."
+          // Here I get the post category by passing wp_get_post_categories the current post's ID.
+          // The $post->ID bit is a little WordPress trick. If you're within a post loop, you can
+          // always use it to get the post's ID.
+          $postCategoryID = wp_get_post_categories($post->ID)[0];
+          $theCategoryObject = get_category($postCategoryID);
+          // Uncomment the three lines below to see what get_category() returns
+          // echo '<pre style="text-align: left;">';
+          // print_r($theCategoryObject);
+          // echo '</pre>';
+
+          // IAN'S NOTE:
+          //    "Cool, I can get a readable category name and a code-friendly category name from
+          //    get_category(). I'll pass those to variables so I can echo them into code later."
+          //    
+          //    "BUT WAIT. get_category() looked like an array, but it was wrapped in parentheses
+          //    instead of square brackets. That means it's an Object."
+          //    
+          //    An object is like an array in that it contains a lot of data, but it's strict about what 
+          //    form it takes. Usually objects are used in code when they will ALWAYS return a set number 
+          //    of pre-defined items. For example, categories in WordPress ALWAYS have the exact 
+          //    attributes listed in the object printed, only their value will change.
+          //
+          //    "Okay, so since it's an Object, I can't use bracket['notaton'] to get data out of it.
+          //    Instead I have to use arrow->notation."
+          // Uncomment the echos below to see what these return. Note it'll all be on one, big
+          // ugly line. You can use $categoryName and $categorySlug in your code.
+          $categoryName = $theCategoryObject->name;
+          // echo $categoryName;
+          $categorySlug = $theCategoryObject->slug;
+          // echo $categorySlug;
+
+          // echo 
+          //   '<a class="card ' . wp_get_post_categories() . ' " ' . if (wp_get_post_categories() == ['annual_report']) { . 'style="background-image: url(' . get_field('annual_report_bg_image')['url'] . ' )"; ' . } . ' href=" ' . get_the_permalink() . ' " target="_blank">             
+          //     <div class="outline">
+          //       <h3>' . get_field('bioone_news') . '</h3>
+          //       <h2>' . get_the_title() . '</h2>' . if (wp_get_post_categories() == ['bioone_news']) { . '<img src="' . get_field('issue_icon')['url'] . '" alt="' . get_field('issue_icon')['alt'] . ' "/> ' . }) . '
+          //       <p>' . get_field('pdf_note') . '</p>
+          //    </div>
+          //   </a>';
         }
       echo '</div>';
 
