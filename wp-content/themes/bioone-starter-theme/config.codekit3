@@ -157,6 +157,12 @@
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
+	"\/front-page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/front-page.php",
+		"oF": 0
+		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -1215,12 +1221,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
-		},
-	"\/sidebar.php": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/sidebar.php",
-		"oF": 0
 		},
 	"\/single.php": {
 		"ft": 8192,
