@@ -18,93 +18,121 @@
     <?php the_content(); ?>
 
   <?php endwhile; endif; ?>
- 
-  <h2><?php the_field('news_title'); ?></h2>
-   <div class="card-container">
-    
-    <?php if (have_rows('news_grid') ) : while (have_rows ('news_grid') ) : the_row(); 
-    
-
-      $news_type = get_sub_field('news_type');
-      $news_type_code = strtolower(str_replace(' ', '_', $news_type)); 
-      $news_item_name = get_sub_field('news_item_name');
-      $link = get_sub_field('link');
-      $report_bg = get_sub_field('report_bg');
-      $issue_icon = get_sub_field('issue_icon');
-      $pdf_note = get_sub_field('pdf_note');
-
-    ?>
-    
-    <a class="card <?php echo $news_type_code; ?>"
+  <section>
+    <h2><?php the_field('news_title'); ?></h2>
+    <div class="card-container">
+      
       <?php   
-        if (get_sub_field('report_bg') && $news_type_code === 'annual_report') {
-        ?> 
-        style="background-image: url(<?php echo $report_bg['url']; ?>);"
-      <?php  
-        }       
+        $the_query = new WP_Query(array( // Define query
+          'post_type' => 'news',
+          'posts_per_page' => 6,
+          'orderby' => 'date'
+        ));
+        
+        if ( $the_query->have_posts() ) {
+          echo '<div class="card-container">';
+            while ( $the_query->have_posts() ) {
+              $the_query->the_post();
+              
+              $postCategoryID = wp_get_post_categories($post->ID)[0];
+              $theCategoryObject = get_category($postCategoryID);
+              
+              $categorySlug = $theCategoryObject->slug;
       ?>
-      href="<?php echo $link; ?>" target="_blank">  
-      <?php if ($news_type_code === 'annual_report') { ?>
-        <div class="outline">
+
+        <a class="card <?php echo $categorySlug; ?>" <?php if (get_field('annual_report_bg_image') && $categorySlug === 'annual_report') { ?>
+          style="background-image: url(<?php echo get_field('annual_report_bg_image')['url']; ?>);"; 
+          <?php } ?>
+          href="<?php if (get_field('link')) { echo get_field('link'); } else { echo get_the_permalink(); } ?>" target="_blank">
+
+          <div class="outline">
+            <h3><?php echo get_field($categorySlug); ?></h3>
+            <h2><?php if (get_field('press_release_header') && $categorySlug == 'press_release') { echo strip_tags(get_field('press_release_header'), '<em>');} else { echo get_the_title(); } ?></h2>
+            <?php if (get_field('issue_icon')) : ?>
+              <img src="<?php echo get_field('issue_icon')['url']; ?>" alt="<?php echo get_field('issue_icon')['alt']; ?>" />
+            <?php endif; ?> 
+            
+            <p><?php echo get_field('pdf_note'); ?></p>
+          </div>
+        </a>
+
+      <?php }
+        wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
+        
+        } else {
+            // No posts found
+        }
+      ?>
+      
+    <a class="btn-main" href="http://www.bioone.org/action/showNews?type=archive" target="_blank">News Archive</a>
+  </section>
+  <section>
+    <a id="calendar"><hr></a>
+    <h2><?php the_field('calendar_title'); ?></h2>
+    <h3><?php the_field('calendar_subhead'); ?></h3>
+    
+    <?php
+      $map = get_field('map'); 
+      if (!empty($map) ) : 
+    ?> 
+      <img id="map" src="<?php echo $map['url']; ?>" alt="<?php echo $map['alt']; ?>" />
+    <?php endif; ?>
+
+    <?php 
+      $the_query = new WP_Query(array( // Define query
+        'post_type' => 'conferences',
+        'posts_per_page' => 200, // For conferences, you don't want them to only get 3, you are looking at all of them (say, 200)
+        'orderby' => 'date'
+      ));
+      
+      $conferenceCalendarArray = array(); // Overall grid of conferences
+
+      if ( $the_query->have_posts() ) {
+        while ( $the_query->have_posts() ) {
+          $the_query->the_post();
+
+          $conferenceArray = array(       
+            'event_name' => get_the_title(),
+            'display_date' => get_field('display_date'), 
+            'location' => get_field('location'),
+            'attendees' => get_field('attendees'),
+            'booth' => get_field('booth'),
+            'order_date' => get_field('order_date')
+          );
+          
+            // array_push adds an item to the end of an existing array
+            array_push($conferenceCalendarArray, $conferenceArray);
+          }
+
+        wp_reset_postdata(); // Restore original post data to prevent unintended functionality
+          
+        } else {
+            // No posts found
+        }
+
+      function date_compare($a, $b)
+      {
+        $t1 = strtotime($a['order_date']);
+        $t2 = strtotime($b['order_date']);
+        return $t1 - $t2;
+      }    
+
+      usort($conferenceCalendarArray, 'date_compare');
+
+      echo '<div class="card-container">';
+      // need a loop here that grabs the posts from the current and upcoming year
+        <a class="card_calendar">
+          <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
+          <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
+          <p><?php echo $conferenceCalendarArray[$i]['location']; ?> </p>
+          <div class="card_calendar_expand">
+            <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
+            <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
+            </div>
+          </a>
       <?php } ?>
-      <h3><?php echo $news_type; ?></h3>
-      <h2><?php echo strip_tags($news_item_name); ?></h2>
-
-      <?php if (get_sub_field('issue_icon')) : ?>
-      <img src="<?php echo $issue_icon['url']; ?>" alt="<?php echo $issue_icon['alt']; ?>" />
-      <?php endif; ?> 
-      <p class="card_PDF"><?php echo $pdf_note; ?></p>
-      <?php if ($news_type_code === 'annual_report') { ?>
-        </div>
-      <?php } ?>
-    </a>
-
-    <?php endwhile; endif; wp_reset_postdata(); ?>
-
-  </div>
-
-  <a class="btn-main" href="http://www.bioone.org/action/showNews?type=archive" target="_blank">More News</a>
-  
-  <a id="calendar"><hr></a>
-  <h2><?php the_field('calendar_title'); ?></h2>
-  <h3><?php the_field('calendar_subhead'); ?></h3>
-  
-  <?php
-    $map = get_field('map'); 
-    if (!empty($map) ) : 
-  ?> 
-    <img id="map" src="<?php echo $map['url']; ?>" alt="<?php echo $map['alt']; ?>" />
-  <?php endif; ?>
-
-  <div class="card-container">
-
-    <?php if( have_rows( 'calendar_grid' ) ) : while ( have_rows( 'calendar_grid' ) ) : the_row(); 
-
-      $date= get_sub_field('date');
-      $event_name = get_sub_field('event_name');
-      $location = get_sub_field('location');
-      $link = get_sub_field('link');
-      $booth = get_sub_field('booth');
-      $attendees = get_sub_field('attendees')
-
-    ?>
-
-    <a class="card_calendar">  
-      <h3><?php echo $date; ?></h3>
-      <h2><?php echo $event_name; ?></h2>
-      <p><?php echo $location; ?></p>
-      <div class="card_calendar_expand">
-        <p class="who">Who you'll see there: </br>
-        <?php echo $attendees; ?></p>
-        <?php if (get_sub_field('booth')) : ?>  
-          <p class="where"><?php echo $booth; ?></br>
-        <?php endif; ?>
-      </div>
-    </a>
-
-    <?php endwhile; endif; wp_reset_postdata(); ?>
-
-  </div>
+    </div>
+  </section>  
   <hr>
   <div class="light-purple-bg">
   <h2>Stay Up to Date</h2>
