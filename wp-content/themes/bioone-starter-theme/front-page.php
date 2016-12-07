@@ -32,7 +32,7 @@
       <a class="card <?php echo $categorySlug; ?>" <?php if (get_field('annual_report_bg_image') && $categorySlug === 'annual_report') { ?>
         style="background-image: url(<?php echo get_field('annual_report_bg_image')['url']; ?>);"; 
         <?php } ?>
-        href="<?php echo get_field('link');?>" target="_blank">
+        href="<?php if (get_field('link')) { echo get_field('link'); } else { echo get_the_permalink(); } ?>" target="_blank">
 
         <div class="outline">
           <h3><?php echo get_field($categorySlug); ?></h3>
@@ -57,7 +57,6 @@
   </section>
   <section>
     <h2>Upcoming Conferences</h2>
-    <br />
     <?php 
       $the_query = new WP_Query(array( // Define query
         'post_type' => 'conferences',
@@ -107,7 +106,7 @@
           <p><?php echo $conferenceCalendarArray[$i]['location']; ?> </p>
           <div class="card_calendar_expand">
             <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
-            <?php if (get_field('booth')) { ?> <p class="where"><?php echo get_field('booth'); ?></br></p><?php } ?> 
+            <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
             </div>
           </a>
       <?php } ?>
