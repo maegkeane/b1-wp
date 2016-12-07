@@ -36,8 +36,7 @@
 
         <div class="outline">
           <h3><?php echo get_field($categorySlug); ?></h3>
-          <h2><?php echo get_the_title(); ?></h2>
-
+          <h2><?php if (get_field('press_release_header') && $categorySlug == 'press_release') { echo strip_tags(get_field('press_release_header'), '<em>');} else { echo get_the_title(); } ?></h2>
           <?php if (get_field('issue_icon')) : ?>
             <img src="<?php echo get_field('issue_icon')['url']; ?>" alt="<?php echo get_field('issue_icon')['alt']; ?>" />
           <?php endif; ?> 
@@ -53,7 +52,8 @@
           // No posts found
       }
     ?>
-
+    
+    <a class="btn-main" href="news-events">More News</a>  
   </section>
   <section>
     <h2>Upcoming Conferences</h2>
@@ -71,9 +71,6 @@
         while ( $the_query->have_posts() ) {
           $the_query->the_post();
 
-          // For this example we have a lot of information we want to group together
-          // for each post, so into the array we pass another array.
-          // So each value in the array is another array with more values.
           $conferenceArray = array(       
             'event_name' => get_the_title(),
             'display_date' => get_field('display_date'), 
@@ -103,7 +100,6 @@
       usort($conferenceCalendarArray, 'date_compare');
 
       echo '<div class="card-container">';
-      //This is where we are actually putting things on the page; type $i<count(2), so only 3 appear
       for ($i=0; $i<3; $i++) { // Do another loop to get stuff out of the array
         echo 
           '<a class="card_calendar">
@@ -120,7 +116,7 @@
       }
       echo '</div>';
     ?>
-    <a class="btn-main" href="news-events.html#calendar">Full Calendar</a>  
+    <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   </section>
   <section>
   <hr>
