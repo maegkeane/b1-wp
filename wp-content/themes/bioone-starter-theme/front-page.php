@@ -5,7 +5,7 @@
     
     <?php the_field('opening_paragraphs'); ?>
     
-    <a class="btn-main" href="publications.html">More About Our Products</a>
+    <a class="btn-main" href="our-work">More About Our Products</a>
   </section>
   <hr>
   <section>
@@ -100,22 +100,19 @@
       usort($conferenceCalendarArray, 'date_compare');
 
       echo '<div class="card-container">';
-      for ($i=0; $i<3; $i++) { // Do another loop to get stuff out of the array
-        echo 
-          '<a class="card_calendar">
-            <h3>' . $conferenceCalendarArray[$i]['display_date'] . '</h3>
-            <h2>' . $conferenceCalendarArray[$i]['event_name'] . '</h2>
-            <p>' . $conferenceCalendarArray[$i]['location'] . '</p>
-            <div class="card_calendar_expand">
-              <p class="who">' .
-                $conferenceCalendarArray[$i]['attendees'] .
-              '</p>' .
-              //if (get_sub_field('booth')) : . '<p class="where">' $conferenceCalendarArray[$i]['booth'] . '</br>   
-            '</div>
-          </a>';
-      }
-      echo '</div>';
-    ?>
+      for ($i=0; $i<3; $i++) { ?> 
+        <a class="card_calendar">
+          <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
+          <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
+          <p><?php echo $conferenceCalendarArray[$i]['location']; ?> </p>
+          <div class="card_calendar_expand">
+            <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
+            <?php if (get_field('booth')) { ?> <p class="where"><?php echo get_field('booth'); ?></br></p><?php } ?> 
+            </div>
+          </a>
+      <?php } ?>
+
+      </div>
     <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   </section>
   <section>
