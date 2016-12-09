@@ -711,7 +711,7 @@ nav {
       padding: 25px 0 0 25px; } }
   @media only screen and (max-width: 740px) {
     .page-header_homepage {
-      background-image: none;
+      background-image: none !important;
       height: 72px;
       border-bottom: #6E9934 solid 2px;
       padding: 25px 75px 0 25px; } }
@@ -1454,11 +1454,11 @@ aside.right {
     display: inline;
     color: #FFFFFF;
     font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     margin-top: 0;
     margin-right: 0;
-    padding-top: 13px;
+    padding-top: 14px;
     padding-right: 20px;
     padding-bottom: 10px;
     padding-left: 20px; }

@@ -283,7 +283,7 @@ nav {
   }
   
   @include media-query(max, small) {
-    background-image: none; 
+    background-image: none !important;
     height: 72px; 
     border-bottom: $color-brand solid 2px;
     padding: 25px 75px 0 25px; 
