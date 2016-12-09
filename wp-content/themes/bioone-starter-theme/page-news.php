@@ -64,7 +64,7 @@
         }
       ?>
       
-    <a class="btn-main" href="http://www.bioone.org/action/showNews?type=archive" target="_blank">News Archive</a>
+    <a class="btn-main" href="archive-news" target="_blank">News Archive</a>
   </section>
   <section>
     <a id="calendar"><hr></a>
@@ -120,16 +120,27 @@
       usort($conferenceCalendarArray, 'date_compare');
 
       echo '<div class="card-container">';
-      // need a loop here that grabs the posts from the current and upcoming year
+      //This works but doesn't do what I need it to do
+      for ($i=0; $i<6; $i++) { 
+      
+      // New code
+      //date_default_timezone_set('EST');
+      //$conferences = Array(['ymd']);
+      //$today = date(['ymd']);
+
+      //for ($i=0; $i>count($conferences); $i++) {
+      //  if ($conferences['order_date'] >= $today) { 
+      //End of new code  
+      ?> 
         <a class="card_calendar">
           <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
           <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
-          <p><?php echo $conferenceCalendarArray[$i]['location']; ?> </p>
+          <p><?php echo $conferenceCalendarArray[$i]['location']; ?></p>
           <div class="card_calendar_expand">
             <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
             <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
-            </div>
-          </a>
+          </div>
+        </a>
       <?php } ?>
     </div>
   </section>  
