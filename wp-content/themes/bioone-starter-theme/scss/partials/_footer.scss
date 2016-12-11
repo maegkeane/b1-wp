@@ -57,22 +57,31 @@ footer {
     li {
       padding-bottom: 5px;
 
-      a.image {
+      a.social-logo-link {
         text-decoration: none; 
-      }
-      
-      img {
-        width: 25px;
-        margin: {
-          right: 5px;
-          top: 5px;
-        }
         
-        @include media-query(max, small) {
-          width: 30px; 
-          margin-right: 10px;
+        svg.social-logo {
+          width: 25px; 
+          margin {
+            right: 10px; 
+            top: 5px; 
+          }
+
+          @include media-query(max, small) {
+            width: 30px; 
+            margin-right: 10px;
+          }
+          
+          .st0 {
+            fill: $color-accent;
+          }
+
+          .st1 {
+            fill: none;
+            stroke: $color-accent;
+            stroke-miterlimit: 10;
+          }
         }
-      
       }
     }
   }
