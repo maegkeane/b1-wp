@@ -1,6 +1,6 @@
 <?php get_header('homepage'); ?>
 
-<article>
+<div class="content">
   <section>
     
     <?php the_field('opening_paragraphs'); ?>
@@ -183,6 +183,6 @@
 
     </div>
   </section>
-</article>
+</div>
 
 <?php get_footer(); ?>
