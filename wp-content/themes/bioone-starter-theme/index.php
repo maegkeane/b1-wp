@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<article>
+<div class="content">
   <section>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -12,6 +12,6 @@
     <?php endwhile; endif; ?>
 
   </section>
-</article>
+</div>
 
 <?php get_footer(); ?>

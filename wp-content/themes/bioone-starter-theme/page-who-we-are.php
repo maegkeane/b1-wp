@@ -4,29 +4,20 @@
 */
 ?> 
 
-
 <?php get_header(''); ?>
 
-<article>
-
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  	
-    <header>		
-  	    <h1><?php the_title(); ?></h1>
-    </header>
-
-    <?php the_content(); ?>
-
-  <?php endwhile; endif; ?>
-  
-  <hr>
-
+<div class="content">
   <section>
-    <!--HQ-->
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    	<header><h1><?php the_title(); ?></h1></header>
+      <?php the_content(); ?>
+    <?php endwhile; endif; ?>
+  </section>
+  <hr>
+  <section>
     <h2><?php the_field('team_header'); ?></h2>
     <p><?php the_field('team_description'); ?></p>
     <h3><?php the_field('hq_staff_header'); ?></h3>
-
     <div class="flex-grid">
 
       <?php if( have_rows( 'bio_grid_hq' ) ) : while ( have_rows( 'bio_grid_hq' ) ) : the_row(); 
@@ -73,6 +64,7 @@
       <?php endwhile; endif; wp_reset_postdata(); ?>
     </div>
   </section>
+  <hr>
   <section>
     <!--BOARD-->
     <h3><?php the_field('board_header'); ?></h3>
@@ -107,6 +99,7 @@
       <?php endwhile; endif; wp_reset_postdata(); ?>
     </div> 
   </section>
+  <hr>
   <section>
     <!--SALES TEAM-->
     <h3><?php the_field('sales_staff_header'); ?></h3>
@@ -136,9 +129,8 @@
     <a href="mailto:<?php echo $email;?>"><?php echo $email; ?></a><br />
       <?php echo $number; ?></p>
 
-
     <?php endwhile; endif; wp_reset_postdata(); ?>
   </section>
-</article>
+</div>
 
 <?php get_footer(); ?>

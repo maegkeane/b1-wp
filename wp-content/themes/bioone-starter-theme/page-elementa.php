@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-<article>
+<div class="content">
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   	
@@ -19,6 +19,6 @@
 
   <?php endwhile; endif; ?>
  
-</article>
+</div>
 
 <?php get_footer(); ?>

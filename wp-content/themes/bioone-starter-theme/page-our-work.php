@@ -6,16 +6,13 @@
 
 <?php get_header(); ?>
 
-<article>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    
-    <header>    
-        <h1><?php the_title(); ?></h1>
-    </header>
-
-    <?php the_content(); ?>
-
-  <?php endwhile; endif; ?>
+<div class="content">
+  <section>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <header><h1><?php the_title(); ?></h1></header>
+      <?php the_content(); ?>
+    <?php endwhile; endif; ?>
+  </section>
   <hr>
   <section>
     <a href="<?php echo get_field('bioone_complete_link'); ?>">
@@ -31,9 +28,10 @@
          <h2>Subject Areas</h2>
         <?php echo get_field('subject_areas'); ?>
       </section>  
-    </div>  
+    </div> 
     <a class="btn-main" href="<?php echo get_field('bioone_complete_link'); ?>"><?php echo get_field('bioone_complete_button'); ?></a>
   </section>
+  <hr>
   <section>
     <a href="<?php echo get_field('elementa_link'); ?>">
       <img class="elementa-logo" src="<?php echo get_field('elementa_logo')['url']; ?>" alt="<?php echo get_field('elementa_logo')['alt']; ?>"/>
@@ -41,6 +39,7 @@
     <p><?php echo get_field('elementa_description'); ?></p>   
     <a class="btn-main" href="<?php echo get_field('elementa_link'); ?>"><?php echo get_field('elementa_button'); ?></a>
   </section>
+  <hr>
   <section>
     <h1>Initiatives &amp; Resources</h1>
     <h2>Community Tools</h2>
@@ -108,6 +107,6 @@
     
     </ul>
   </section>
-</article>
+</div>
 
 <?php get_footer(); ?>

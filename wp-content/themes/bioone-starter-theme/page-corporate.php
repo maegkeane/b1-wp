@@ -4,21 +4,13 @@
 */
 ?> 
 
-
 <?php get_header(); ?>
 
-<article>
-
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  	
-    <header>		
-  	    <h1><?php the_title(); ?></h1>
-    </header>
-
+<div class="content">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
+    <header><h1><?php the_title(); ?></h1></header>
     <?php the_content(); ?>
-
   <?php endwhile; endif; ?>
- 
   <section>
     <h3>Annual Reports</h3><br />
     <div class="card-container">
@@ -45,11 +37,11 @@
     </div>
 
   </section>
-
+  <hr>
   <section>
     <h3><a href="<?php echo get_field('bylaws_link');?>">BioOne Bylaws</a></h3>
   </section>
-
+  <hr>
   <section>
     <h3>Audited Financial Statements &amp; 990s</h3>
     <ol>
@@ -78,6 +70,6 @@
 
     </ol>
   </section>
-</article>
+</div>
 
 <?php get_footer(); ?>

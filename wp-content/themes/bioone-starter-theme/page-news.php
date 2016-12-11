@@ -7,17 +7,12 @@
 
 <?php get_header(); ?>
 
-<article>
-
+<div class="content">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  	
-    <header>		
-  	    <h1><?php the_title(); ?></h1>
-    </header>
-
+    <header><h1><?php the_title(); ?></h1></header>
     <?php the_content(); ?>
-
   <?php endwhile; endif; ?>
+  
   <section>
     <h2><?php the_field('news_title'); ?></h2>
     <div class="card-container">
@@ -55,7 +50,7 @@
             <p><?php echo get_field('pdf_note'); ?></p>
           </div>
         </a>
-
+      </div>  
       <?php }
         wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
         
@@ -66,6 +61,7 @@
       
     <a class="btn-main" href="archive-news" target="_blank">News Archive</a>
   </section>
+  <hr>
   <section>
     <a id="calendar"><hr></a>
     <h2><?php the_field('calendar_title'); ?></h2>
@@ -120,17 +116,11 @@
       usort($conferenceCalendarArray, 'date_compare');
 
       echo '<div class="card-container">';
-      //This works but doesn't do what I need it to do
-      for ($i=0; $i<6; $i++) { 
       
-      // New code
-      //date_default_timezone_set('EST');
-      //$conferences = Array(['ymd']);
-      //$today = date(['ymd']);
+      $today = date('U');
 
-      //for ($i=0; $i>count($conferences); $i++) {
-      //  if ($conferences['order_date'] >= $today) { 
-      //End of new code  
+      for ($i=0; $i<count($conferenceCalendarArray); $i++) {
+        if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
       ?> 
         <a class="card_calendar">
           <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
@@ -141,12 +131,16 @@
             <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
           </div>
         </a>
-      <?php } ?>
+      <?php 
+          }
+        }
+      ?>
     </div>
   </section>  
   <hr>
-  <div class="light-purple-bg">
-  <h2>Stay Up to Date</h2>
+  <section>
+    <div class="light-purple-bg">
+      <h2>Stay Up to Date</h2>
       <p>Everyone has a full inbox. That's why we only send you essential updates and a seasonal newsletter to keep you up to speed.</p>
 <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
@@ -182,7 +176,8 @@
         </form>
       </div>
 <!--End mc_embed_signup-->
-  </div>  
-</article>
+    </div> 
+  </section> 
+</div>
 
 <?php get_footer(); ?>
