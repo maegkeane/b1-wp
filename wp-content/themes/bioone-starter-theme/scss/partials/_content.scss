@@ -13,7 +13,7 @@ header {
   margin-top: 40px; 
 }
 
-article {
+.content {
   margin: 0 auto; 
   max-width: 700px; 
   font: {
@@ -28,7 +28,7 @@ article {
 }
 
 section {
-  margin-bottom: 35px;
+  padding: 35px 0; 
 }
 
 aside.left {
@@ -100,7 +100,6 @@ aside.right {
   margin: {
     top: 10px; 
     right: 10px; 
-    bottom: 25px; 
   }
   border-radius: 3px; 
   font: {
@@ -117,7 +116,7 @@ aside.right {
   color: $white; 
   
   &:hover {
-    background: lighten($color-accent, 5%);
+    background: lighten($color-accent, 15%);
     color: $white;
     cursor: pointer;  
   }
@@ -943,8 +942,7 @@ aside.right {
 //images
 img.pub-logo { 
   display: inline; 
-  max-width: 200px;
-  margin-top: 40px; 
+  max-width: 250px;
   margin-bottom: 10px;
 
   @include media-query(max, small) {
@@ -992,7 +990,7 @@ img.pub-logo {
     z-index: 500; 
     display: table-cell; 
     padding: 0; 
-    max-width: 100%; 
+    min-width: 100%; 
     vertical-align: middle; 
     pointer-events: none; 
     color: $color-light; 

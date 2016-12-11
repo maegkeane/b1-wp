@@ -460,10 +460,9 @@ ol, ul {
 
 hr {
   display: block;
-  margin: 3em auto;
+  margin: 1em auto;
   padding: 0;
   max-width: 25%;
-  height: 1px;
   border: 0;
   border-top: 3px solid #6E9934;
   border-radius: 0; }
@@ -785,18 +784,18 @@ body {
 header {
   margin-top: 40px; }
 
-article {
+.content {
   margin: 0 auto;
   max-width: 700px;
   font-family: "ff-tisa-web-pro", Georgia, serif;
   font-size: 16px; }
   @media only screen and (max-width: 740px) {
-    article {
+    .content {
       margin: 0 auto;
       padding: 0 20px; } }
 
 section {
-  margin-bottom: 35px; }
+  padding: 35px 0; }
 
 aside.left {
   display: inline;
@@ -854,7 +853,6 @@ aside.right {
   padding: 13px 26px;
   margin-top: 10px;
   margin-right: 10px;
-  margin-bottom: 25px;
   border-radius: 3px;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -865,7 +863,7 @@ aside.right {
   letter-spacing: 1.5px;
   color: #FFFFFF; }
   .btn-main:hover {
-    background: #4252a3;
+    background: #5c6cbd;
     color: #FFFFFF;
     cursor: pointer; }
 
@@ -1470,8 +1468,7 @@ aside.right {
 
 img.pub-logo {
   display: inline;
-  max-width: 200px;
-  margin-top: 40px;
+  max-width: 250px;
   margin-bottom: 10px; }
   @media only screen and (max-width: 740px) {
     img.pub-logo {
@@ -1506,7 +1503,7 @@ img.pub-logo {
     z-index: 500;
     display: table-cell;
     padding: 0;
-    max-width: 100%;
+    min-width: 100%;
     vertical-align: middle;
     pointer-events: none;
     color: #64717D;
@@ -1584,16 +1581,23 @@ footer {
       margin: 0; }
     footer .page-footer_content li {
       padding-bottom: 5px; }
-      footer .page-footer_content li a.image {
+      footer .page-footer_content li a.social-logo-link {
         text-decoration: none; }
-      footer .page-footer_content li img {
-        width: 25px;
-        margin-right: 5px;
-        margin-top: 5px; }
-        @media only screen and (max-width: 740px) {
-          footer .page-footer_content li img {
-            width: 30px;
-            margin-right: 10px; } }
+        footer .page-footer_content li a.social-logo-link svg.social-logo {
+          width: 25px; }
+          footer .page-footer_content li a.social-logo-link svg.social-logo margin {
+            right: 10px;
+            top: 5px; }
+          @media only screen and (max-width: 740px) {
+            footer .page-footer_content li a.social-logo-link svg.social-logo {
+              width: 30px;
+              margin-right: 10px; } }
+          footer .page-footer_content li a.social-logo-link svg.social-logo .st0 {
+            fill: #3B4991; }
+          footer .page-footer_content li a.social-logo-link svg.social-logo .st1 {
+            fill: none;
+            stroke: #3B4991;
+            stroke-miterlimit: 10; }
   footer .footer-copyright {
     text-align: right;
     padding-right: 50px;
