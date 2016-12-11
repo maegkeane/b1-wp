@@ -31,7 +31,7 @@ FUNCTION DECLARATIONS
 
 //modal window
    	$('a.bio-list-item_short-bio-container').click(function() {
-   		var $modal = $(this).siblings('.bio-list-item_modal');
+   		var $modal = $(this).closest('.bio-list-item').find('.bio-list-item_modal');
    		if (!$modal.hasClass('visible')) {
    			$modal.addClass('visible');
    			$(this).append('<div class="overlay"></div>');
