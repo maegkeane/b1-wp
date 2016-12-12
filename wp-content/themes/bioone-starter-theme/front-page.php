@@ -2,59 +2,67 @@
 
 <div class="content">
   <section>
-    
-    <?php the_field('opening_paragraphs'); ?>
-    
+    <h1><?php the_field('mission-header'); ?></h1>
+    <?php the_field('mission_text'); ?>
+  </section>
+  <section>
+    <h1><?php the_field('products_header'); ?></h1>
+    <?php the_field('products_b1_complete'); ?>
+    <section class="secondary">
+      <?php the_field('products_elementa'); ?>
+    </section>
     <a class="btn-main" href="our-work">More About Our Products</a>
   </section>
   <hr>
   <section>
-    <h1>Stay Current</h1>
+    <h1>News &amp; Events</h1>
     <h2>Top Stories</h2>
-    <?php   
-      $the_query = new WP_Query(array( // Define query
-        'post_type' => 'news',
-        'posts_per_page' => 3,
-        'orderby' => 'date'
-      ));
-      
-      if ( $the_query->have_posts() ) {
-        echo '<div class="card-container">';
-          while ( $the_query->have_posts() ) {
-            $the_query->the_post();
+    <section class="secondary">
+      <?php   
+        $the_query = new WP_Query(array( // Define query
+          'post_type' => 'news',
+          'posts_per_page' => 3,
+          'orderby' => 'date'
+        ));
+        
+        if ( $the_query->have_posts() ) {
+          echo '<div class="card-container">';
+            while ( $the_query->have_posts() ) {
+              $the_query->the_post();
+              
+              $postCategoryID = wp_get_post_categories($post->ID)[0];
+              $theCategoryObject = get_category($postCategoryID);
+              
+              $categorySlug = $theCategoryObject->slug;
+      ?>
+
+        <a class="card <?php echo $categorySlug; ?>" <?php if (get_field('annual_report_bg_image') && $categorySlug === 'annual_report') { ?>
+          style="background-image: url(<?php echo get_field('annual_report_bg_image')['url']; ?>);"; 
+          <?php } ?>
+          href="<?php if (get_field('link')) { echo get_field('link'); } else { echo get_the_permalink(); } ?>" target="_blank">
+
+          <div class="outline">
+            <h3><?php echo get_field($categorySlug); ?></h3>
+            <h2><?php if (get_field('press_release_header') && $categorySlug == 'press_release') { echo strip_tags(get_field('press_release_header'), '<em>');} else { echo get_the_title(); } ?></h2>
+            <?php if (get_field('issue_icon')) : ?>
+              <img src="<?php echo get_field('issue_icon')['url']; ?>" alt="<?php echo get_field('issue_icon')['alt']; ?>" />
+            <?php endif; ?> 
             
-            $postCategoryID = wp_get_post_categories($post->ID)[0];
-            $theCategoryObject = get_category($postCategoryID);
-            
-            $categorySlug = $theCategoryObject->slug;
-    ?>
+            <p><?php echo get_field('pdf_note'); ?></p>
+          </div>
+        </a>
 
-      <a class="card <?php echo $categorySlug; ?>" <?php if (get_field('annual_report_bg_image') && $categorySlug === 'annual_report') { ?>
-        style="background-image: url(<?php echo get_field('annual_report_bg_image')['url']; ?>);"; 
-        <?php } ?>
-        href="<?php if (get_field('link')) { echo get_field('link'); } else { echo get_the_permalink(); } ?>" target="_blank">
-
-        <div class="outline">
-          <h3><?php echo get_field($categorySlug); ?></h3>
-          <h2><?php if (get_field('press_release_header') && $categorySlug == 'press_release') { echo strip_tags(get_field('press_release_header'), '<em>');} else { echo get_the_title(); } ?></h2>
-          <?php if (get_field('issue_icon')) : ?>
-            <img src="<?php echo get_field('issue_icon')['url']; ?>" alt="<?php echo get_field('issue_icon')['alt']; ?>" />
-          <?php endif; ?> 
-          
-          <p><?php echo get_field('pdf_note'); ?></p>
-        </div>
-      </a>
-
-    <?php }
-      wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
-      
-      } else {
-          // No posts found
-      }
-    ?>
-    
+      <?php }
+        wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
+        
+        } else {
+            // No posts found
+        }
+      ?>
     <a class="btn-main" href="news-events">More News</a>  
+    </section>
   </section>
+  <hr>
   <section>
     <h2>Upcoming Conferences</h2>
     <?php 
@@ -112,8 +120,8 @@
       <?php } ?>
 
       </div>
-    <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   </section>
+  <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   <section>
   <hr>
     <div class="light-purple-bg">
@@ -123,23 +131,23 @@
         <div id="mc_embed_signup">
           <form action="//bioone.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-            <div class="sign-up-list">
-              <div class="sign-up-col1">
-              I am a
+              <div class="sign-up-list">
+                <div class="sign-up-col1">
+                  I am a
+                </div>
+                <div class="sign-up-col2">
+                  <ul>
+                    <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
+                    <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
+                  </ul>
+                </div>
+                <div class="sign-up-col3">
+                  <ul>  
+                    <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
+                    <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
+                  </ul>
+                </div>
               </div>
-              <div class="sign-up-col2">
-                <ul>
-                  <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
-                  <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
-                </ul>
-              </div>
-              <div class="sign-up-col3">
-                <ul>  
-                  <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
-                  <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
-                </ul>
-              </div>
-            </div>
             <div class="mc-field-group" style="display: inline">
               <label for="mce-EMAIL">and my email address is</label><br />
               <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
@@ -155,6 +163,7 @@
   <!--End mc_embed_signup-->
     </div>  
   </section>
+  <hr>
   <section> 
     <h1>From the Community</h1>
 
