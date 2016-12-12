@@ -97,15 +97,20 @@ aside.right {
 }
 
 //buttons 
-.btn-main {
+.btn-main {  
+  -webkit-transition: background-color, 0.2s ease-in-out;
+  -moz-transition: background-color, 0.2s ease-in-out;
+  -ms-transition: background-color, 0.2s ease-in-out;
+  -o-transition: background-color, 0.2s ease-in-out;
+  transition: background-color, 0.2s ease-in-out; 
+  
   display: inline-block; 
-  background: $color-accent; 
   padding: 13px 26px; 
-  margin: {
-    top: 0.5rem; 
-    bottom: 1rem; 
-  }
-  border-radius: 3px; 
+  margin-top: 0.5rem; 
+  border: 2px solid $color-accent; 
+  border-radius: 3px;
+  background: $color-accent; 
+  color: white; 
   font: {
     family: $font-sans; 
     size: 13px; 
@@ -117,45 +122,21 @@ aside.right {
     decoration: none;  
   }
   letter-spacing: 1.5px; 
-  color: $white; 
   
   &:hover {
-    background: lighten($color-accent, 15%);
-    color: $white;
-    cursor: pointer;  
-  }
-}
- 
-.btn-secondary {
-  display: inline-block; 
-  border: 2px solid $color-accent; 
-  padding: 10px 25px; 
-  margin: {
-    right: 10px; 
-    bottom: 25px; 
-  }
-  border-radius: 3px; 
-  font: {
-    family: $font-sans; 
-    size: 13px; 
-    weight: 600; 
-  }
-  text: {
-    transform: uppercase;
-    align: center; 
-    decoration: none; 
-  }
-  letter-spacing: 1.5px; 
-  color: $color-accent; 
-  
-  &:hover {
-    border: 2px solid lighten($color-accent, 20%);
-    color: lighten($color-accent, 20%);
+    background: $white; 
+    color: $color-accent; 
     cursor: pointer; 
   }
 }
 
 .btn-secondary-charter {
+  -webkit-transition: background-color, 0.2s ease-in-out;
+  -moz-transition: background-color, 0.2s ease-in-out;
+  -ms-transition: background-color, 0.2s ease-in-out;
+  -o-transition: background-color, 0.2s ease-in-out;
+  transition: background-color, 0.2s ease-in-out; 
+  
   display: inline-block; 
   border: 2px solid $color-accent; 
   padding: 10px 25px; 
@@ -178,8 +159,9 @@ aside.right {
   color: $color-accent; 
   
   &:hover {
-    border: 2px solid lighten($color-accent, 20%);
-    color: lighten($color-accent, 20%);
+    border: 2px solid $color-accent;
+    background-color: $color-accent; 
+    color: white;
     cursor: pointer; 
   }
 }
@@ -857,17 +839,18 @@ aside.right {
 //mailchimp form 
 .light-purple-bg {
   position: relative;
-  padding: 20px 40px;  
+  padding: 20px 40px 60px;  
   background-color: lighten($color-accent, 50%);
-    @include media-query(max, small) {
-      padding: 20px; 
+  
+  @include media-query(max, small) {
+    padding: 20px; 
   }
 
   #mc_embed_signup {
     input {
       margin-top: 20px; 
       padding: 10px 130px 10px 20px;
-      border: 1px solid $color-accent; 
+      border: 2px solid $color-accent; 
       color: $color-light; 
       font: {
         family: $font-serif; 
@@ -912,6 +895,7 @@ aside.right {
       .sign-up-col3 {
         @include media-query(max, medium) {
           margin-bottom: 0; 
+        }
 
         @include media-query(max, small) {
           width: 100%; 
@@ -929,20 +913,22 @@ aside.right {
         size: 14px; 
         weight: 600; 
       }
-      margin-top: 0;
-      margin-right: 0; 
-      margin-left: 5px;  
+      margin: 0 0 0 5px;
       padding: { 
         top: 14px;
         right: 20px;
         bottom: 10px; 
         left: 20px;
       }
+
+      &:hover {
+        color: $color-accent; 
+      }
+
       @include media-query(max, small) {
         margin-top: 10px; 
         margin-left: 0; 
       }
-   
     }
   }
 
@@ -987,18 +973,21 @@ img.pub-logo {
       margin-top: 70px; 
     }
 
-  .cycle-pager-active {
-    color: $color-brand;
-    width: 100px; 
-  }
-  span {
-    color: $color-light;
-    &:hover {
-      color: $color-brand; 
+    .cycle-pager-active {
+      color: $color-brand;
+      width: 100px; 
     }
-    padding: 5px 10px;   
+  
+    span {
+      color: $color-light;
+      
+      &:hover {
+        color: $color-brand; 
+      }
+      
+      padding: 5px 10px;   
+    }
   }
-}
   
   blockquote {
     z-index: 500; 
@@ -1047,4 +1036,3 @@ img.pub-logo {
 .elementa-logo {
   max-width: 50%; 
 }
-
