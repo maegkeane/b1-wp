@@ -85,7 +85,7 @@ h4 {
   //margin: 0; 
   font: {
     family: $font-sans; 
-    size: 1rem;
+    size: 1.1rem;
     weight: 100; 
   }
   line-height: 1.5rem; 
@@ -132,6 +132,8 @@ address {
 }
 
 small {
+  font-size: 0.9rem; 
+  
   @include media-query(max, small) {
     font-size: 0.8rem; 
   } 
