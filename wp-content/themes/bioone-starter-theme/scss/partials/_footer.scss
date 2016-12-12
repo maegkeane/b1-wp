@@ -88,7 +88,7 @@ footer {
 
   .footer-copyright {
     text-align: right;
-    padding-right: 50px; 
+    margin-right: 50px; 
     padding-left: 0; 
 
     @include media-query(max, small) {
