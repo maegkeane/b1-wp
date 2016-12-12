@@ -50,7 +50,7 @@
             <p><?php echo get_field('pdf_note'); ?></p>
           </div>
         </a>
-      </div>  
+
       <?php }
         wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
         
@@ -59,11 +59,10 @@
         }
       ?>
       
-    <a class="btn-main" href="archive-news" target="_blank">News Archive</a>
+    <a class="btn-main" href="news" target="_blank">News Archive</a>
   </section>
-  <hr>
+  <a id="calendar"><hr></a>
   <section>
-    <a id="calendar"><hr></a>
     <h2><?php the_field('calendar_title'); ?></h2>
     <h3><?php the_field('calendar_subhead'); ?></h3>
     
@@ -140,44 +139,45 @@
   <hr>
   <section>
     <div class="light-purple-bg">
-      <h2>Stay Up to Date</h2>
-      <p>Everyone has a full inbox. That's why we only send you essential updates and a seasonal newsletter to keep you up to speed.</p>
-<!-- Begin MailChimp Signup Form -->
-      <div id="mc_embed_signup">
-        <form action="//bioone.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-          <div class="sign-up-list">
-            <div class="sign-up-col1">
-            I am a
+    <h2>Stay Up to Date</h2>
+        <p>Everyone has a full inbox. That's why we only send you essential updates and a seasonal newsletter to keep you up to speed.</p>
+  <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="//bioone.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <div class="sign-up-list">
+              <div class="sign-up-col1">
+              I am a
+              </div>
+              <div class="sign-up-col2">
+                <ul>
+                  <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
+                  <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
+                </ul>
+              </div>
+              <div class="sign-up-col3">
+                <ul>  
+                  <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
+                  <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
+                </ul>
+              </div>
             </div>
-            <div class="sign-up-col2">
-              <ul>
-                <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
-                <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
-              </ul>
+            <div class="mc-field-group" style="display: inline">
+              <label for="mce-EMAIL">and my email address is</label><br />
+              <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
-            <div class="sign-up-col3">
-              <ul>  
-                <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
-                <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
-              </ul>
-            </div>
-          </div>
-          <div class="mc-field-group" style="display: inline">
-            <label for="mce-EMAIL">and my email address is</label><br />
-            <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
-          </div>
-<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_c96bf0ec63cc75c323952cced_13cf7c0c45" tabindex="-1" value="">
-            </div>
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-main">
-            </div>
-        </form>
-      </div>
+  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_c96bf0ec63cc75c323952cced_13cf7c0c45" tabindex="-1" value="">
+              </div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-main">
+              </div>
+          </form>
+        </div>
 <!--End mc_embed_signup-->
-    </div> 
-  </section> 
+      </div> 
+    </section> 
+  </div>
 </div>
 
 <?php get_footer(); ?>
