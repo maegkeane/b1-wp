@@ -19,7 +19,7 @@ ol,
 ul, 
 aside, 
 {
-   margin: 1rem 0px;
+   margin: 1rem 0 0.5rem 0;
 }
 
 p {
@@ -51,11 +51,11 @@ h1 {
     weight: 100;
   }
   color: $color-brand;
-  margin-top: 1.1rem; 
+  //margin-top: 1.1rem; 
 }
 
 h2 { 
-  margin-bottom: 5px; 
+  margin-top: 0; 
   font: {
     family: $font-serif; 
     size: 1.5rem;
@@ -64,7 +64,7 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 0; 
+  //margin-bottom: 0; 
   font: {
     family: $font-sans;
     size: 1.3rem;
@@ -82,7 +82,7 @@ h3 {
 }
 
 h4 {
-  margin: 0; 
+  //margin: 0; 
   font: {
     family: $font-sans; 
     size: 1rem;
@@ -98,7 +98,7 @@ h4.bold {
 }
 
 h5 {
-  margin: 0; 
+  //margin: 0; 
   font: {
     size: 0.8rem; 
     weight: 600; 
@@ -112,10 +112,10 @@ h5 {
 
 h6 {
   padding: 0;
-  margin: {
-    top: 0; 
-    bottom: 2px;
-  } 
+  //margin: {
+  //  top: 0; 
+  //  bottom: 2px;
+  //} 
   font: {
     family: $font-serif; 
     size: 0.8rem; 
@@ -150,8 +150,7 @@ ol, ul {
 
 hr {
   display: block; 
-  margin: 1em auto; 
-  padding: 0; 
+  margin: 3em auto; 
   max-width: 25%; 
   border: 0; 
   border: {
