@@ -104,12 +104,26 @@
     <!--SALES TEAM-->
     <h3><?php the_field('sales_staff_header'); ?></h3>
     <p><?php the_field('sales_staff_description'); ?></p>
-    <h4 class="bold"><?php the_field('global_director_name'); ?></h4>
-    <h4><?php the_field('global_director_position'); ?></h4>
-    <?php the_field('global_director_address'); ?>
-    <br />
+    
+    <h4>Sales Team Address</h4>
+    <?php strip_tags(the_field('sales_address'));?>
+    <h4>Sales Team Contacts</h4>
+    <p>
+      <?php echo the_field('library_services_admin_name'); ?><br />
+      <?php echo the_field('library_services_admin_position'); ?><br />
+      <a href="mailto:<?php the_field('library_services_admin_email');?>"><?php echo the_field('library_services_admin_email');?></a><br />
+      <?php echo the_field('library_services_admin_number');?>
+    </p>
+    <p>
+      <?php echo the_field('global_director_name'); ?><br />
+      <?php echo the_field('global_director_position'); ?><br />
+      <a href="mailto:<?php the_field('global_director_email');?>"><?php echo the_field('global_director_email');?></a><br />
+      <?php echo the_field('global_director_number'); ?>
+    </p>
+
+    </br>
+
     <h4 class="bold">Account Managers by Region</h4>
-    <hr class="secondary">
     <?php if( have_rows( 'bio_grid_sales' ) ) : while ( have_rows( 'bio_grid_sales' ) ) : the_row(); 
 
       $name = get_sub_field('name');
