@@ -59,82 +59,83 @@
         }
       ?>
       
-    <a class="btn-main" href="news" target="_blank">News Archive</a>
+    <a class="btn-main" href="http://devmaeg.com/bioone-wp/news" target="_blank">News Archive</a>
   </section>
   <a id="calendar"><hr></a>
   <section>
     <h2><?php the_field('calendar_title'); ?></h2>
     <h3><?php the_field('calendar_subhead'); ?></h3>
     
-    <?php
+    <!--<?php
       $map = get_field('map'); 
       if (!empty($map) ) : 
     ?> 
       <img id="map" src="<?php echo $map['url']; ?>" alt="<?php echo $map['alt']; ?>" />
-    <?php endif; ?>
-
-    <?php 
-      $the_query = new WP_Query(array( // Define query
-        'post_type' => 'conferences',
-        'posts_per_page' => 200, // For conferences, you don't want them to only get 3, you are looking at all of them (say, 200)
-        'orderby' => 'date'
-      ));
-      
-      $conferenceCalendarArray = array(); // Overall grid of conferences
-
-      if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-          $the_query->the_post();
-
-          $conferenceArray = array(       
-            'event_name' => get_the_title(),
-            'display_date' => get_field('display_date'), 
-            'location' => get_field('location'),
-            'attendees' => get_field('attendees'),
-            'booth' => get_field('booth'),
-            'order_date' => get_field('order_date')
-          );
-          
-            // array_push adds an item to the end of an existing array
-            array_push($conferenceCalendarArray, $conferenceArray);
-          }
-
-        wp_reset_postdata(); // Restore original post data to prevent unintended functionality
-          
-        } else {
-            // No posts found
-        }
-
-      function date_compare($a, $b)
-      {
-        $t1 = strtotime($a['order_date']);
-        $t2 = strtotime($b['order_date']);
-        return $t1 - $t2;
-      }    
-
-      usort($conferenceCalendarArray, 'date_compare');
-
-      echo '<div class="card-container">';
-      
-      $today = date('U');
-
-      for ($i=0; $i<count($conferenceCalendarArray); $i++) {
-        if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
-      ?> 
-        <a class="card_calendar">
-          <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
-          <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
-          <p><?php echo $conferenceCalendarArray[$i]['location']; ?></p>
-          <div class="card_calendar_expand">
-            <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
-            <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
-          </div>
-        </a>
+    <?php endif; ?>-->
+    <section class="secondary">
       <?php 
+        $the_query = new WP_Query(array( // Define query
+          'post_type' => 'conferences',
+          'posts_per_page' => 200, // For conferences, you don't want them to only get 3, you are looking at all of them (say, 200)
+          'orderby' => 'date'
+        ));
+        
+        $conferenceCalendarArray = array(); // Overall grid of conferences
+
+        if ( $the_query->have_posts() ) {
+          while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+
+            $conferenceArray = array(       
+              'event_name' => get_the_title(),
+              'display_date' => get_field('display_date'), 
+              'location' => get_field('location'),
+              'attendees' => get_field('attendees'),
+              'booth' => get_field('booth'),
+              'order_date' => get_field('order_date')
+            );
+            
+              // array_push adds an item to the end of an existing array
+              array_push($conferenceCalendarArray, $conferenceArray);
+            }
+
+          wp_reset_postdata(); // Restore original post data to prevent unintended functionality
+            
+          } else {
+              // No posts found
           }
-        }
-      ?>
-    </div>
+
+        function date_compare($a, $b)
+        {
+          $t1 = strtotime($a['order_date']);
+          $t2 = strtotime($b['order_date']);
+          return $t1 - $t2;
+        }    
+
+        usort($conferenceCalendarArray, 'date_compare');
+
+        echo '<div class="card-container">';
+        
+        $today = date('U');
+
+        for ($i=0; $i<count($conferenceCalendarArray); $i++) {
+          if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
+        ?> 
+          <a class="card_calendar">
+            <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
+            <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
+            <p><?php echo $conferenceCalendarArray[$i]['location']; ?></p>
+            <div class="card_calendar_expand">
+              <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
+              <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
+            </div>
+          </a>
+        <?php 
+            }
+          }
+        ?>
+      </div>
+    </section>
   </section>  
   <hr>
   <section>
