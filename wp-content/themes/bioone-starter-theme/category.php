@@ -3,11 +3,8 @@
   <header class="header">
     <h1 class="entry-title"><?php _e( 'Category Archives: ', 'blankslate' ); ?><?php single_cat_title(); ?></h1>
 </header>
-
-
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <?php get_template_part('entry'); ?>
+<?php get_template_part('entry'); ?>
 <?php endwhile; endif; ?>
 <?php get_template_part('nav', 'below'); ?>
-
 </section>
