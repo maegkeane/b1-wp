@@ -8,9 +8,6 @@
   <section>
     <h1><?php the_field('products_header'); ?></h1>
     <?php the_field('products_b1_complete'); ?>
-    <section class="secondary">
-      <?php the_field('products_elementa'); ?>
-    </section>
     <a class="btn-main" href="our-work">More About Our Products</a>
   </section>
   <hr>
@@ -60,7 +57,7 @@
         }
       ?>
     <a class="btn-main" href="news-events">More News</a>  
-    </section>
+  </section>
   </section>
   <hr>
   <section>
@@ -107,7 +104,12 @@
       usort($conferenceCalendarArray, 'date_compare');
 
       echo '<div class="card-container">';
-      for ($i=0; $i<3; $i++) { ?> 
+      
+      $today = date('U');
+
+      for ($i=0; $i<5; $i++) {
+        if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
+      ?>  
         <a class="card_calendar">
           <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
           <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
@@ -117,11 +119,13 @@
             <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
             </div>
           </a>
-      <?php } ?>
-
+      <?php 
+            }
+          }
+        ?>
       </div>
+      <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   </section>
-  <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   <section>
   <hr>
     <div class="light-purple-bg">
