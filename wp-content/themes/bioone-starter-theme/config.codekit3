@@ -503,12 +503,6 @@
 		"oAP": "\/img\/favicon.ico",
 		"oF": 0
 		},
-	"\/img\/headerbg-homepage.psd": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/headerbg-homepage.psd",
-		"oF": 0
-		},
 	"\/img\/headerbg.jpg": {
 		"ft": 16384,
 		"iS": 33926,
@@ -557,6 +551,38 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/logos\/b1-logo-bw.jpg": {
+		"ft": 16384,
+		"iS": 44940,
+		"oA": 0,
+		"oAP": "\/img\/logos\/b1-logo-bw.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/logos\/b1-logo-bw.png": {
+		"ft": 32768,
+		"iS": 34365,
+		"oA": 0,
+		"oAP": "\/img\/logos\/b1-logo-bw.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/logos\/b1-logo-full-color.jpg": {
+		"ft": 16384,
+		"iS": 13002,
+		"oA": 0,
+		"oAP": "\/img\/logos\/b1-logo-full-color.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/logos\/b1-logo-full-color.png": {
+		"ft": 32768,
+		"iS": 35828,
+		"oA": 0,
+		"oAP": "\/img\/logos\/b1-logo-full-color.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/logos\/b1-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -595,7 +621,7 @@
 		},
 	"\/img\/logos\/logo-elementa.png": {
 		"ft": 32768,
-		"iS": 0,
+		"iS": 29586,
 		"oA": 0,
 		"oAP": "\/img\/logos\/logo-elementa.png",
 		"oF": 0,
