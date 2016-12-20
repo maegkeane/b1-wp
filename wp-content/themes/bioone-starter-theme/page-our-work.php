@@ -32,7 +32,7 @@
     <a class="btn-main" href="<?php echo get_field('bioone_complete_link'); ?>"><?php echo get_field('bioone_complete_button'); ?></a>
   </section>
   <section>
-    <section class="secondary">
+    <section class="secondary-elementa">
       <a href="<?php echo get_field('elementa_link'); ?>">
         <img class="elementa-logo" src="<?php echo get_field('elementa_logo')['url']; ?>" alt="<?php echo get_field('elementa_logo')['alt']; ?>"/>
       </a>
@@ -66,7 +66,7 @@
       </section>
       <section class="flex-2ndcol_leftborder">
         <a class="btn-main" href="http://www.bioone.org/page/subscribe/developing_world_programs">Country list</a> <br/><br/>
-        <?php echo strip_tags(get_field('dev_world_info'),'<a>'); ?>
+        <small><?php echo strip_tags(get_field('dev_world_info'),'<a>'); ?></small>
       </section>  
     </div>
   </section>
