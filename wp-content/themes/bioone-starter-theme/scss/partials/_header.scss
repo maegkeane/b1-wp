@@ -63,7 +63,7 @@
 ====================
 */
 
-//Primary Navigation, For Desktop & Mobile 
+//Navigation, For Desktop & Mobile 
 
 ul.menu { 
   position: relative;
@@ -101,7 +101,7 @@ ul.menu {
       display: block;
       padding: 0;
       border-bottom: 2px solid lighten($color-light, 30%);
-      font-size: 14px;
+      font-size: 16px;
 
       &:last-of-type {
         border-bottom: 0; 
@@ -119,16 +119,24 @@ ul.menu {
     
       @include media-query(max, small) { 
         display: block; 
-        padding: 10px 20px 10px 15px;
+        padding: 19.5px 15px;
         color: $color-brand; 
         font-weight: 600;
 
         &:hover {
-          color: darken($color-brand, 10%);
+          color: $color-light; 
           border-bottom: 0;
         }
       }
     }
+  }
+}
+
+ul.menu li.current-menu-item a {
+  border-bottom: 2px $color-brand solid;
+
+  @include media-query(max, small) {
+    border-bottom: 0; 
   }
 }
 

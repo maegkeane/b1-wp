@@ -36,7 +36,7 @@ a {
   color: $color-accent;
 
   &:hover {
-    color: lighten($color-accent, 15%);
+    color: lighten($color-accent, 25%);
   }
 
   a#calendar {
@@ -82,23 +82,16 @@ h3 {
 }
 
 h4 {
-  //margin: 0; 
   font: {
     family: $font-sans; 
     size: 1.1rem;
-    weight: 100; 
+    weight: 600; 
   }
   line-height: 1.5rem; 
-  color: $color-main; 
-}
-
-h4.bold {
-  font-weight: 600; 
   color: $color-light; 
 }
 
 h5 {
-  //margin: 0; 
   font: {
     size: 0.8rem; 
     weight: 600; 
