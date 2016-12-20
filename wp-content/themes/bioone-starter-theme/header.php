@@ -9,6 +9,8 @@
 	
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
+    <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
+
     <script src="https://use.typekit.net/gmo5uyg.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>

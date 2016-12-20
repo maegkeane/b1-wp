@@ -8,6 +8,8 @@
 		
 	
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />    
     
     <script src="https://use.typekit.net/gmo5uyg.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
