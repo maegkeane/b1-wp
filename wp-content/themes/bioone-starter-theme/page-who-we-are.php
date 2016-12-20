@@ -123,7 +123,7 @@
 
     </br>
 
-    <h4 class="bold">Account Managers by Region</h4>
+    <h4>Account Managers by Region</h4>
     <?php if( have_rows( 'bio_grid_sales' ) ) : while ( have_rows( 'bio_grid_sales' ) ) : the_row(); 
 
       $name = get_sub_field('name');
