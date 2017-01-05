@@ -17,10 +17,10 @@
       <h6>Digital</h6>
       <ul>
         <li>
-          <a href="<?php bloginfo('url'); ?>">about.bioone.org</a>
+          <a href="<?php bloginfo('url'); ?>">bioonepublishing.org</a>
         </li>
         <li>
-          <a href="mailto:hello@bioone.org">hello@bioone.org</a>
+          <a href="mailto:team@bioone.org">team@bioone.org</a>
         </li>
         <li>
           <a class="social-logo-link" href="https://twitter.com/BioOneNews" target="_blank">
@@ -49,7 +49,7 @@
     <section class="footer-copyright">Copyright &copy; <?php echo date('Y'); ?><br/>
       <a href="http://www.bioone.org/page/terms_of_use" target="_blank">Terms of Use</a> | <a href="http://www.bioone.org/page/privacy_policy" target="_blank">Privacy Policy
       </a><br />
-      <a href="http://devmaeg.com/bioone-wp/corporate-documents" target="_blank">Corporate Documents</a>
+      <a href="<?php bloginfo('url');?>/corporate-documents" target="_blank">Corporate Documents</a>
     </section>
   </div>
 </footer>
