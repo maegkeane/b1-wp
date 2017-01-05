@@ -143,26 +143,26 @@
     <h2>Stay Up to Date</h2>
         <p>Everyone has a full inbox. That's why we only send you essential updates and a seasonal newsletter to keep you up to speed.</p>
   <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
+        <div id="mailchimp">
           <form action="//bioone.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-            <div class="sign-up-list">
-              <div class="sign-up-col1">
-              I am a
+              <div class="sign-up-list">
+                <div class="sign-up-col1">
+                  I am a
+                </div>
+                <div class="sign-up-col2">
+                  <ul>
+                    <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
+                    <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
+                  </ul>
+                </div>
+                <div class="sign-up-col3">
+                  <ul>  
+                    <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
+                    <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
+                  </ul>
+                </div>
               </div>
-              <div class="sign-up-col2">
-                <ul>
-                  <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
-                  <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
-                </ul>
-              </div>
-              <div class="sign-up-col3">
-                <ul>  
-                  <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
-                  <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
-                </ul>
-              </div>
-            </div>
             <div class="mc-field-group" style="display: inline">
               <label for="mce-EMAIL">and my email address is</label><br />
               <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
