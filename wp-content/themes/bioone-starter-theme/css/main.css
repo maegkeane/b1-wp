@@ -1595,23 +1595,28 @@ footer {
     footer .page-footer_content li {
       padding-bottom: 5px; }
       footer .page-footer_content li a.social-logo-link {
-        text-decoration: none; }
+        text-decoration: none;
+        padding-top: 7px; }
         footer .page-footer_content li a.social-logo-link svg.social-logo {
           width: 25px;
           padding-top: 2px; }
           footer .page-footer_content li a.social-logo-link svg.social-logo margin {
             right: 10px;
             top: 5px; }
+          footer .page-footer_content li a.social-logo-link svg.social-logo:hover .st1 {
+            stroke: #929dd3;
+            fill: #FFFFFF; }
+          footer .page-footer_content li a.social-logo-link svg.social-logo:hover .st0 {
+            fill: #929dd3; }
+          footer .page-footer_content li a.social-logo-link svg.social-logo .st1 {
+            stroke: #3B4991;
+            fill: #FFFFFF; }
+          footer .page-footer_content li a.social-logo-link svg.social-logo .st0 {
+            fill: #3B4991; }
           @media only screen and (max-width: 740px) {
             footer .page-footer_content li a.social-logo-link svg.social-logo {
               width: 30px;
               margin-right: 10px; } }
-          footer .page-footer_content li a.social-logo-link svg.social-logo .st0 {
-            fill: #3B4991; }
-          footer .page-footer_content li a.social-logo-link svg.social-logo .st1 {
-            fill: none;
-            stroke: #3B4991;
-            stroke-miterlimit: 10; }
   footer .footer-copyright {
     text-align: right;
     margin-right: 50px;

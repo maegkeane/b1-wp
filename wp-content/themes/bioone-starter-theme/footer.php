@@ -31,8 +31,8 @@
           </a>
           <a class="social-logo-link" href="https://www.facebook.com/bioone.org/" target="_blank">
             <svg class="social-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-              <path class="st0" d="M12.4 24.6v-9H10v-3.2h2.4V9.5c0-2.2 1.4-4.2 4.7-4.2 1.3 0 2.3 0.1 2.3 0.1l-0.1 3c0 0-1 0-2.1 0 -1.2 0-1.4 0.5-1.4 1.4v2.4h3.5l-0.2 3.2h-3.4v9H12.4z"/>
               <circle class="st1" cx="15" cy="15" r="14.4"/>
+              <path class="st0" d="M12.4 24.6v-9H10v-3.2h2.4V9.5c0-2.2 1.4-4.2 4.7-4.2 1.3 0 2.3 0.1 2.3 0.1l-0.1 3c0 0-1 0-2.1 0 -1.2 0-1.4 0.5-1.4 1.4v2.4h3.5l-0.2 3.2h-3.4v9H12.4z"/>
             </svg>
           </a>
           <a class="social-logo-link" href="https://www.linkedin.com/company/bioone-" target="_blank">
