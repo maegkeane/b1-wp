@@ -56,83 +56,85 @@
             // No posts found
         }
       ?>
-    <a class="btn-main" href="news-events">More News</a>  
   </section>
+      <a class="btn-main" href="news-events">More News</a>  
   </section>
   <hr>
   <section>
     <h2>Upcoming Conferences</h2>
-    <?php 
-      $the_query = new WP_Query(array( // Define query
-        'post_type' => 'conferences',
-        'posts_per_page' => 200, // For conferences, you don't want them to only get 3, you are looking at all of them (say, 200)
-        'orderby' => 'date'
-      ));
-      
-      $conferenceCalendarArray = array(); // Overall grid of conferences
-
-      if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-          $the_query->the_post();
-
-          $conferenceArray = array(       
-            'event_name' => get_the_title(),
-            'display_date' => get_field('display_date'), 
-            'location' => get_field('location'),
-            'attendees' => get_field('attendees'),
-            'booth' => get_field('booth'),
-            'order_date' => get_field('order_date')
-          );
-          
-            // array_push adds an item to the end of an existing array
-            array_push($conferenceCalendarArray, $conferenceArray);
-          }
-
-        wp_reset_postdata(); // Restore original post data to prevent unintended functionality
-          
-        } else {
-            // No posts found
-        }
-
-      function date_compare($a, $b)
-      {
-        $t1 = strtotime($a['order_date']);
-        $t2 = strtotime($b['order_date']);
-        return $t1 - $t2;
-      }    
-
-      usort($conferenceCalendarArray, 'date_compare');
-
-      echo '<div class="card-container">';
-      
-      $today = date('U');
-
-      for ($i=0; $i<5; $i++) {
-        if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
-      ?>  
-        <a class="card_calendar">
-          <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
-          <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
-          <p><?php echo $conferenceCalendarArray[$i]['location']; ?> </p>
-          <div class="card_calendar_expand">
-            <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
-            <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
-            </div>
-          </a>
+    <section class="secondary">
       <?php 
+        $the_query = new WP_Query(array( // Define query
+          'post_type' => 'conferences',
+          'posts_per_page' => 200, // For conferences, you don't want them to only get 3, you are looking at all of them (say, 200)
+          'orderby' => 'date'
+        ));
+        
+        $conferenceCalendarArray = array(); // Overall grid of conferences
+
+        if ( $the_query->have_posts() ) {
+          while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+
+            $conferenceArray = array(       
+              'event_name' => get_the_title(),
+              'display_date' => get_field('display_date'), 
+              'location' => get_field('location'),
+              'attendees' => get_field('attendees'),
+              'booth' => get_field('booth'),
+              'order_date' => get_field('order_date')
+            );
+            
+              // array_push adds an item to the end of an existing array
+              array_push($conferenceCalendarArray, $conferenceArray);
             }
+
+          wp_reset_postdata(); // Restore original post data to prevent unintended functionality
+            
+          } else {
+              // No posts found
           }
-        ?>
-      </div>
-      <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
+
+        function date_compare($a, $b)
+        {
+          $t1 = strtotime($a['order_date']);
+          $t2 = strtotime($b['order_date']);
+          return $t1 - $t2;
+        }    
+
+        usort($conferenceCalendarArray, 'date_compare');
+
+        echo '<div class="card-container">';
+        
+        $today = date('U');
+
+        for ($i=0; $i<4; $i++) {
+          if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
+        ?>  
+          <a class="card_calendar">
+            <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
+            <h2><?php echo $conferenceCalendarArray[$i]['event_name']; ?></h2>
+            <p><?php echo $conferenceCalendarArray[$i]['location']; ?> </p>
+            <div class="card_calendar_expand">
+              <p class="who"><?php echo $conferenceCalendarArray[$i]['attendees']; ?></p>
+              <p class="where"><?php echo $conferenceCalendarArray[$i]['booth']; ?></p> 
+              </div>
+            </a>
+        <?php 
+              }
+            }
+          ?>
+        </div>
+    </section>
   </section>
+  <a class="btn-main" href="news-events#calendar">Full Calendar</a>  
   <section>
   <hr>
     <div class="light-purple-bg">
       <h2>Stay Up to Date</h2>
         <p>Everyone has a full inbox. That's why we only send you essential updates and a seasonal newsletter to keep you up to speed.</p>
   <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
+        <div id="mailchimp">
           <form action="//bioone.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <div class="sign-up-list">
