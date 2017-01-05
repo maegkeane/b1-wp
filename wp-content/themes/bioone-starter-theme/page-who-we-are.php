@@ -107,21 +107,20 @@
     
     <h4>Sales Team Address</h4>
     <?php strip_tags(the_field('sales_address'));?>
-    <h4>Sales Team Contacts</h4>
+    <!--<h4>Sales Team Contacts</h4>
     <p>
       <?php echo the_field('library_services_admin_name'); ?><br />
       <?php echo the_field('library_services_admin_position'); ?><br />
       <a href="mailto:<?php the_field('library_services_admin_email');?>"><?php echo the_field('library_services_admin_email');?></a><br />
       <?php echo the_field('library_services_admin_number');?>
-    </p>
-    <p>
+    </p>-->
+
+    <h4><?php echo the_field('global_director_position'); ?></h4>
+      <p>
       <?php echo the_field('global_director_name'); ?><br />
-      <?php echo the_field('global_director_position'); ?><br />
       <a href="mailto:<?php the_field('global_director_email');?>"><?php echo the_field('global_director_email');?></a><br />
       <?php echo the_field('global_director_number'); ?>
     </p>
-
-    </br>
 
     <h4>Account Managers by Region</h4>
     <?php if( have_rows( 'bio_grid_sales' ) ) : while ( have_rows( 'bio_grid_sales' ) ) : the_row(); 
