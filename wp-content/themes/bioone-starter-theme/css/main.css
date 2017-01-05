@@ -1407,12 +1407,12 @@ aside.right {
 
 .light-purple-bg {
   position: relative;
-  padding: 20px 40px 60px;
+  padding: 25px 40px 60px;
   background-color: #dbdef0; }
   @media only screen and (max-width: 740px) {
     .light-purple-bg {
       padding: 20px; } }
-  .light-purple-bg #mc_embed_signup input {
+  .light-purple-bg #mailchimp input {
     margin-top: 20px;
     padding: 10px 130px 10px 20px;
     border: 2px solid #3B4991;
@@ -1420,13 +1420,13 @@ aside.right {
     font-family: "ff-tisa-web-pro", Georgia, serif;
     font-size: 16px;
     border-radius: 3px; }
-    .light-purple-bg #mc_embed_signup input:focus {
+    .light-purple-bg #mailchimp input:focus {
       outline: 0;
       outline-offset: 0; }
     @media only screen and (max-width: 740px) {
-      .light-purple-bg #mc_embed_signup input {
+      .light-purple-bg #mailchimp input {
         padding: 10px 20px; } }
-  .light-purple-bg #mc_embed_signup .sign-up-list {
+  .light-purple-bg #mailchimp .sign-up-list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1435,28 +1435,28 @@ aside.right {
     align-items: baseline;
     margin-bottom: 20px; }
     @media only screen and (max-width: 740px) {
-      .light-purple-bg #mc_embed_signup .sign-up-list {
+      .light-purple-bg #mailchimp .sign-up-list {
         flex-direction: column; } }
-    .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col1 {
+    .light-purple-bg #mailchimp .sign-up-list .sign-up-col1 {
       width: 15%; }
       @media only screen and (max-width: 740px) {
-        .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col1 {
+        .light-purple-bg #mailchimp .sign-up-list .sign-up-col1 {
           width: 100%; } }
-    .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col2 {
+    .light-purple-bg #mailchimp .sign-up-list .sign-up-col2 {
       width: 40%; }
       @media only screen and (max-width: 740px) {
-        .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col2 {
+        .light-purple-bg #mailchimp .sign-up-list .sign-up-col2 {
           width: 100%;
           max-height: 60px; } }
     @media only screen and (max-width: 900px) {
-      .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col3 {
+      .light-purple-bg #mailchimp .sign-up-list .sign-up-col3 {
         margin-bottom: 0; } }
     @media only screen and (max-width: 740px) {
-      .light-purple-bg #mc_embed_signup .sign-up-list .sign-up-col3 {
+      .light-purple-bg #mailchimp .sign-up-list .sign-up-col3 {
         width: 100%;
         max-height: 60px;
-        margin-bottom: 20px; } }
-  .light-purple-bg #mc_embed_signup .btn-main {
+        margin: 20px 0 40px 0; } }
+  .light-purple-bg #mailchimp .btn-main {
     display: inline;
     color: #FFFFFF;
     font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1467,10 +1467,10 @@ aside.right {
     padding-right: 20px;
     padding-bottom: 10px;
     padding-left: 20px; }
-    .light-purple-bg #mc_embed_signup .btn-main:hover {
+    .light-purple-bg #mailchimp .btn-main:hover {
       color: #3B4991; }
     @media only screen and (max-width: 740px) {
-      .light-purple-bg #mc_embed_signup .btn-main {
+      .light-purple-bg #mailchimp .btn-main {
         margin-top: 10px;
         margin-left: 0; } }
   .light-purple-bg #mc_embed_signup_scroll div div ul li label {
@@ -1513,7 +1513,7 @@ img.pub-logo {
     z-index: 500;
     display: table-cell;
     padding: 0;
-    min-width: 100%;
+    width: 100%;
     vertical-align: middle;
     pointer-events: none;
     color: #64717D;

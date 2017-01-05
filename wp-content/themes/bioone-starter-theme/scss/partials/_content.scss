@@ -851,14 +851,14 @@ aside.right {
 //mailchimp form 
 .light-purple-bg {
   position: relative;
-  padding: 20px 40px 60px;  
+  padding: 25px 40px 60px;  
   background-color: lighten($color-accent, 50%);
   
   @include media-query(max, small) {
     padding: 20px; 
   }
 
-  #mc_embed_signup {
+  #mailchimp {
     input {
       margin-top: 20px; 
       padding: 10px 130px 10px 20px;
@@ -912,7 +912,7 @@ aside.right {
         @include media-query(max, small) {
           width: 100%; 
           max-height: 60px; 
-          margin-bottom: 20px; 
+          margin: 20px 0 40px 0; 
         }
       }
     }
@@ -1005,7 +1005,7 @@ img.pub-logo {
     z-index: 500; 
     display: table-cell; 
     padding: 0; 
-    min-width: 100%; 
+    width: 100%; 
     vertical-align: middle; 
     pointer-events: none; 
     color: $color-light; 
