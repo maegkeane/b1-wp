@@ -15,7 +15,7 @@
   </section>
   <hr>
   <section>
-    <h2><?php the_field('team_header'); ?></h2>
+    <a id="team"></a><h2><?php the_field('team_header'); ?></h2>
     <p><?php the_field('team_description'); ?></p>
     <h3><?php the_field('hq_staff_header'); ?></h3>
     <div class="flex-grid">
