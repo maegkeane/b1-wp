@@ -108,8 +108,13 @@
         
         $today = date('U');
 
-        for ($i=0; $i<4; $i++) {
-          if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {  
+        $displayItems = 0;
+        for ($i=0; $i<100; $i++) {
+          if ($displayedItems === 3) {
+            break; // This stops the loop from running
+          }
+          if (strtotime($conferenceCalendarArray[$i]['order_date']) >= $today) {
+          $displayedItems++;  
         ?>  
           <a class="card_calendar">
             <h3><?php echo $conferenceCalendarArray[$i]['display_date']; ?></h3>
