@@ -52,7 +52,7 @@ Template Name: News Archive
       }
     ?>      
   </section>
-  <a href="http://www.bioonepublishing.org/news-events/">Back to News &amp; Events</a>
+  <a class="btn-main" href="http://www.bioonepublishing.org/news-events/">Back to News &amp; Events</a>
 </div>
 
 <?php get_footer(); ?>
