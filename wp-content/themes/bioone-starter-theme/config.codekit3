@@ -7,7 +7,7 @@
 		"uuidString": "207DAE48-B55D-4BFA-9862-10124B8B5CC3"
 		}
 	],
-"creatorBuild": "25704",
+"creatorBuild": "25813",
 "files": {
 	"\/404.php": {
 		"ft": 8192,
@@ -127,17 +127,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2008.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2008.png": {
 		"ft": 32768,
 		"iS": 194728,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2008.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2009.jpg": {
@@ -146,17 +148,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2009.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2009.png": {
 		"ft": 32768,
 		"iS": 184770,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2009.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2010.jpg": {
@@ -165,17 +169,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2010.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2010.png": {
 		"ft": 32768,
 		"iS": 198738,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2010.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2011.jpg": {
@@ -184,17 +190,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2011.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2011.png": {
 		"ft": 32768,
 		"iS": 153461,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2011.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2012.jpg": {
@@ -203,17 +211,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2012.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2012.png": {
 		"ft": 32768,
 		"iS": 142150,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2012.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2013.jpg": {
@@ -222,17 +232,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2013.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2013.png": {
 		"ft": 32768,
 		"iS": 179007,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2013.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2014.jpg": {
@@ -241,17 +253,19 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2014.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2014.png": {
 		"ft": 32768,
 		"iS": 177820,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2014.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2015.jpg": {
@@ -260,27 +274,30 @@
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2015.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/annual-reports\/ar-2015.png": {
 		"ft": 32768,
 		"iS": 234158,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/annual-reports\/ar-2015.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/b1c-screenshot.png": {
 		"ft": 32768,
 		"iS": 921566,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/b1c-screenshot.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/bgs\/headerbg-homepage.jpg": {
@@ -289,6 +306,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -298,6 +316,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_bear.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -307,6 +326,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_bug.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -316,6 +336,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_butterfly.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -325,6 +346,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_flowers.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -334,6 +356,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_frog.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -343,6 +366,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_hawk.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -352,6 +376,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_hummingbird.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -361,6 +386,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_leopard.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -370,6 +396,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_monkey2.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -379,6 +406,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bgs\/headerbg-homepage_otter.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -388,6 +416,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/blake.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -397,6 +426,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/carlson.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -406,6 +436,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/crow.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -415,6 +446,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/holsinger.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -424,6 +456,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/horrell.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -433,6 +466,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/maher.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -442,6 +476,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/murrayrust.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -451,6 +486,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/murrayrust_2.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -460,6 +496,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/peterson.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -469,6 +506,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/reilly.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -478,6 +516,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/savitzky.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -487,6 +526,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/travis.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -496,6 +536,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/board\/williams.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -505,6 +546,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/colovos.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -514,6 +556,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/kane.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -523,6 +566,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/keane.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -532,6 +576,7 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/kurtz.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -541,17 +586,19 @@
 		"oA": 0,
 		"oAP": "\/img\/bio-photos\/skomal.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/elementa-screenshot.png": {
 		"ft": 32768,
 		"iS": 2448330,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/elementa-screenshot.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/favicon.ico": {
@@ -566,6 +613,7 @@
 		"oA": 0,
 		"oAP": "\/img\/headerbg.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
@@ -575,47 +623,52 @@
 		"oA": 0,
 		"oAP": "\/img\/headerbg_hummingbird.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/icons\/icon-calendar.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/icon-calendar.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/icons\/icon-news.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/icon-news.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/icons\/icon-news_white.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/icon-news_white.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/icons\/icon-subscribe.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/icon-subscribe.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/b1-logo-bw.jpg": {
@@ -624,17 +677,19 @@
 		"oA": 0,
 		"oAP": "\/img\/logos\/b1-logo-bw.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/logos\/b1-logo-bw.png": {
 		"ft": 32768,
 		"iS": 34365,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/b1-logo-bw.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/b1-logo-full-color.jpg": {
@@ -643,17 +698,19 @@
 		"oA": 0,
 		"oAP": "\/img\/logos\/b1-logo-full-color.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/logos\/b1-logo-full-color.png": {
 		"ft": 32768,
 		"iS": 35828,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/b1-logo-full-color.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 1,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/b1-logo.svg": {
@@ -679,11 +736,12 @@
 	"\/img\/logos\/logo-b1complete.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/logo-b1complete.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/logo-elementa-w-bg.jpg": {
@@ -692,87 +750,96 @@
 		"oA": 0,
 		"oAP": "\/img\/logos\/logo-elementa-w-bg.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/logos\/logo-elementa.png": {
 		"ft": 32768,
 		"iS": 29586,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/logo-elementa.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/logo.png": {
 		"ft": 32768,
 		"iS": 16815,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/logo.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/logo_bw.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/logo_bw.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logos\/whitelogo.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logos\/whitelogo.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/map.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/map.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-aibs.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-aibs.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-ap.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-ap.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-eifl.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-eifl.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-gwla.jpg": {
@@ -781,57 +848,63 @@
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-gwla.jpg",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-ku.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-ku.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-r4l.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-r4l.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-sparc.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-sparc.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/other-logos\/logo-teeal.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/other-logos\/logo-teeal.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/social\/fb.png": {
 		"ft": 32768,
 		"iS": 1294,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/social\/fb.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/social\/fb.svg": {
@@ -847,11 +920,12 @@
 	"\/img\/social\/linkedin.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/social\/linkedin.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/social\/linkedin.svg": {
@@ -867,11 +941,12 @@
 	"\/img\/social\/twitter.png": {
 		"ft": 32768,
 		"iS": 0,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/social\/twitter.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/social\/twitter.svg": {
@@ -1064,11 +1139,12 @@
 	"\/screenshot.png": {
 		"ft": 32768,
 		"iS": 238463,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/scss\/.sass-cache\/3fce44231e764bb7ddf839008fdd71332dcc9435\/_all.scssc": {
@@ -2355,6 +2431,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-prototype-builtins": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-redeclare": {
 			"active": 1,
 			"optionString": "{'builtinGlobals': false}"
@@ -3179,14 +3259,6 @@
 		"orderOutput": 0,
 		"outputStyle": 1
 		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
-		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
@@ -3249,7 +3321,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"enableLossy": 1,
+		"optimizerType": 1,
 		"quality": 100
 		},
 	"languageDefaultsPUG": {
