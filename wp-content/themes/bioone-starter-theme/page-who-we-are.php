@@ -102,12 +102,12 @@
   <hr>
   <section>
     <!--SALES TEAM-->
-    <a id="sales-team">
+    <a id="sales-team"></a>
     <h3><?php the_field('sales_staff_header'); ?></h3>
     <p><?php the_field('sales_staff_description'); ?></p>
     
     <h4>Sales Team Address</h4>
-    <?php strip_tags(the_field('sales_address'));?>
+    <?php echo strip_tags(the_field('sales_address'));?>
     <!--<h4>Sales Team Contacts</h4>
     <p>
       <?php echo the_field('library_services_admin_name'); ?><br />
@@ -118,7 +118,7 @@
 
     <h4><?php echo the_field('global_director_position'); ?></h4>
       <p>
-      <?php echo the_field('global_director_name'); ?><br />
+      <?php echo strip_tags(the_field('global_director_name')); ?><br />
       <a href="mailto:<?php the_field('global_director_email');?>"><?php echo the_field('global_director_email');?></a><br />
       <?php echo the_field('global_director_number'); ?>
     </p>
