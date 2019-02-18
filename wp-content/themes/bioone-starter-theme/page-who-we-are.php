@@ -105,9 +105,9 @@
     <a id="sales-team"></a>
     <h3><?php the_field('sales_staff_header'); ?></h3>
     <p><?php the_field('sales_staff_description'); ?></p>
+    <h4>Sales Address</h4>
+	<?php the_field('sales_staff_description_copy'); ?>
     
-    <h4>Sales Team Address</h4>
-    <?php echo strip_tags(the_field('sales_address'));?>
     <!--<h4>Sales Team Contacts</h4>
     <p>
       <?php echo the_field('library_services_admin_name'); ?><br />
@@ -116,14 +116,6 @@
       <?php echo the_field('library_services_admin_number');?>
     </p>-->
 
-    <h4><?php echo the_field('global_director_position'); ?></h4>
-      <p>
-      <?php echo strip_tags(the_field('global_director_name')); ?><br />
-      <a href="mailto:<?php the_field('global_director_email');?>"><?php echo the_field('global_director_email');?></a><br />
-      <?php echo the_field('global_director_number'); ?>
-    </p>
-
-    <h4>Account Managers by Region</h4>
     <?php if( have_rows( 'bio_grid_sales' ) ) : while ( have_rows( 'bio_grid_sales' ) ) : the_row(); 
 
       $name = get_sub_field('name');
@@ -137,14 +129,9 @@
 
     ?>
 
-    <h5><?php echo $area; ?></h5>
-    <p><?php echo $name; ?><br />
-    <?php echo $title; ?><br />
-    <a href="mailto:<?php echo $email;?>"><?php echo $email; ?></a><br />
-      <?php echo $number; ?></p>
-
     <?php endwhile; endif; wp_reset_postdata(); ?>
   </section>
+
 </div>
 
 <?php get_footer(); ?>

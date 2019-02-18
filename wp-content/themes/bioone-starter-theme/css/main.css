@@ -295,7 +295,7 @@ input[type="radio"] {
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-appearance: textfield;
+  -webkit-appearance: none;
   /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;

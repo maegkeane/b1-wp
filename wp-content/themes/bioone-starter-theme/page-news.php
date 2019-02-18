@@ -64,14 +64,7 @@
   <a id="calendar"><hr></a>
   <section>
     <h2><?php the_field('calendar_title'); ?></h2>
-    <h3><?php the_field('calendar_subhead'); ?></h3>
     
-    <!--<?php
-      $map = get_field('map'); 
-      if (!empty($map) ) : 
-    ?> 
-      <img id="map" src="<?php echo $map['url']; ?>" alt="<?php echo $map['alt']; ?>" />
-    <?php endif; ?>-->
     <section class="secondary">
       <?php 
         $the_query = new WP_Query(array( // Define query
@@ -138,46 +131,73 @@
     </section>
   </section>  
   <hr>
-  <section>
-    <div class="light-purple-bg">
-    <h2>Stay Up to Date</h2>
-        <p>Everyone has a full inbox. That's why we only send you essential updates and a seasonal newsletter to keep you up to speed.</p>
-  <!-- Begin MailChimp Signup Form -->
-        <div id="mailchimp">
-          <form action="//bioone.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <div class="sign-up-list">
-                <div class="sign-up-col1">
-                  I am a
-                </div>
-                <div class="sign-up-col2">
-                  <ul>
-                    <li><input type="radio" value="16384" name="group[11821]" id="mce-group[11821]-11821-0"><label for="mce-group[11821]-11821-0">Researcher</label></li>
-                    <li><input type="radio" value="32768" name="group[11821]" id="mce-group[11821]-11821-1"><label for="mce-group[11821]-11821-1">Librarian</label></li>
-                  </ul>
-                </div>
-                <div class="sign-up-col3">
-                  <ul>  
-                    <li><input type="radio" value="65536" name="group[11821]" id="mce-group[11821]-11821-2"><label for="mce-group[11821]-11821-2">Publisher</label></li>
-                    <li><input type="radio" value="131072" name="group[11821]" id="mce-group[11821]-11821-4"><label for="mce-group[11821]-11821-4">Other</label></li>
-                  </ul>
-                </div>
-              </div>
-            <div class="mc-field-group" style="display: inline">
-              <label for="mce-EMAIL">and my email address is</label><br />
-              <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_c96bf0ec63cc75c323952cced_13cf7c0c45" tabindex="-1" value="">
-              </div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-main">
-              </div>
-          </form>
-        </div>
+<section>
+  <div class="light-purple-bg"> <a name="SignUpForm"></a>
+    <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	#mc_embed_signup{background:#fff; clear:left; font:13px "ff-tisa-sans-web-pro","Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.5rem; }
+	#mc_embed_signup h2, h3 {font-family:"ff-tisa-web-pro", Georgia, serif; font-size:1.5rem; font-weight:100; margin:10px 0;}
+  #mc_embed_signup h3{font-size:.95rem;}
+  #mc_embed_signup p{margin:10px 0;}
+  #mc_embed_signup ul{list-style-type:none; margin-left:10px; line-height:1.1rem; margin-top:10px;}
+  #mc_embed_signup li{overflow:hidden;}
+  #mc_embed_signup input[type='checkbox']{float:left;}
+  #mc_embed_signup input[type='radio']{float:left;}
+  #mc_embed_signup label{float:left; margin-bottom:5px;margin-left:5px;}
+  #mc_embed_signup .indicates-required{text-align:right; font-size:.8rem;}
+  #mc_embed_signup .asterisk{color:#FF0004;}
+</style>
+<div id="mc_embed_signup">
+<form action="https://bioonepublishing.us3.list-manage.com/subscribe/post?u=c96bf0ec63cc75c323952cced&amp;id=13cf7c0c45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+	<h2>We'd like to keep in touch with you.</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group" style="margin-bottom: 10px;">
+	<label for="mce-EMAIL">Email address  <span class="asterisk">*</span>&nbsp;
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group input-group">
+  <h3><br>
+    Get only the emails you want from us:</h3>
+    <ul>
+      <li>
+        <input type="checkbox" value="8192" name="group[8369][8192]" id="mce-group[8369]-8369-0">
+        <label for="mce-group[8369]-8369-0"><strong>BioOne News</strong>: <em>Our quarterly newsletter and occasional announcements from the organization.</em></label>
+      </li>
+      <li><input type="checkbox" value="16384" name="group[8369][16384]" id="mce-group[8369]-8369-1">
+      <label for="mce-group[8369]-8369-1"><strong>BioOne Career Center</strong>: <em>Opportunities for employers and job seekers in the biological, ecological, and environmental sciences.</em></label>
+      </li>
+      <li><input type="checkbox" value="32768" name="group[8369][32768]" id="mce-group[8369]-8369-2">
+      <label for="mce-group[8369]-8369-2"><strong>BioOne Complete</strong>: <em>Timely &amp; trending research to help you stay up-to-date.</em></label>
+      </li>
+</ul>
+</div>
+
+<div class="mc-field-group input-group">
+    <h3>Email Format </h3>
+    <ul><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label>
+    </li>
+      <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
+</ul>
+</div>
+      <p style="font-size:.95em;">BioOne will use the information on this form to be in touch with you. We will never sell or share your data and you may opt-out at any time. See our <a href="http://www.bioone.org/page/privacy_policy">privacy practices</a> for details.</p>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c96bf0ec63cc75c323952cced_13cf7c0c45" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Sign me up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[5]='FNAME';ftypes[5]='text';fnames[4]='LNAME';ftypes[4]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='ORG';ftypes[3]='text';fnames[12]='DEPT';ftypes[12]='text';fnames[13]='MMERGE13';ftypes[13]='dropdown';fnames[17]='MMERGE17';ftypes[17]='dropdown';fnames[6]='TITLE';ftypes[6]='text';fnames[1]='ADDR1';ftypes[1]='text';fnames[2]='ADDR2';ftypes[2]='text';fnames[7]='MMERGE7';ftypes[7]='text';fnames[8]='CITY';ftypes[8]='text';fnames[9]='STATE';ftypes[9]='text';fnames[10]='ZIP';ftypes[10]='text';fnames[14]='CUSNUM';ftypes[14]='text';fnames[11]='MMERGE11';ftypes[11]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
-      </div> 
-    </section> 
+  </div>
+</section> 
   </div>
 </div>
 

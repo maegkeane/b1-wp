@@ -2,7 +2,7 @@
   <div id="footer-rule"></div>
   <div class="page-footer_content">
     <section class="flex_footer-logo">
-      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logos/b1-logo.svg" alt="logo" />
+      <img id="footer-logo" src="<?php bloginfo('template_url'); ?>/img/logos/rgb_B1Logo_color_text_290px.svg" alt="BioOne Logo" />
     </section>  
     <section>
       <h6>Physical</h6> 

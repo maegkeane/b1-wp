@@ -9,7 +9,6 @@
       </header>
     	
       <?php the_content(); ?>
-
     <?php endwhile; endif; ?>
 
   </section>

@@ -155,3 +155,51 @@ function create_news_post_type()
 //
 //  END CUSTOM POST TYPE DECLARATION
 //
+
+//  CUSTOM POST TYPE DECLARATION NICOLE ADDED 20180214
+//    This goes in functions.php
+//
+add_action('init', 'create_activity_post_type'); // Add our HTML5 Blank Custom Post Type
+function create_activity_post_type()
+{
+  register_taxonomy_for_object_type('category', 'activity'); // Register Taxonomies for Category
+  register_taxonomy_for_object_type('post_tag', 'activity');
+  register_post_type('activity', // Register Custom Post Type
+    array(
+    'labels' => array(
+      'name' => __('Work Activity Post', 'activity_section'), // Rename these to suit
+      'singular_name' => __('Work Activity Section', 'activity_section'),
+      'add_new' => __('Add Work Activity Post', 'activity_section'),
+      'add_new_item' => __('Add Work Activity Post', 'activity_section'),
+      'edit' => __('Edit', 'activity_section'),
+      'edit_item' => __('Edit Post', 'activity_section'),
+      'new_item' => __('New Work Activity Post', 'activity_section'),
+      'view' => __('View Work Activity Post', 'activity_section'),
+      'view_item' => __('View Work Activity Post', 'activity_section'),
+      'search_items' => __('Search Work Activity Posts', 'activity_section'),
+      'not_found' => __('No work activity posts found', 'activity_section'),
+      'not_found_in_trash' => __('No work activity posts found in Trash', 'activity_section')
+    ),
+    'public' => true,
+    'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+    'has_archive' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      'excerpt',
+      'thumbnail',
+      'excerpt',
+      'revisions',
+      'comments',
+    ),
+    'can_export' => true, // Allows export in Tools > Export
+    'taxonomies' => array(
+      'post_tag',
+      'category'
+    ) // Add Category and Post Tags support
+  ));
+  // flush_rewrite_rules();
+}
+//
+//  END CUSTOM POST TYPE DECLARATION
+//

@@ -49,7 +49,12 @@
       </div>
     </div>
   </section>
-  <hr>
+<!-- START MTD hack to fix spacing following timeline -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- STOP MTD hack to fix spacing following timeline -->
+<hr>
   <section>
     <h1><?php the_field('partners_header'); ?></h1>
     <h2><?php the_field('partners_subheader'); ?></h2>

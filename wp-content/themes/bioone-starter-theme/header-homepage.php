@@ -11,8 +11,9 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />    
     
-    <script src="https://use.typekit.net/gmo5uyg.js"></script>
+    <script src="https://use.typekit.net/rrt7llx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 		<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/conditionizr.min.js"></script>
 		<?php wp_head(); ?>
@@ -37,13 +38,13 @@
 	      <picture class="header-logo">
 	        <source 
 	          media="(min-width: 741px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/b1-logo_white.svg">
+	          srcset="<?php bloginfo('template_url'); ?>/img/logos/rgb_B1_Logo_white_text.svg">
 	        <source  
 	          media="(max-width: 740px)"
-	          srcset="<?php bloginfo('template_url'); ?>/img/logos/b1-logo.svg">
+	          srcset="<?php bloginfo('template_url'); ?>/img/logos/rgb_B1_Logo_white_text.svg">
 	        <img 
             class="header-logo"
-	          src="<?php bloginfo('template_url'); ?>/img/logos/b1-logo_white.svg"
+	          src="<?php bloginfo('template_url');?>/img/logos/rgb_B1_Logo_white_text.svg"
 	          alt="BioOne Logo">
 	      </picture>
       </a>

@@ -9,24 +9,24 @@ Template Name: News Archive
 <div class="content">
   <header><h1>News Archive</h1></header>
   <section>  
- <div class="card-container">
-  <?php   
-      $the_query = new WP_Query(array( // Define query
-        'post_type' => 'news',
-        'posts_per_page' => 900,
-        'orderby' => 'date'
-      ));
-      
-      if ( $the_query->have_posts() ) {
-        echo '<div class="card-container">';
-          while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            
-            $postCategoryID = wp_get_post_categories($post->ID)[0];
-            $theCategoryObject = get_category($postCategoryID);
-            
-            $categorySlug = $theCategoryObject->slug;
-    ?>
+    <div class="card-container">
+      <?php   
+          $the_query = new WP_Query(array( // Define query
+            'post_type' => 'news',
+            'posts_per_page' => 900,
+            'orderby' => 'date'
+          ));
+          
+          if ( $the_query->have_posts() ) {
+            echo '<div class="card-container">';
+              while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                
+                $postCategoryID = wp_get_post_categories($post->ID)[0];
+                $theCategoryObject = get_category($postCategoryID);
+                
+                $categorySlug = $theCategoryObject->slug;
+      ?>
 
       <a class="card <?php echo $categorySlug; ?>" <?php if (get_field('annual_report_bg_image') && $categorySlug === 'annual_report') { ?>
         style="background-image: url(<?php echo get_field('annual_report_bg_image')['url']; ?>);"; 
@@ -44,14 +44,16 @@ Template Name: News Archive
         </div>
       </a>
 
-    <?php }
-      wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
-      
-      } else {
-          // No posts found
-      }
-    ?>      
+      <?php }
+        wp_reset_postdata(); // Restore original post data to prevent unintended functionality          
+        
+        } else {
+            // No posts found
+        }
+      ?>
+    </div>      
   </section>
+  <a href="http://www.bioonepublishing.org/news-events/">Back to News &amp; Events</a>
   <a class="btn-main" href="http://www.bioonepublishing.org/news-events/">Back to News &amp; Events</a>
 </div>
 

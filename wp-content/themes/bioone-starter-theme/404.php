@@ -7,7 +7,7 @@
       </header>
       <section class="entry-content">
         <p><?php _e( 'Hm. That is strange. Nothing here. Let us know at', 'blankslate' ); ?>
-        <a href="mailto:maeg@arl.org">maeg@arl.org.
+        <a href="mailto:tech.admin@bioone.org">tech.admin@bioone.org.
         </a>
         </p>
       </section>
