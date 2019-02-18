@@ -1,4 +1,15 @@
 <?php
+/*------------------------------------*\
+  TOOLS
+\*------------------------------------*/
+function pp($data, $comment = false) { // Wraps a print_r() in a <pre> for easy reading during development.
+  if ($comment) { echo '<!--'; }
+  if (!$comment) { echo '<pre>'; }
+  print_r($data);
+  if (!$comment) { echo '</pre>'; }
+  if ($comment) { echo '-->'; }
+}
+
 add_action('after_setup_theme', 'blankslate_setup');
 function blankslate_setup() {
 	load_theme_textdomain('blankslate', get_template_directory() . '/languages');

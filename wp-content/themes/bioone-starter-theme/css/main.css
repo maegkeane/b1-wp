@@ -295,7 +295,7 @@ input[type="radio"] {
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-appearance: none;
+  -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -365,6 +365,8 @@ h2,
 h3,
 h4,
 h5,
+.comments .comments__title,
+.comments .comment-respond label,
 h6,
 p,
 blockquote,
@@ -409,16 +411,6 @@ h3 {
     h3 a:hover {
       color: #5c6cbd; }
 
-.h3-green {
-  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: #6E9934; }
-  .h3-green a {
-    color: #3B4991; }
-    .h3-green a:hover {
-      color: #5c6cbd; }
-
 h4 {
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
@@ -426,11 +418,14 @@ h4 {
   line-height: 1.5rem;
   color: #64717D; }
 
-h5 {
+
+h5,
+.comments .comments__title,
+.comments .comment-respond label {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000000;
+  color: #6E9934;
   text-transform: uppercase;
   letter-spacing: 1px; }
 
@@ -440,7 +435,6 @@ h6 {
   font-size: 0.8rem;
   font-style: italic;
   font-weight: 100;
-  color: #000000;
   letter-spacing: 1px;
   text-transform: uppercase;
   list-style-type: none; }
@@ -460,17 +454,6 @@ ol, ul {
 
 .long-list li {
   padding-bottom: 0.7rem; }
-
-blockquote p {
-  padding: 40px;
-  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-style: italic;
-  color: #64717D;
-  line-height: 26px; }
-  @media only screen and (max-width: 740px) {
-    blockquote p {
-      padding: 20px; } }
 
 hr {
   display: block;
@@ -493,14 +476,6 @@ hr.secondary {
 .indigo {
   color: #3B4991;
   font-weight: 600; }
-
-.category {
-  font-size: 0.8rem;
-  font-weight: 400;
-  font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
 
 /*
 ==========================================================================
@@ -536,15 +511,14 @@ hr.secondary {
   .page-header img {
     width: 130px;
     float: left;
-    margin-top: 5px; }
+    margin-top: -2px; }
     @media only screen and (max-width: 900px) {
       .page-header img {
         width: 110px;
-        padding-top: 2px; } }
+        margin-top: -12px; } }
     @media only screen and (max-width: 740px) {
       .page-header img {
-        width: 110px;
-        padding-top: 0; } }
+        width: 110px; } }
 
 .page-header-container {
   margin: 0 auto;
@@ -881,7 +855,7 @@ aside.right {
   color: #3B4991;
   font-weight: 600; }
 
-.btn-main {
+.btn-main, .comments .comment-respond input[type=submit] {
   -webkit-transition: background-color, 0.2s ease-in-out;
   -moz-transition: background-color, 0.2s ease-in-out;
   -ms-transition: background-color, 0.2s ease-in-out;
@@ -901,12 +875,12 @@ aside.right {
   text-align: center;
   text-decoration: none;
   letter-spacing: 1.5px; }
-  .btn-main:hover {
+  .btn-main:hover, .comments .comment-respond input:hover[type=submit] {
     background: #FFFFFF;
     color: #3B4991;
     cursor: pointer; }
 
-.btn-secondary-charter {
+.btn-secondary-charter, .comments > ul .reply a {
   -webkit-transition: background-color, 0.2s ease-in-out;
   -moz-transition: background-color, 0.2s ease-in-out;
   -ms-transition: background-color, 0.2s ease-in-out;
@@ -926,7 +900,7 @@ aside.right {
   text-decoration: none;
   letter-spacing: 1.5px;
   color: #3B4991; }
-  .btn-secondary-charter:hover {
+  .btn-secondary-charter:hover, .comments > ul .reply a:hover {
     border: 2px solid #3B4991;
     background-color: #3B4991;
     color: white;
@@ -1189,6 +1163,8 @@ aside.right {
       padding-top: 7px;
       border-bottom: 2px solid #6E9934;
       width: 30px; }
+    .card-container h3.h3-green {
+      color: #6E9934; }
   .card-container h2 {
     color: #6E9934;
     font-family: "ff-tisa-web-pro", Georgia, serif;
@@ -1204,7 +1180,8 @@ aside.right {
     font-weight: 100; }
   .card-container p.card-pdf {
     font-size: 12px; }
-  .card-container a.card.press_release {
+  .card-container a.card.press_release,
+  .card-container a.card.news {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1218,7 +1195,8 @@ aside.right {
     flex: 0 1 auto;
     text-decoration: none;
     cursor: pointer; }
-    .card-container a.card.press_release:hover {
+    .card-container a.card.press_release:hover,
+    .card-container a.card.news:hover {
       -webkit-box-shadow: inset 0px 0px 0px 4px #6E9934;
       -moz-box-shadow: inset 0px 0px 0px 4px #6E9934;
       box-shadow: inset 0px 0px 0px 4px #6E9934; }
@@ -1486,7 +1464,7 @@ aside.right {
         width: 100%;
         max-height: 60px;
         margin: 20px 0 40px 0; } }
-  .light-purple-bg #mailchimp .btn-main {
+  .light-purple-bg #mailchimp .btn-main, .light-purple-bg #mailchimp .comments .comment-respond input[type=submit], .comments .comment-respond .light-purple-bg #mailchimp input[type=submit] {
     display: inline;
     color: #FFFFFF;
     font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1497,10 +1475,10 @@ aside.right {
     padding-right: 20px;
     padding-bottom: 10px;
     padding-left: 20px; }
-    .light-purple-bg #mailchimp .btn-main:hover {
+    .light-purple-bg #mailchimp .btn-main:hover, .light-purple-bg #mailchimp .comments .comment-respond input:hover[type=submit], .comments .comment-respond .light-purple-bg #mailchimp input:hover[type=submit] {
       color: #3B4991; }
     @media only screen and (max-width: 740px) {
-      .light-purple-bg #mailchimp .btn-main {
+      .light-purple-bg #mailchimp .btn-main, .light-purple-bg #mailchimp .comments .comment-respond input[type=submit], .comments .comment-respond .light-purple-bg #mailchimp input[type=submit] {
         margin-top: 10px;
         margin-left: 0; } }
   .light-purple-bg #mc_embed_signup_scroll div div ul li label {
@@ -1663,6 +1641,102 @@ footer {
 
 /*
 ==========================================================================
+  COMMENTS (scss/partials/_comments.scss)
+==========================================================================
+*/
+.comments .comments__title {
+  display: block;
+  text-align: center; }
+
+.comments > ul li {
+  padding: 30px 0;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .comments > ul li:last-of-type {
+    border-bottom: 0; }
+  .comments > ul li.parent {
+    padding-bottom: 0; }
+  .comments > ul li ul.children {
+    position: relative;
+    margin: 0 0 0 40px; }
+    .comments > ul li ul.children li {
+      margin-top: 30px;
+      padding-left: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 0; }
+
+.comments > ul .comment-author img {
+  float: left;
+  margin-top: 6px;
+  margin-right: 10px; }
+
+.comments > ul .comment-author cite {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.75); }
+  .comments > ul .comment-author cite a {
+    color: rgba(0, 0, 0, 0.75); }
+
+.comments > ul .comment-author .says {
+  color: rgba(0, 0, 0, 0.75); }
+
+.comments > ul .comment-meta {
+  margin-bottom: 15px;
+  font-size: 0.875rem; }
+  .comments > ul .comment-meta a {
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none; }
+
+.comments > ul .reply a {
+  padding: 5px 10px;
+  margin-bottom: 0;
+  opacity: 0.5; }
+  .comments > ul .reply a:hover {
+    opacity: 1; }
+
+.comments .comment-respond {
+  background: rgba(0, 0, 0, 0.025);
+  padding: 20px; }
+  .comments .comment-respond h3 {
+    margin-top: 0; }
+  .comments .comment-respond #email-notes {
+    font-style: italic;
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.65); }
+  .comments .comment-respond label {
+    display: block; }
+  .comments .comment-respond textarea,
+  .comments .comment-respond input[type=text],
+  .comments .comment-respond input[type=email] {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+    -webkit-transition: border-color 250ms ease-in-out;
+    -moz-transition: border-color 250ms ease-in-out;
+    -ms-transition: border-color 250ms ease-in-out;
+    -o-transition: border-color 250ms ease-in-out;
+    transition: border-color 250ms ease-in-out; }
+    .comments .comment-respond textarea:focus,
+    .comments .comment-respond input[type=text]:focus,
+    .comments .comment-respond input[type=email]:focus {
+      outline: 0;
+      border: 1px solid #6E9934;
+      color: black; }
+  @media only screen and (min-width: 740px) {
+    .comments .comment-respond .comment-form-email,
+    .comments .comment-respond .comment-form-url {
+      width: 45%;
+      width: calc(50% - 20px);
+      float: left; } }
+  @media only screen and (min-width: 740px) {
+    .comments .comment-respond .comment-form-url {
+      float: right; } }
+
+.comments li .comment-respond {
+  margin-top: 20px; }
+
+/*
+==========================================================================
 	GENERIC PRINT STYLES (scss/partials/_print.scss)
 	Cribbed from html5bp.
 ==========================================================================
@@ -1710,3 +1784,5 @@ footer {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+/*# sourceMappingURL=main.css.map */

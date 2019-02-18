@@ -1,0 +1,173 @@
+/*
+==========================================================================
+    TYPOGRAPHY (scss/partials/_typography.scss)
+==========================================================================
+*/
+
+$font-serif: "ff-tisa-web-pro", Georgia, serif;
+$font-sans: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol, 
+ul, 
+aside, 
+{
+   margin: 1rem 0 0.5rem 0;
+}
+
+p {
+  font: {
+    family: $font-serif; 
+    size: 1rem;
+  }
+  line-height: 1.5rem;
+  margin-top: 0; 
+  margin-bottom: 1.1rem; 
+}
+
+a {
+  color: $color-accent;
+
+  &:hover {
+    color: lighten($color-accent, 25%);
+  }
+
+  a#calendar {
+    color: $color-main; 
+  }
+}
+
+h1 {
+  font: {
+    family: $font-sans;
+    size: 2rem;
+    weight: 100;
+  }
+  color: $color-main;
+  //margin-top: 1.1rem; 
+}
+
+h2 { 
+  margin-top: 0; 
+  font: {
+    family: $font-serif; 
+    size: 1.5rem;
+    weight: 100;
+  }
+}
+
+h3 {
+  //margin-bottom: 0; 
+  font: {
+    family: $font-sans;
+    size: 1.3rem;
+    weight: 400; 
+  }
+  color: $color-main;
+
+  a {
+    color: $color-accent;
+    
+    &:hover {
+      color: lighten($color-accent, 15%);
+    }
+  }
+}
+
+h4 {
+  font: {
+    family: $font-sans; 
+    size: 1.1rem;
+    weight: 600; 
+  }
+  line-height: 1.5rem; 
+  color: $color-light; 
+}
+
+h5 {
+  font: {
+    size: 0.8rem; 
+    weight: 600; 
+    family: $font-sans; 
+  }
+  color: $color-brand;
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+
+}
+
+h6 {
+  padding: 0;
+  //margin: {
+  //  top: 0; 
+  //  bottom: 2px;
+  //} 
+  font: {
+    family: $font-serif; 
+    size: 0.8rem; 
+    style: italic;
+    weight: 100; 
+  }
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  list-style-type: none; 
+} 
+
+address {
+  font-style: normal;
+}
+
+small {
+  font-size: 0.9rem; 
+  
+  @include media-query(max, small) {
+    font-size: 0.8rem; 
+  } 
+}
+
+ol, ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.long-list {
+  li {
+    padding-bottom: 0.7rem; 
+  }
+}
+
+hr {
+  display: block; 
+  margin: 3em auto; 
+  max-width: 25%; 
+  border: 0; 
+  border: {
+    top: 3px solid $color-brand;
+    radius: 0;  
+  } 
+}
+
+hr.secondary {
+  display: block; 
+  margin: 0.2em 0 1em; 
+  padding: 0; 
+  max-width: 60%; 
+  height: 1px; 
+  border: 0; 
+  border: {
+    top: 2px solid $color-light;
+    radius: 0;  
+  } 
+} 
+
+.indigo {
+  color: $color-accent;
+  font-weight: 600; 
+}

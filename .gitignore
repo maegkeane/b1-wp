@@ -16,6 +16,7 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 sftp-config.json
+dev-project-info.txt
 
 
 # Created by https://www.gitignore.io/api/osx,codekit
@@ -52,7 +53,11 @@ Temporary Items
 ### CodeKit ###
 # General CodeKit files to ignore
 config.codekit
+config.codekit3
 /min
 
 
 
+# SASS
+*.scssc
+.sass-cache

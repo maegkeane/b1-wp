@@ -1,0 +1,65 @@
+// BREAKPOINTS
+$break-small: 740px;
+$break-medium: 900px;
+$break-aside: 1020px;
+$break-large: 1024px;
+$break-huge: 1280px;
+
+// MIXINS
+//mixin for breakpoints
+@mixin media-query($type,$size) {
+  @if $type == min { 
+  @if $size == small {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+  @else if $size == medium {
+    @media only screen and (min-width: $break-medium + 1) { @content; }
+  }
+  
+  @else if $size == aside {
+    @media only screen and (min-width: $break-aside) { @content; }
+  }
+
+  @else if $size == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $size == huge {
+    @media only screen and (min-width: $break-huge) { @content; }
+  }
+  }
+ 
+  @else if $type == max {
+  @if $size == small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $size == medium {
+    @media only screen and (max-width: $break-medium) { @content; }
+  }
+
+  @else if $size == aside {
+    @media only screen and (max-width: $break-aside) { @content; }
+  }
+
+  @else if $size == large {
+    @media only screen and (max-width: $break-large) { @content; }
+  }
+  @else if $size == huge {
+    @media only screen and (max-width: $break-huge) { @content; }
+  }
+  }
+ 
+  @else if $type == only {
+  @if $size == small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $size == medium {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+  }
+  @else if $size == large {
+    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+  }
+  @else if $size == huge {
+    @media only screen and (min-width: $break-huge) { @content; }
+  }
+  }
+}

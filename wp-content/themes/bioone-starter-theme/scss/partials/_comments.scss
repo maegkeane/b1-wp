@@ -1,0 +1,151 @@
+/*
+==========================================================================
+  COMMENTS (scss/partials/_comments.scss)
+==========================================================================
+*/
+
+.comments {
+  
+  .comments__title {
+    display: block;
+    @extend h5;
+    text-align: center;    
+  }
+
+
+  > ul {
+    
+    li {
+      padding: 30px 0;
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      &.parent {
+        padding-bottom: 0;
+      }
+
+      ul.children {
+        position: relative;
+        margin: 0 0 0 40px;
+
+        li {
+          margin-top: 30px;
+          padding-left: 0;
+          border-top: 1px solid rgba(0,0,0,0.1);
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .comment-author {
+      img {
+        float: left;
+        margin-top: 6px;
+        margin-right: 10px;
+      }
+
+      cite {
+        font-style: italic;
+        color: rgba(0,0,0,0.75);
+
+        a {
+          color: rgba(0,0,0,0.75);
+        }
+      }
+
+      .says {
+        color: rgba(0,0,0,0.75);
+      }
+    }
+
+    .comment-meta {
+      margin-bottom: 15px;
+      font-size: 0.875rem;
+
+      a {
+        color: rgba(0,0,0,0.75);
+        text-decoration: none;
+      }
+    }
+
+    .reply {
+      a {
+        @extend .btn-secondary-charter;
+        padding: 5px 10px;
+        margin-bottom: 0;
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .comment-respond {
+    background: rgba(0,0,0,0.025);
+    padding: 20px;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    #email-notes {
+      font-style: italic;
+      font-size: 0.875rem;
+      color: rgba(0,0,0, 0.65);
+    }
+
+
+    label {
+      @extend h5  ;
+      display: block; 
+    }
+
+    textarea,
+    input[type=text],
+    input[type=email] {
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid rgba(0,0,0, 0.25);
+      color: rgba(0,0,0, 0.75);
+      @include transition(border-color, 250ms);
+
+      &:focus {
+        outline: 0;
+        border: 1px solid $color-brand;
+        color: black;
+      }
+    }
+
+    input[type=submit] {
+      @extend .btn-main;
+    }
+
+    .comment-form-email,
+    .comment-form-url {
+      @include media-query(min, small) {
+        width: 45%;
+        width: calc(50% - 20px);
+        float: left;
+      }
+    }
+
+    .comment-form-url {
+      @include media-query(min, small) {
+        float: right;
+      }
+    }
+  }
+  li .comment-respond {
+    margin-top: 20px;
+  }
+}
+
+
+
+

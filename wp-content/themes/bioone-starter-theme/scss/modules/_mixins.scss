@@ -1,0 +1,60 @@
+//
+//	BORDER BOX
+//
+@mixin border-box {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+//
+//	FONT FAMILIES
+//
+// @mixin font-family-trade-gothic-light {
+// 	font-family:'Trade Gothic W01 Light', 'Helvetica Neue', Arial, sans-serif;
+// 	font-weight: normal;
+// }
+
+
+// 
+//	LAYOUT UNITS
+//
+$gutter: 20px;
+
+//
+//	MISC. FONT STUFF
+//
+@mixin text-shadow {
+	text-shadow: 1px 1px 5px $black-50;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+@mixin font-smoothing {
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+//
+//	BACKGROUNDS
+//
+@mixin background-cover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+//
+//	TRANSITIONS
+//
+@mixin transition($type,$length) {
+	-webkit-transition: $type $length ease-in-out;
+	-moz-transition: $type $length ease-in-out;
+	-ms-transition: $type $length ease-in-out;
+	-o-transition: $type $length ease-in-out;
+	transition: $type $length ease-in-out;
+}

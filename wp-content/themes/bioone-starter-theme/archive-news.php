@@ -34,7 +34,7 @@ Template Name: News Archive
         href="<?php if (get_field('link')) { echo get_field('link'); } else { echo get_the_permalink(); } ?>" target="_blank">
 
         <div class="outline">
-          <h3 class="h3-green"><?php echo get_field($categorySlug); ?></h3>
+          <h3 class="h3-green"><?php if (get_field($categorySlug)) { echo get_field($categorySlug); } else { echo $theCategoryObject->name; } ?></h3>
           <h2><?php if (get_field('press_release_header') && $categorySlug == 'press_release') { echo strip_tags(get_field('press_release_header'), '<em>');} else { echo get_the_title(); } ?></h2>
           <?php if (get_field('issue_icon')) : ?>
             <img src="<?php echo get_field('issue_icon')['url']; ?>" alt="<?php echo get_field('issue_icon')['alt']; ?>" />
