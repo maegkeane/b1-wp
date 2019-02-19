@@ -7,7 +7,7 @@
 		<title><?php wp_title(' | ', true, 'right'); ?></title>
 		
 	
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>?v=0.0.1" />
 
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 
